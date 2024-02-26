@@ -1,0 +1,54 @@
+.contnidoCampeonatos {
+
+    background-color: rgba(116, 126, 137, 0.3);
+    width: 80%;
+    border-radius: 15px;
+    margin-top: 20px;
+    max-height: max-content;
+    padding: 10px;
+    border: 1px solid white;
+    margin-left: 180px;
+}
+
+.textoE{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
+}
+.cardCampeonato{
+    display: flex;
+    gap: 20px;
+}
+
+.imagen{
+    height: 140px;
+    width: 140px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.descripcion{
+    display: flex;
+    gap: 20px;
+    border: 1px solid;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    width: max-content;
+}
+.texto{
+    width: 250px;
+}
+.barraProgreso{
+    background-color: aliceblue;
+    height:25px;
+    border-radius: 10px;
+    text-align: end;
+}
+.editar{
+    background-color: rgb(226, 59, 59);
+    padding: 10px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: large;
+}
