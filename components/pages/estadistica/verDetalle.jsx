@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function verDetalle() {
   return (
       <>
-          <Image/>
+        <Image src="./"></Image>
          </>
   )
 }
