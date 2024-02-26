@@ -1,0 +1,68 @@
+ .contenedorPartido {
+    border:1px #ffff;
+    height:50px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+.btnJornada{
+    border-radius: 10px;
+    height: 40px;
+    background-color: #C63F3F;
+}
+option .btnJornada{
+    background-color: #C63F3F;
+}
+.contepar{
+    border-bottom: 2px solid #ffff;
+}
+.contenedorImagen{
+    display: flex;
+    align-items: center;
+    width: 300px;
+margin-left: 10%;
+}
+
+
+.nombreEquipo{
+    margin: 10%;
+    color: #ffff;
+}
+.faltas{
+    width: 35px;
+    height: 35px;
+    margin-left: 25%;
+    display: flex;
+    justify-content: center;
+}
+.rojas{
+    margin: 1%;
+}
+.marcador{
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left:20%;
+   font-size:larger;
+border-right: 2px solid #ffff;
+height: 50px;
+width: 200px;
+
+}
+.estadoPartido{
+    display: flex;
+    justify-content: center;
+font-size: medium;
+margin-left: 5%;
+
+}
+.estadoPartido .botonDetalle{
+    height: 50px;
+    width: 160px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+}
+.contenedorBoton{
+    width: 73px;
+}

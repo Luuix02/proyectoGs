@@ -1,0 +1,14 @@
+.contenedorDetalle{
+    display: flex;
+    justify-content: center;
+ align-content: center;
+}
+.contenedorEquipo{
+    display: flex;
+    width: 80%;
+    height: max-content;
+    background-color: #747E89;
+}
+.imageEquipo{
+    border-radius: 90%;
+}
