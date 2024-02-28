@@ -1,10 +1,10 @@
-body {
+html {
     background-image: url('https://as01.epimg.net/masdeporte/imagenes/2021/08/18/reportajes/1629287252_471087_1632935001_noticiareportajes_grande.jpg');
-    background-size: 100% ;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
-.mayor {
+.divpadre {
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
@@ -27,22 +27,22 @@ h1, label, .cuenta, .registro {
     font-weight: bold;
 }
 
-select, input {
+Select, Input {
     color: rgb(70, 37, 37);
     margin: 10px 0;
     border: 2px solid black;
     border-radius: 20px;
     padding: 10px;
-    width: calc(100% - 22px); /* Ajusta el ancho considerando el padding y el borde */
+    width: calc(100% - 22px);
     background-color: #A1B9D1;
 }
 
-select{
+Select{
     width: 400PX;
     padding-left: 30px;
 }
 
-input{
+Input{
     width: 400PX;
 
 }
@@ -58,7 +58,7 @@ input{
     width: 100%;
 }
 
-.registros {
+.Botonregistros {
     border-radius: 15px;
     background-color: #C63F3F;
     color: white;
@@ -71,15 +71,14 @@ button{
     font-weight: bold;
 }
 
-input::placeholder, select::placeholder {
-    color: #574545; /* Ajusta este valor al color deseado */
+Input::placeholder, Select::placeholder {
+    color: #574545; 
     padding-left: 25px;
 }
 
-/* Ajustes responsivos para diferentes anchos de pantalla */
 @media (max-width: 1024px) {
     .mayor {
-        width: 80%; /* Se ajusta el ancho para pantallas más pequeñas */
+        width: 80%; 
     }
 }
 
@@ -101,4 +100,8 @@ input::placeholder, select::placeholder {
     .divdatos form {
         width: 95%;
     }
+}
+
+.class{
+    background-color: #574545;
 }
