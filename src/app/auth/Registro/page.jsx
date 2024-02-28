@@ -1,10 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-import '../../../styles/styleRegistro/styleRegistro.css'
+import React from 'react';
+import Link from 'next/link';
+import '../../../styles/styleRegistro/styleRegistro.css';
 
 export default function Registro() {
   return (
-    <div className='divpadre'>
+    <div className='mayor'>
       <h1 className='titulo'>Registrate en GoSport</h1>
       <br />
         
@@ -19,8 +19,8 @@ export default function Registro() {
           <label htmlFor="telefono">Telefono :</label>
           <input className='la' type="tel" id="telefono" name="telefono" placeholder="ej:3163221523" required />
 
-          <label className='Label' htmlFor="genero">Genero :</label>
-          <select className='Select' name="genero" id="genero">
+          <label htmlFor="genero">Genero :</label>
+          <select name="genero" id="genero">
             <option value="selecciona" disabled defaultValue>selecciona</option>
             <option value="Femenino">Femenino</option>
             <option value="Masculino">Masculino</option>
@@ -32,24 +32,16 @@ export default function Registro() {
           <input type="email" id="email" name="email" placeholder="ej:pepito@gmail.com" required />
 
           <label htmlFor="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="*****" required />
+          <input type="password" id="password" name="password" placeholder="***********" required />
 
           <label htmlFor="confirmar-password">Confirmar Contraseña</label>
-          <input type="password" id="confirmar-password" name="confirmar-password" placeholder="*****" required />
+          <input type="password" id="confirmar-password" name="confirmar-password" placeholder="***********" required />
 
           <div className='divre'>
-            <button   type="submit" className='Botonregistros'>Registrarse</button>
-
-            
+            <button type="submit" className='Botonregistros'>Registrarse</button>
           </div>
-          <h1 className='cuenta'>¿Ya tienes cuenta? <Link href="/inicioSesion">Inicia sesion</Link>
+          <h1 className='cuenta'>¿Ya tienes cuenta? <Link href="/inicioSesion">inicia sesion</Link>
           </h1> 
-
-          
-  
-          
-
-         
         </form>
       </div>
     </div>

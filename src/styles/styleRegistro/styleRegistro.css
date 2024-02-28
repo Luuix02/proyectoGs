@@ -20,11 +20,21 @@ html {
 .titulo{
     font-size: 26px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
 }
 
-h1, label, .cuenta, .registro {
+h1, label, .registro {
     color: rgb(7, 6, 6);
     font-weight: bold;
+}
+.cuenta{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 80px;
+    color: rgb(0, 0, 0);
+
 }
 
 Select, Input {
@@ -33,12 +43,11 @@ Select, Input {
     border: 2px solid black;
     border-radius: 20px;
     padding: 10px;
-    width: calc(100% - 22px);
     background-color: #A1B9D1;
 }
 
 Select{
-    width: 400PX;
+    width: 428PX;
     padding-left: 30px;
 }
 
