@@ -1,9 +1,10 @@
 import React from 'react'
-import Image from 'next/image'
-export default function verDetalle() {
+//import Image from 'next/image'
+export default function Detalle() {
   return (
       <>
-        <Image src="./"></Image>
+    
+      <p>hola desde detalle </p>
          </>
   )
 }

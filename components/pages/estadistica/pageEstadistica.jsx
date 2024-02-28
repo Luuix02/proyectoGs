@@ -6,16 +6,14 @@ import { Estadistica } from '../estadistica/estadistica'
 
 import '@/styles/styleEstadisticas/stylePageEstadistica.module.css'
 
-const path ='/inicioSesion/organizador/campeonatos/estadisticas'
+const path ='@/src/'
 
 
 export default function PageEstadisticas() {
   const router = useRouter()
-  const [selectedOption, setSelectedOption] = useState();
 
   const handleChange = (event) => {
     const ruta = event.target.value;
-    setSelectedOption(ruta);
     if (ruta) {
       router.push(ruta);
     }

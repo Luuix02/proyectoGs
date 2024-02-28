@@ -1,7 +1,7 @@
-import { PageEstadisticas } from '../../../../../../components/pages/estadistica/pageEstadistica'
+import  PageEstadisticas  from '../../../../../../components/pages/estadistica/pageEstadistica'
 import React from 'react'
 import '@/styles/styleEstadisticas/styleManana.module.css'
-import RootLayout from '@/app/layout'
+
 
 
 export default function Manana() {
