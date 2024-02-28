@@ -1,0 +1,65 @@
+.principalCuenta{
+    display: flex;
+    gap: 16px;
+}
+.section{
+    margin-top: 20px;
+   width: 80%;
+   margin-left: 180px;
+}
+.cambiar{
+    margin: 0%;
+}
+
+.textPerfil{
+    display: flex;
+    gap: 20px;
+}
+.formulario{
+    display: grid;
+    padding: 20px;
+    background-color: rgba(116, 126, 137, 0.3);
+    width: 40rem;
+    border-radius: 15px;
+    margin-top: 20px;
+    max-height: max-content;  
+    margin: 5rem 25%;   
+    justify-content: center;
+    gap: 8px;
+}
+
+.contenedorFormulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    width: 20rem;
+    margin-bottom: 10px;
+}
+.textoFmo{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: max-content;
+}
+
+.cajaTexto{
+    width: 200px;
+    height: 24px;
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.guardar{
+    background-color: rgb(240, 37, 78);
+    color: aliceblue;
+    border-radius: 5px;
+    height: 30px;
+    width: max-content;
+    font-weight: bolder;
+    
+}
+
+.text{
+    margin: 0%;
+    padding-top: 5px;
+    color: white;
+}

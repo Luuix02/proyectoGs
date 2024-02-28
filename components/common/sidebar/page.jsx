@@ -8,26 +8,26 @@ export default function SideBarPrincipal() {
   return (
     <aside className="barraLateral">
         <ul className="lista">
-          <div className={`contenedor `}>
+          <li className={`contenedor `}>
             <Image src={`${pathImg}/campeonatos.png`}className='img' width={35} height={35}></Image>
-          <Link href={`${path}/campeonatos`} >Campeonatos </Link>
-          </div>
-          <div className='contenedor'>
+          <Link href={`${path}/campeonatos`} className='li'>Campeonatos </Link>
+          </li>
+          <li className='contenedor'>
             <Image src={`${pathImg}/crearCampenato.png`} className='img2' width={35} height={35}></Image>
-            <Link href={`${path}/crearCampeonato`}>Crear Campeonatos</Link>
-          </div>
-          <div className='contenedor'>
+            <Link href={`${path}/crearCampeonato`} className='li'>Crear Campeonatos</Link>
+          </li>
+          <li className='contenedor'>
             <Image src={`${pathImg}/fotos.png`} width={35} height={35}></Image>
-            <Link href={`${path}/fotos`}>Fotos</Link>
-          </div>
-          <div className='contenedor'>
+            <Link href={`${path}/fotos`} className='li'>Fotos</Link>
+          </li>
+          <li className='contenedor'>
             <Image src={`${pathImg}/cuenta.png`} width={35} height={35}></Image>
-            <Link href={`${path}/cuenta`}>Cuenta</Link>
-          </div>
-          <div className='contenedor'>
+            <Link href={`${path}/cuenta`} className='li'>Cuenta</Link>
+          </li>
+          <li className='contenedor'>
             <Image src={`${pathImg}/salir.png`} width={35} height={35}></Image>
-            <Link href={`/inicioSesion`}>Salir</Link>
-          </div >
+            <Link href={`/inicioSesion`} className='li'>Salir</Link>
+          </li >
           </ul>
       </aside>
   )
