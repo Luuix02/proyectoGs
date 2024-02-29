@@ -1,0 +1,49 @@
+.contenedorBienvenida{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.textoBienvenida{
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: entradaDesdeIzquierda 4s forwards;
+    padding: 0rem 20rem 0rem 20rem;
+    margin-bottom: 70px;
+  }
+
+  @keyframes entradaDesdeIzquierda {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.tituloCam{
+    font-size: 40px;
+    transform: translateX(100%);
+    animation: entradaDesdeDerecha 4s forwards;
+}
+@keyframes entradaDesdeDerecha {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+.contenedorCards{
+    display: flex;
+    gap: 100px;
+    margin-top: 30px;
+    padding: 20px;
+    justify-content: space-evenly;
+}
