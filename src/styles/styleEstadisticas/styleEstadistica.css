@@ -34,9 +34,12 @@ margin-left: 10%;
     margin-left: 25%;
     display: flex;
     justify-content: center;
+}.amarillas{
+    background-color: #fbff05;
 }
 .rojas{
     margin: 1%;
+    background-color: #f00202;
 }
 .marcador{
     color: #ffff;

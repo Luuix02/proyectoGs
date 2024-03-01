@@ -1,24 +1,20 @@
-import '@/styles/styleEstadisticas/styleEstadistica.module.css'
+import '@/styles/styleEstadisticas/styleEstadistica.css'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 
-const path = '/organizador/campeonatos/estadisticas/'
-export const Estadistica = () => {
+const path = '/organizador/campeonatos/estadisticas'
+export default function Estadistica (){
   return (
     <>
       <div className='contenedorPartido ' > 
       <div className=' contenedorImagen'>
-          <Image src="/imageEstadistica/millonarios.png" width={60} height={100} className='imagen rounded-full' />
+          <Image src="/images/imageEstadistica/MILONARIOS.png" width={60} height={100} className='imagen rounded-full' />
         <p className='nombreEquipo'>Millonarios</p>
         </div>
-        <div className='faltas bg-yellow-500 '>
-          <p>0</p>
-        </div>
-        <div className='faltas rojas bg-red-700 m-0'>
-          <p>0</p>
-        </div>
+        <button className='faltas amarillas '><Link href={`${path}/Editar`}>0</Link></button>
+        <button className='faltas rojas '><Link href={`${path}/Editar`}>0</Link></button>
         <div className='marcador'>
         <p>2</p>
         </div>
@@ -29,15 +25,11 @@ export const Estadistica = () => {
     </div>
     <div className='contenedorPartido contepar' >
       <div className=' contenedorImagen'>
-          <Image src="/image/imageEstadistica/nacional.png" width={60} height={100} className='imagen rounded-full'/>
+          <Image src="/images/imageEstadistica/nacional.png" width={60} height={100} className='imagen rounded-full'/>
         <p className='nombreEquipo'>Nacional</p>
         </div>
-        <div className='faltas bg-yellow-500 '>
-          <p>0</p>
-        </div>
-        <div className='faltas rojas bg-red-700 m-0'>
-          <p>0</p>
-        </div>
+        <button className='faltas amarillas '><Link href={`${path}/Editar`}> 0</Link></button>
+        <button className='faltas rojas '><Link href={`${path}/Editar`}> 0</Link></button>
         <div className='marcador'>
           <p>2</p>
         </div>

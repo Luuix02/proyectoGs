@@ -1,0 +1,51 @@
+.contenedorDetalle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #747E89;
+    width: 80%;
+    height: 90vh;
+    margin: 2% 2% 2% 10%;
+}
+.contenedorEquipo{
+    display: grid;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.nombreEquipo{
+margin-left: 41%;
+color: #020202;
+font-weight: bolder;
+}
+
+.falta{
+    display: flex;
+    gap: 20px;
+    width: 30px;
+    height: 30px;
+}
+.nombreFalta{
+    font-weight: 600;
+}.marcador{
+    display: flex;
+    border: 0px;
+}
+.numeroMarcador{
+    font-size:100px;
+    font-weight:bolder;
+}
+.amarilla{
+    background-color: rgb(255, 251, 8);
+}
+.roja{
+    background-color: rgb(255, 0, 0);
+   
+}
+.columnas{
+    display: flex;
+    gap: 40px;
+    margin-left: 40%;
+}

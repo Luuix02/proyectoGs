@@ -1,13 +1,11 @@
 import React from 'react'
-import RootLayout from '@/app/layout'
-import '@/styles/styleEstadisticas/styleVerDetalle.module.css'
+import Detalle from '../../../../../../components/pages/componentEstadistica/verDetalle'
+
 export default function VerDetalle() {
-  
-  return (
+  return(
     <>
-      <RootLayout>
-       
-    </RootLayout >
+    <Detalle/>
     </>
   )
+
 }

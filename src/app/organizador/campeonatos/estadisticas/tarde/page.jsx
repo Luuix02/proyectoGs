@@ -1,21 +1,20 @@
-import PageEstadisticas from '../../../../../../components/pages/estadistica/pageEstadistica'
+import PageEstadisticas from '../../../../../../components/pages/componentEstadistica/pageEstadistica'
 import React from 'react'
-import RootLayout from '@/app/layout'
-import SideCampeonato from '@/Components/sideCampeonato'
-import '@/styles/styleEstadisticas/styleTarde.module.css'
+
+import '@/styles/styleEstadisticas/styleTarde.css'
+import SideBarCampeonato from '../../../../../../components/common/sidebarCampeonato/page'
 
 export default function Tarde() {
   return (
     <>
-      <RootLayout>
-    
-        <SideCampeonato></SideCampeonato>
+       
+       <SideBarCampeonato/>
         <div>
           <h1 className='jornada'>Tarde</h1>
           <PageEstadisticas/>
         </div>
       
-      </RootLayout>
+    
     </>
   )
 }

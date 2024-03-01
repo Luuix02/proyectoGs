@@ -1,0 +1,32 @@
+.tituloFase{
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+.contenedorEstadistica{
+    margin-left: 20%;
+}
+.numeroFases{
+    margin-top: 3%;
+    width:90%;
+    background-color: #A0A0A0;
+    border-radius: 2px;
+}
+.contenedorTitulos{
+    display: flex;
+}
+.titulo{
+    color: #ffff;
+   font-weight: bolder;
+}
+.tiFalta{
+    margin-left:33%;
+}
+.tiEquipo{
+    margin-left: 10%;
+}
+.tiMarcador{
+    margin-left: 22%;
+}
+.tiEstado{
+    margin-left: 5%;
+}
