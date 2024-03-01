@@ -3,23 +3,15 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-
-<<<<<<< HEAD:components/pages/componentEstadistica/estadistica.jsx
 const path = '/organizador/campeonatos/estadisticas'
 export default function Estadistica (){
-=======
-const path = '../'
-export const Estadistica = () => {
->>>>>>> 5e0f7aabe35769678aa977e7828714cb05e870fb:components/pages/estadistica/estadistica.jsx
+
   return (
     <>
       <div className='contenedorPartido ' > 
       <div className=' contenedorImagen'>
-<<<<<<< HEAD:components/pages/componentEstadistica/estadistica.jsx
           <Image src="/images/imageEstadistica/MILONARIOS.png" width={60} height={100} className='imagen rounded-full' />
-=======
           <Image src="/images/imageEstadistica/Nacional.png" width={60} height={100} className='imagen rounded-full' />
->>>>>>> 5e0f7aabe35769678aa977e7828714cb05e870fb:components/pages/estadistica/estadistica.jsx
         <p className='nombreEquipo'>Millonarios</p>
         </div>
         <button className='faltas amarillas '><Link href={`${path}/Editar`}>0</Link></button>
@@ -34,11 +26,9 @@ export const Estadistica = () => {
     </div>
     <div className='contenedorPartido contepar' >
       <div className=' contenedorImagen'>
-<<<<<<< HEAD:components/pages/componentEstadistica/estadistica.jsx
           <Image src="/images/imageEstadistica/nacional.png" width={60} height={100} className='imagen rounded-full'/>
-=======
+
           <Image src="/images/imageEstadistica/Nacional.png" width={60} height={100} className='imagen rounded-full'/>
->>>>>>> 5e0f7aabe35769678aa977e7828714cb05e870fb:components/pages/estadistica/estadistica.jsx
         <p className='nombreEquipo'>Nacional</p>
         </div>
         <button className='faltas amarillas '><Link href={`${path}/Editar`}> 0</Link></button>

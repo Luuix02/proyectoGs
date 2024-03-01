@@ -5,12 +5,7 @@ import  Estadistica  from './estadistica.jsx'
 
 import '@/styles/styleEstadisticas/stylePageEstadistica.css'
 
-<<<<<<< HEAD:components/pages/componentEstadistica/pageEstadistica.jsx
 const path ='/organizador/campeonatos/estadisticas'
-=======
-const path ='@/src/'
->>>>>>> 5e0f7aabe35769678aa977e7828714cb05e870fb:components/pages/estadistica/pageEstadistica.jsx
-
 
 export default function PageEstadisticas() {
   const router = useRouter()
