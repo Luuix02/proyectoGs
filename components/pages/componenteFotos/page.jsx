@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import '../../../src/styles/styleFotos/fotos.css'
 export default function Fotos() {

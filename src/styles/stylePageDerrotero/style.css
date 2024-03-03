@@ -1,0 +1,11 @@
+@media (max-width: 2500px) {
+    body {
+        background-color: rgb(45, 50, 105);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 2500px; /* Ancho máximo del cuerpo para controlar el espacio horizontal disponible */
+        margin: 0 auto; /* Centramos el cuerpo horizontalmente */
+    }
+}
