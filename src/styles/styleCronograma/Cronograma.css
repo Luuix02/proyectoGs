@@ -1,0 +1,97 @@
+.ContainerPrincipal{
+    width:100%;
+    overflow-y: auto;
+
+}
+.contenedorDeTextoJornada{
+    padding:15px;
+}
+.contenedorCronograma{
+    
+    width: 15%;
+}
+.selectorJornada{
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.principalEquipos{
+    padding: 15px;
+    /* margin: auto;
+    width: auto; */
+    background-color: rgba(116,126,137,0.3);
+}
+/* module.css */
+
+.contenedorEquipos{
+    width: 80%;
+    border-radius: 10px; 
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(119, 118, 129, 0.64);
+
+}
+.texto{
+    font-size: 25px;
+    font-family: bold;
+    text-align: center;
+    color: white;
+}
+
+.contenedorCard{
+    border-radius: 10px;
+    margin: 30px;
+    height: 150px;
+    background-color: white;
+    width: 30%;
+    transition: ease-in-out 0.3s;
+    display: flex;
+}
+.contenedorCard:hover{
+    box-shadow:10px 20px 10px rgba(213, 107, 107, 0.3);
+    transform: translate(0px,-5px);
+}
+.seccion1{
+    width: 50%;
+    border-right: 1px solid black;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.equipos{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+
+}
+.seccion2{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px;
+    font-family: bold;
+    gap: 15px;
+}
+label{
+    margin-right: 20px;
+
+}
+input{
+    width: 30%;
+    background-color: rgb(179, 170, 170);
+    border-radius: 10px;
+}
+input::placeholder{
+    color: black;
+}
