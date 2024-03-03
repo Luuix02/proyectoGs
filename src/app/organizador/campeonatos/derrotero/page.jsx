@@ -1,3 +1,4 @@
+import SideBarCampeonato from "../../../../../components/common/sidebarCampeonato/page";
 import Ganador from "../../../../../components/pages/componenteFases/pageEqGanador";
 import FaseCuarta from "../../../../../components/pages/componenteFases/pageFaseCuar";
 import FasePrimera from "../../../../../components/pages/componenteFases/pageFasePri";
@@ -12,6 +13,7 @@ import "../../../../styles/stylePageDerrotero/style.css";
 export default function Derrotero() {
   return (
     <>
+    <SideBarCampeonato/>
       <FasePrimera></FasePrimera>
       <FaseSegunda></FaseSegunda>
       <FaseTercera></FaseTercera>

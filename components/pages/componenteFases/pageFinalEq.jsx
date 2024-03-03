@@ -2,6 +2,7 @@ import Link from "next/link";
 import "../../../src/styles/stylesFases.css/styles.css";
 import Image from "next/image";
 export default function Final() {
+  const path = '/organizador/campeonatos'
   return (
     <>
       <div class="ContenedorFinal">
@@ -39,8 +40,8 @@ export default function Final() {
         <div class="Fase1">
           <p>25 Febrero 2024</p>
           <p>2:00 pm</p>
-          <Link href="/src/app/organizador/campeonatos/cronogramas/page.jsx">
-            <div className="iconEditar">
+          <Link href={`${path}/cronogramas`} >
+          <div className="iconEditar">
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
