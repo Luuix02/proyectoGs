@@ -21,7 +21,7 @@ export default function SideBarCampeonato() {
               </div>
               <div className='contenedor'>
                   <Image src={`${pathImg}/derrotero.png`} className='img4' width={35} height={35}></Image>
-                  <Link href={`${path}/derrotero`}>Derrotero</Link>
+                  <Link href={`${path}/derrotero/mananaDerr`}>Derrotero</Link>
               </div>
               <div className='contenedor'>
                   <Image src={`${pathImg}/campeonatos.png`} className='img5' width={35} height={35}></Image>
