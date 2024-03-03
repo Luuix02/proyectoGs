@@ -13,15 +13,18 @@ import "../../../../styles/stylePageDerrotero/style.css";
 export default function Derrotero() {
   return (
     <>
+    <article class = "bodyDerrotero">
     <SideBarCampeonato/>
-      <FasePrimera></FasePrimera>
-      <FaseSegunda></FaseSegunda>
-      <FaseTercera></FaseTercera>
-      <FaseCuarta></FaseCuarta>
-      <FaseQuinta></FaseQuinta>
-      <FaseSexta></FaseSexta>
-      <Final></Final>
-      <Ganador></Ganador>
+      <FasePrimera/>
+      <FaseSegunda/>
+      <FaseTercera/>
+      <FaseCuarta/>
+      <FaseQuinta/>
+      <FaseSexta/>
+      <Final/>
+      <Ganador/>
+    </article>
+ 
     </>
   );
 }

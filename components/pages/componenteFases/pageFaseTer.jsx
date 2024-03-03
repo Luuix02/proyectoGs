@@ -16,9 +16,9 @@ export default function FaseTercera() {
           </Link>
         </div>
         <div class="Equipos">
-          <div class="contenedor">
-            <div class="seccion">
-              <div class="contenido">
+          <div class="contenedorEquipos">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"
@@ -31,8 +31,8 @@ export default function FaseTercera() {
               </div>
             </div>
             <div class="linea"></div>
-            <div class="seccion">
-              <div class="contenido">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"

@@ -17,9 +17,9 @@ export default function FaseSexta() {
           </Link>
         </div>
         <div class="Equipos">
-          <div class="contenedor">
-            <div class="seccion">
-              <div class="contenido">
+          <div class="contenedorEquipos">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"
@@ -32,8 +32,8 @@ export default function FaseSexta() {
               </div>
             </div>
             <div class="linea"></div>
-            <div class="seccion">
-              <div class="contenido">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"
@@ -56,9 +56,9 @@ export default function FaseSexta() {
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
-          <div class="contenedor">
-            <div class="seccion">
-              <div class="contenido">
+          <div class="contenedorEquipos">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"
@@ -71,8 +71,8 @@ export default function FaseSexta() {
               </div>
             </div>
             <div class="linea"></div>
-            <div class="seccion">
-              <div class="contenido">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"
@@ -95,9 +95,9 @@ export default function FaseSexta() {
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
-          <div class="contenedor">
-            <div class="seccion">
-              <div class="contenido">
+          <div class="contenedorEquipos">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"
@@ -110,8 +110,8 @@ export default function FaseSexta() {
               </div>
             </div>
             <div class="linea"></div>
-            <div class="seccion">
-              <div class="contenido">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"
@@ -134,9 +134,9 @@ export default function FaseSexta() {
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
-          <div class="contenedor">
-            <div class="seccion">
-              <div class="contenido">
+          <div class="contenedorEquipos">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"
@@ -149,8 +149,8 @@ export default function FaseSexta() {
               </div>
             </div>
             <div class="linea"></div>
-            <div class="seccion">
-              <div class="contenido">
+            <div class="seccionVersusEq">
+              <div class="contenidoVersus">
                 <div class="imagenEscudo">
                   <Image
                     src="/images/imgFases/JUNIOR.jpg"

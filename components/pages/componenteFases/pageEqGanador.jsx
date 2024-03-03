@@ -5,9 +5,9 @@ export default function Ganador() {
     <>
       <div class="ContenedorEqGanador">
         <h1 class="Ganador">Ganador</h1>
-        <div class="contenedor">
-          <div class="seccion">
-            <div class="contenido">
+        <div class="contenedorEquipos">
+          <div class="seccionVersusEq">
+            <div class="contenidoVersus">
               <div class="imagenEscudo">
                 <Image
                   src="/images/imgFases/JUNIOR.jpg"

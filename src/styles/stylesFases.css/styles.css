@@ -1,5 +1,5 @@
 
-.contenedor {
+.contenedorEquipos {
     /* width: 100%; */
     height: auto;
     border: 1px solid;
@@ -18,12 +18,12 @@
     background-color: black;
 }
 
-.seccion {
+.seccionVersusEq {
     display: flex;
    
 }
 
-.contenido {
+.contenidoVersus {
     display: flex;
     align-items: center;
 }
