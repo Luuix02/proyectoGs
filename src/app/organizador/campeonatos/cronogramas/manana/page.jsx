@@ -1,5 +1,5 @@
 "use client"
-import "../Cronograma.css"
+import "../../../../../styles/styleCronograma/Cronograma.css"
 import ComponenteCronograma from "../../../../../../components/pages/cronograma/EditorCronograma"
 import Image from 'next/image'
 import React from 'react'

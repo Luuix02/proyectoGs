@@ -5,7 +5,7 @@ export default function Ganador() {
     <>
       <div class="ContenedorEqGanador">
         <h1 class="Ganador">Ganador</h1>
-        <div class="contenedorEquipos">
+        <div class="contenedorEquiposDerr">
           <div class="seccionVersusEq">
             <div class="contenidoVersus">
               <div class="imagenEscudo">

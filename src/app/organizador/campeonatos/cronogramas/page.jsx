@@ -1,12 +1,12 @@
-<<<<<<< HEAD
 "use client"
 import React from 'react'
-import SideCampeonato from '@/Components/sideCampeonato'
+
 import RootLayout from '@/app/layout'
 import "../../../../styles/styleCronograma/Cronograma.css"
 import Tarde from './tarde/page'
 import Manana from './manana/page'
 import { useState } from 'react'
+import SideBarCampeonato from '../../../../../components/common/sidebarCampeonato/page'
 
 export default function Cronograma() {
   const [selectOption , setSelectOption] = useState ('manana')
@@ -17,7 +17,7 @@ export default function Cronograma() {
   return (
     <RootLayout>
 
-      <SideCampeonato />
+      <SideBarCampeonato></SideBarCampeonato>
       <div class="ContainerPrincipal">
         <div class="contenedorCronograma">
           <select value={selectOption} class="selectorJornada" onChange={handleChange}>
@@ -37,13 +37,4 @@ export default function Cronograma() {
 }
 
 
-=======
-import SideBarCampeonato from "../../../../../components/common/sidebarCampeonato/page";
 
-export default function  Cronogramas () {
-    return(
-<SideBarCampeonato/>
-
-    )
-}
->>>>>>> bb594deefea93f23f68bcb6a11635dd0ea4025b6

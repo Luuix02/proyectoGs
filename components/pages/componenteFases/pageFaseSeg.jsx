@@ -16,7 +16,7 @@ export default function FaseSegunda() {
           </Link>
         </div>
         <div class="Equipos1">
-          <div class="contenedorEquipos">
+          <div class="contenedorEquiposDerr">
             <div class="seccionVersusEq">
               <div class="contenidoVersus">
                 <div class="imagenEscudo">
@@ -57,7 +57,7 @@ export default function FaseSegunda() {
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
-          <div class="contenedorEquipos">
+          <div class="contenedorEquiposDerr">
             <div class="seccionVersusEq">
               <div class="contenidoVersus">
                 <div class="imagenEscudo">

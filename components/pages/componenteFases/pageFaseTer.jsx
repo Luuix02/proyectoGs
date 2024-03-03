@@ -16,7 +16,7 @@ export default function FaseTercera() {
           </Link>
         </div>
         <div class="Equipos">
-          <div class="contenedorEquipos">
+          <div class="contenedorEquiposDerr">
             <div class="seccionVersusEq">
               <div class="contenidoVersus">
                 <div class="imagenEscudo">

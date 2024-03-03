@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import "./Cronograma.css"
+import "../../../src/styles/styleCronograma/Cronograma.css";
 import React from 'react'
 export default function ComponenteCronograma({ texto1, texto2 }) {
     return (

@@ -17,7 +17,7 @@ export default function FasePrimera() {
           </Link>
         </div>
         <div class="Equipos">
-          <div class="contenedorEquipos">
+          <div class="contenedorEquiposDerr">
             <div class="seccionVersusEq">
               <div class="contenidoVersus">
                 <div class="imagenEscudo">
@@ -56,7 +56,7 @@ export default function FasePrimera() {
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
-          <div class="contenedorEquipos">
+          <div class="contenedorEquiposDerr">
             <div class="seccionVersusEq">
               <div class="contenidoVersus">
                 <div class="imagenEscudo">
@@ -95,7 +95,7 @@ export default function FasePrimera() {
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
-          <div class="contenedorEquipos">
+          <div class="contenedorEquiposDerr">
             <div class="seccionVersusEq">
               <div class="contenidoVersus">
                 <div class="imagenEscudo">
@@ -134,7 +134,7 @@ export default function FasePrimera() {
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
-          <div class="contenedorEquipos">
+          <div class="contenedorEquiposDerr">
             <div class="seccionVersusEq">
               <div class="contenidoVersus">
                 <div class="imagenEscudo">
