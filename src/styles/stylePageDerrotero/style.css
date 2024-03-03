@@ -1,6 +1,6 @@
 @media (max-width: 2500px) {
     body {
-        background-color: rgb(45, 50, 105);
+        /* background-color: rgb(45, 50, 105); */
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;

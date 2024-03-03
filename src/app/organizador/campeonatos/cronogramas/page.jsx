@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 import React from 'react'
 import SideCampeonato from '@/Components/sideCampeonato'
@@ -36,3 +37,13 @@ export default function Cronograma() {
 }
 
 
+=======
+import SideBarCampeonato from "../../../../../components/common/sidebarCampeonato/page";
+
+export default function  Cronogramas () {
+    return(
+<SideBarCampeonato/>
+
+    )
+}
+>>>>>>> bb594deefea93f23f68bcb6a11635dd0ea4025b6

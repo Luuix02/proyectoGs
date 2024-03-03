@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "../../../src/styles/stylesFases.css/styles.css";
 import Image from "next/image";
 export default function Ganador() {

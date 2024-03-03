@@ -13,7 +13,7 @@ export default function SideBarCampeonato() {
               </div>
               <div className='contenedor'>
                   <Image src={`${pathImg}/cronograma.png`} className='img2' width={35} height={35}></Image>
-                  <Link href={`${path}/agregarCronograma`}>Agregar Cronograma</Link>
+                  <Link href={`${path}/cronogramas`}>Agregar Cronograma</Link>
               </div>
               <div className='contenedor'>
                   <Image src={`${pathImg}/verParticipantes.png`} className='img3' width={35} height={35}></Image>
@@ -25,7 +25,7 @@ export default function SideBarCampeonato() {
               </div>
               <div className='contenedor'>
                   <Image src={`${pathImg}/campeonatos.png`} className='img5' width={35} height={35}></Image>
-                  <Link href={`${path}`}>Campeonatos</Link>
+                  <Link href={`${path}/`}>Campeonatos</Link>
               </div >
           </ul>
       </aside>

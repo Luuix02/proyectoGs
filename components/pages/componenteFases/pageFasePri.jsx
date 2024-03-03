@@ -2,6 +2,7 @@ import Link from "next/link";
 import "../../../src/styles/stylesFases.css/styles.css";
 import Image from "next/image";
 export default function FasePrimera() {
+  const path = '/organizador/campeonatos'
   return (
     <>
       <div class="ContenedorEquiposPrin">
@@ -9,8 +10,8 @@ export default function FasePrimera() {
           <h1>Fase1</h1>
           <p>25 Febrero 2024</p>
           <p>2:00 pm</p>
-          <Link href="/src/app/organizador/campeonatos/cronogramas/page.jsx">
-            <div className="iconEditar">
+          <Link href={`${path}/cronogramas`} >
+          <div className="iconEditar">
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
@@ -50,8 +51,8 @@ export default function FasePrimera() {
             <p>25 Febrero 2024</p>
             <p>2:00 pm</p>
           </div>
-          <Link href="/src/app/organizador/campeonatos/cronogramas/page.jsx">
-            <div className="iconEditar1">
+          <Link href={`${path}/cronogramas`} >
+          <div className="iconEditar1">
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
@@ -89,8 +90,8 @@ export default function FasePrimera() {
             <p>25 Febrero 2024</p>
             <p>2:00 pm</p>
           </div>
-          <Link href="/src/app/organizador/campeonatos/cronogramas/page.jsx">
-            <div className="iconEditar1">
+          <Link href={`${path}/cronogramas`} >
+          <div className="iconEditar1">
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
@@ -128,8 +129,8 @@ export default function FasePrimera() {
             <p>25 Febrero 2024</p>
             <p>2:00 pm</p>
           </div>
-          <Link href="/src/app/organizador/campeonatos/cronogramas/page.jsx">
-            <div className="iconEditar1">
+          <Link href={`${path}/cronogramas`} >
+          <div className="iconEditar1">
               <Image src="/images/imgFases/edit.png" width={17} height={17} />
             </div>
           </Link>
