@@ -1,7 +1,5 @@
 "use client"
 import React from 'react'
-
-import RootLayout from '@/app/layout'
 import "../../../../styles/styleCronograma/Cronograma.css"
 import Tarde from './tarde/page'
 import Manana from './manana/page'
@@ -15,8 +13,8 @@ export default function Cronograma() {
     setSelectOption(event.target.value)
         }
   return (
-    <RootLayout>
-
+    
+<>
       <SideBarCampeonato></SideBarCampeonato>
       <div class="ContainerPrincipal">
         <div class="contenedorCronograma">
@@ -32,7 +30,7 @@ export default function Cronograma() {
       
         </div>
 
-    </RootLayout>
+    </>
   )
 }
 

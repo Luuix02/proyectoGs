@@ -1,5 +1,5 @@
 "use client"
-import AsideBar from "@/Components/sideBar";
+
 import RootLayout from "@/app/layout";
 import {useState} from 'react'
 import "../../../styles/styleCrearCampeonato/crearcampeonato.css"
@@ -21,9 +21,9 @@ export default function CrearCampeonato() {
   
   return (
     <>
-    <RootLayout>
 
-      <AsideBar />
+
+    
       <div class="contenedor2">
 
       <div class="MuestraDeConfirmacion" active>
@@ -121,7 +121,6 @@ export default function CrearCampeonato() {
       </div>
 
 
-    </RootLayout>
     </>
   )
 }

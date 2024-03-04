@@ -23,7 +23,7 @@ export default function CardsEquipos() {
           <p class="nombreEquipoCard">Equipo 1</p>
 
           <button
-            onClick={handleVerIntegrantes}
+            // onClick={handleVerIntegrantes}
             class="botonVerIntegrantesCard"
           >
             Ver integrantes
@@ -44,7 +44,7 @@ export default function CardsEquipos() {
           <p class="nombreEquipoCard">Equipo 2</p>
 
           <button
-            onClick={handleVerIntegrantes}
+            // onClick={handleVerIntegrantes}
             class="botonVerIntegrantesCard"
           >
             Ver integrantes
@@ -65,7 +65,7 @@ export default function CardsEquipos() {
           <p class="nombreEquipoCard">Equipo 3</p>
 
           <button
-            onClick={handleVerIntegrantes}
+            // onClick={handleVerIntegrantes}
             class="botonVerIntegrantesCard"
           >
             Ver integrantes
@@ -86,7 +86,7 @@ export default function CardsEquipos() {
           <p class="nombreEquipoCard">Equipo 4</p>
 
           <button
-            onClick={handleVerIntegrantes}
+            // onClick={handleVerIntegrantes}
             class="botonVerIntegrantesCard"
           >
             Ver integrantes
