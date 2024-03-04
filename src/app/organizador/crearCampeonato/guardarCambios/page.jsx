@@ -4,17 +4,18 @@ export default function Guardar() {
   
   const path ='/organizador';
   return (  
-    <div class="MuestraDeConfirmacion" active>
+    <div class="MuestraDeConfirmacion" >
     <div class="contendorConfirmacionCambios" >
       <p class="textoConfirmacion">¿Desea confirmar los cambios?</p>
         <div class="AlineacionBotonesConfirmacion">
             
-              <Link class="BotonesConfirmacion" href={`${path}/campeonatos`}><button class="">Aceptar</button> </Link>
+              <Link  href={`${path}/campeonatos`} class="BotonesConfirmacion">ddds </Link>
               
             
-            <Link href={`${path}/crearCampeonatos`}> 
-            <button class="BotonesConfirmacion" >Cancelar
-            </button></Link>
+              <button class="BotonesConfirmacion" ><Link href={`${path}/campeonatos`}> 
+           Cancelar
+            </Link></button>
+            <li><Link href={`${path}/campeonatos`} class="BotonesConfirmacion">aceptar</Link></li>
         </div>
     </div>
     </div>
