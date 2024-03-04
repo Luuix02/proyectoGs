@@ -1,0 +1,116 @@
+html {
+    background-image: url('https://as01.epimg.net/masdeporte/imagenes/2021/08/18/reportajes/1629287252_471087_1632935001_noticiareportajes_grande.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.divpadre {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(116, 126, 137, 0.6);
+    width: 650px;
+    height: auto;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.titulo{
+    font-size: 26px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+h1, label, .registro {
+    color: rgb(7, 6, 6);
+    font-weight: bold;
+}
+.cuenta{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 80px;
+    color: rgb(0, 0, 0);
+
+}
+
+Select, Input {
+    color: rgb(70, 37, 37);
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #A1B9D1;
+}
+
+Select{
+    width: 428PX;
+    padding-left: 30px;
+}
+
+Input{
+    width: 400PX;
+
+}
+
+.divdatos {
+    width: 100%;
+}
+
+.divdatos form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.Botonregistros {
+    border-radius: 15px;
+    background-color: #C63F3F;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button{
+    font-weight: bold;
+}
+
+Input::placeholder, Select::placeholder {
+    color: #574545; 
+    padding-left: 25px;
+}
+
+@media (max-width: 1024px) {
+    .mayor {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .mayor {
+        width: 90%;
+    }
+
+    .divdatos form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .mayor {
+        width: 95%;
+    }
+
+    .divdatos form {
+        width: 95%;
+    }
+}
+
+.class{
+    background-color: #574545;
+}
