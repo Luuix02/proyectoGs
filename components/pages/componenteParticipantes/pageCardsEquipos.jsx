@@ -14,7 +14,7 @@ export default function CardsEquipos() {
         <div class="CardFigura">
           <div class="imagenEquipoCard">
             <Image
-              src="/images/imgFases/JUNIOR.jpg"
+              src="/images/imgFases/ESCUDO_JUNIOR.jpg"
               width={70}
               height={70}
               class="equipoLogoCard"
@@ -23,7 +23,7 @@ export default function CardsEquipos() {
           <p class="nombreEquipoCard">Equipo 1</p>
 
           <button
-            onClick={handleVerIntegrantes}
+            // onClick={handleVerIntegrantes}
             class="botonVerIntegrantesCard"
           >
             Ver integrantes
@@ -35,7 +35,7 @@ export default function CardsEquipos() {
         <div class="CardFigura">
           <div class="imagenEquipoCard">
             <Image
-              src="/images/imgFases/JUNIOR.jpg"
+              src="/images/imgFases/ESCUDO_JUNIOR.jpg"
               width={70}
               height={70}
               class="equipoLogoCard"
@@ -44,7 +44,7 @@ export default function CardsEquipos() {
           <p class="nombreEquipoCard">Equipo 2</p>
 
           <button
-            onClick={handleVerIntegrantes}
+            // onClick={handleVerIntegrantes}
             class="botonVerIntegrantesCard"
           >
             Ver integrantes
@@ -56,7 +56,7 @@ export default function CardsEquipos() {
         <div class="CardFigura">
           <div class="imagenEquipoCard">
             <Image
-              src="/images/imgFases/JUNIOR.jpg"
+              src="/images/imgFases/ESCUDO_JUNIOR.jpg"
               width={70}
               height={70}
               class="equipoLogoCard"
@@ -65,7 +65,7 @@ export default function CardsEquipos() {
           <p class="nombreEquipoCard">Equipo 3</p>
 
           <button
-            onClick={handleVerIntegrantes}
+            // onClick={handleVerIntegrantes}
             class="botonVerIntegrantesCard"
           >
             Ver integrantes
@@ -77,7 +77,7 @@ export default function CardsEquipos() {
         <div class="CardFigura">
           <div class="imagenEquipoCard">
             <Image
-              src="/images/imgFases/JUNIOR.jpg"
+              src="/images/imgFases/ESCUDO_JUNIOR.jpg"
               width={70}
               height={70}
               class="equipoLogoCard"
@@ -86,7 +86,7 @@ export default function CardsEquipos() {
           <p class="nombreEquipoCard">Equipo 4</p>
 
           <button
-            onClick={handleVerIntegrantes}
+            // onClick={handleVerIntegrantes}
             class="botonVerIntegrantesCard"
           >
             Ver integrantes

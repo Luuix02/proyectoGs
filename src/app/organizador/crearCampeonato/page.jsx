@@ -1,6 +1,10 @@
 "use client"
 
+<<<<<<< HEAD
 
+=======
+import RootLayout from "@/app/layout";
+>>>>>>> 02ef95f2aba1cfe17789c08f6e4d8a7cf609593d
 import {useState} from 'react'
 import "../../../styles/styleCrearCampeonato/crearcampeonato.css"
 import Calendarioo from './calendar/Calendario';
@@ -21,10 +25,19 @@ export default function CrearCampeonato() {
 
   return (
     <>
+<<<<<<< HEAD
    
       <div class="contenedor2" active>
 
     
+=======
+
+
+    
+      <div class="contenedor2">
+
+      <div class="MuestraDeConfirmacion" active>
+>>>>>>> 02ef95f2aba1cfe17789c08f6e4d8a7cf609593d
         {GuardarCambios === 'guardar' && <Guardar/>}
         
         <div class="contendorPrincipalFormulario">
