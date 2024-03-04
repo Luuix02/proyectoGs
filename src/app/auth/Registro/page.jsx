@@ -12,16 +12,16 @@ export default function Registro() {
 
       <div className='divdatos'>
         <form action="datos">
-          <label htmlFor="nombre">Nombres:</label>
+          <label htmlFor="nombre">Nombres</label>
           <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required />
 
-          <label htmlFor="apellidos">Apellidos:</label>
+          <label htmlFor="apellidos">Apellidos</label>
           <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" required />
 
-          <label htmlFor="telefono">Teléfono:</label>
+          <label htmlFor="telefono">Teléfono</label>
           <input className='la' type="tel" id="telefono" name="telefono" placeholder="ej:3163221523" required />
 
-          <label htmlFor="genero">Género:</label>
+          <label htmlFor="genero">Género</label>
           <select name="genero" id="genero" defaultValue="selecciona">
             <option value="selecciona" disabled>Selecciona</option>
             <option value="Femenino">Femenino</option>
@@ -30,7 +30,7 @@ export default function Registro() {
           </select>
 
           <br />
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email</label>
           <input type="email" id="email" name="email" placeholder="ej:pepito@gmail.com" required />
 
           <label htmlFor="password">Contraseña</label>
