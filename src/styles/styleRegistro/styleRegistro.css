@@ -41,7 +41,7 @@ Select, Input {
     color: rgb(70, 37, 37);
     margin: 10px 0;
     border: 2px solid black;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
     background-color: #A1B9D1;
 }
@@ -111,6 +111,3 @@ Input::placeholder, Select::placeholder {
     }
 }
 
-.class{
-    background-color: #574545;
-}

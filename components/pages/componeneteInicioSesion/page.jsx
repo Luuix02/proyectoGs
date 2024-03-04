@@ -2,7 +2,9 @@ import Link from 'next/link';
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
 
 export default function InicioSesion() {
+    const path = '/auth';
     return (
+        <html className='html_iniciarsesion'>
         <div className='contenedorPrincipal'>
             <h1 className='tituloPrincipal'>Inicio de Sesión</h1>
             <br /> <br />
@@ -21,12 +23,13 @@ export default function InicioSesion() {
                     <button className='botonInicioSesion'>Iniciar Sesión</button>
 
                     <h1 className='tituloPrincipal'>¿No tienes cuenta? <br />
-                        <Link href="/auth/registro">Regístrate</Link>
+                        <Link href={`${path}/Registro`}>Regístrate</Link>
                     </h1>
 
 
                 </form>
             </div>
-        </div>
+            </div>
+        </html>
     );
 }
