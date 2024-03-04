@@ -4,7 +4,7 @@
   margin: auto;
 }
 .contenedor2:active{
-    backdrop-filter: blur(10px);
+    /*backdrop-filter: blur(10px);*/
 }
 
 .textDeCrearCampeonato { 
@@ -151,8 +151,7 @@ legend {
 
 
 
-option,
-select {
+option,select {
     color: rgb(255, 255, 255);
     background-color: #f75e59;
 }
@@ -202,9 +201,9 @@ input[type="number"]::-webkit-inner-spin-button {
     position: static;
 }
 
-input[type="number"] {
+/*input[type="number"] {
     -moz-appearance: static;
-}
+}*/
 
 /* Estilo para el control de número */
 input[type="number"] {
