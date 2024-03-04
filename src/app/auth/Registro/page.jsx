@@ -37,9 +37,11 @@ export default function Registro() {
           <label htmlFor="confirmar-password">Confirmar Contraseña</label>
           <input type="password" id="confirmar-password" name="confirmar-password" placeholder="***********" required />
 
-          <div className='divre'>
-            <button type="submit" className='Botonregistros'>Registrarse</button>
-          </div>
+          
+          <Link href="/Registro/cuenta">
+          <button className='Botonregistros'>Registrarse</button>
+          </Link>
+          
           <h1 className='cuenta'>¿Ya tienes cuenta? <Link href="/inicioSesion">inicia sesion</Link>
           </h1> 
         </form>
