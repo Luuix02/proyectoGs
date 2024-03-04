@@ -4,8 +4,8 @@ export default function CardCampeonato() {
   return (
     <article className="descripcion ">
               <div className="texto">
-                  <h1 className="titulo">Torneo del Ascenso Dorado</h1>
-                  <p className="text-xl">El torneo del Ascenso Dorado
+                  <h1 className="tituloTorneo">Torneo del Ascenso Dorado</h1>
+                  <p className="text">El torneo del Ascenso Dorado
                       no es solo un torneo;es una
                       oportunidad para elevarse
                       por encima de las adversidades,
@@ -23,7 +23,7 @@ export default function CardCampeonato() {
                   <p className="">Fecha de inicio:   15/01/2024</p>
                   <p className="">Fecha de finalizacion:   12/02/2024</p>
 
-                  <Link href='/inicioSesion/organizador/campeonatos/estadisticas/tarde'
+                  <Link href='campeonatos/estadisticas/tarde'
                       className="editar">Editar</Link>
               </div>
           </article>

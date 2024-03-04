@@ -15,12 +15,15 @@ export default function CampeonatosDisponibles() {
         No olvides que cada torneo es una oportunidad para demostrar 
         tu habilidad en la cancha. ¡Éxito!”
         </h1>
-        <h1 className='tituloCam'>Camponatos Disponibles</h1>
+        <h1 className='tituloCam'>Campeonatos Disponibles</h1>
        <article className='contenedorCards'>
         <CardCampeonato/>
         <CardCampeonato/>
-       </article>
-    </section>
+        </article>
+      </section>
+      <Link href={'/auth/inicioSesion'} className='salir'>
+        <Image src={'/images/iconosSide/salir.png'} width={50} height={50}/>
+      </Link>
     </>
   )
 }
