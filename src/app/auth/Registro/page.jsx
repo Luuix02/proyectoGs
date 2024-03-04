@@ -33,10 +33,10 @@ export default function Registro() {
           <label htmlFor="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="ej:pepito@gmail.com" required />
 
-          <label htmlFor="password">Contraseña:</label>
+          <label htmlFor="password">Contraseña</label>
           <input type="password" id="password" name="password" placeholder="***********" required />
 
-          <label htmlFor="confirmar-password">Confirmar Contraseña:</label>
+          <label htmlFor="confirmar-password">Confirmar contraseña:</label>
           <input type="password" id="confirmar-password" name="confirmar-password" placeholder="***********" required />
 
           <Link href={`${path}/inicioSesion`}>
