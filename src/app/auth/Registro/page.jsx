@@ -3,7 +3,8 @@ import Link from 'next/link';
 import '../../../styles/styleRegistro/styleRegistro.css';
 
 export default function Registro() {
-  const path = '/auth'
+  const path = '/auth';
+  
   return (
     <div className='mayor class'>
       <h1 className='titulo'>Regístrate en GoSport</h1>
@@ -38,12 +39,11 @@ export default function Registro() {
           <label htmlFor="confirmar-password">Confirmar Contraseña:</label>
           <input type="password" id="confirmar-password" name="confirmar-password" placeholder="***********" required />
 
-          <Link href="/inicioSesion">
+          <Link href={`${path}/inicioSesion`}>
             <button className='Botonregistros'>Registrarse</button>
           </Link>
 
-          <p className='cuenta'>¿Ya tienes cuenta? <Link href = {`${path}/inicioSesion`}>Inicia sesión</Link>
-           </p>
+          <p className='cuenta'>¿Ya tienes cuenta? <Link href={`${path}/inicioSesion`}>Inicia sesión</Link></p>
         </form>
       </div>
     </div>
