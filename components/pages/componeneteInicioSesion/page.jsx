@@ -26,7 +26,6 @@ export default function InicioSesion() {
                         <Link href={`${path}/Registro`}>Regístrate</Link>
                     </h1>
 
-
                 </form>
             </div>
             </div>
