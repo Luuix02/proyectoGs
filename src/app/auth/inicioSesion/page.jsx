@@ -3,7 +3,7 @@ import InicioSesion from "../../../../components/pages/componeneteInicioSesion/p
 export default function Iniciar() {
     return (
         <>
-           <InicioSesion></InicioSesion>
+           <InicioSesion />
 
         </>
 
