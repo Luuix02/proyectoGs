@@ -5,12 +5,12 @@ export default function ComponenteCronograma({ texto1, texto2 }) {
     return (
         <div class="contenedorCard">
             <section class="seccion1">
-                <span class="equipos">
+                <span class="ImagenesTexto">
                     <Image src="/image/Cronogramas/EscudoNacional.png" width={40} height={50} />
-                    <p>{texto1}</p>
-                </span>
-                <span class="equipos">
                     <Image src="/image/Cronogramas/escudo.png" width={40} height={50} />
+                </span>
+                <span class="ImagenesTexto">
+                    <p>{texto1}</p>
                     <p>{texto2}</p>
                 </span>
             </section>

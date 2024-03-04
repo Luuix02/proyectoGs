@@ -1,9 +1,9 @@
 "use client"
-import AsideBar from "@/Components/sideBar";
-import RootLayout from "@/app/layout";
+
+
 import {useState} from 'react'
 import "../../../styles/styleCrearCampeonato/crearcampeonato.css"
-import Calendarioo from "./calendar/Calendario";
+import Calendarioo from './calendar/Calendario';
 import Boton from "../../../../components/pages/CrearCampeonato/Boton";
 import Guardar from "./guardarCambios/page";
 
@@ -11,24 +11,22 @@ export default function CrearCampeonato() {
   const [BotonVer, setBotonVer] = useState('crearCampeonato')
 
   const handleClickAbrir = () =>{
-    setBotonVer(BotonVer === 'crearCampeonato' ? 'calendar' : 'crearCampeonato');
+    setBotonVer(BotonVer == 'crearCampeonato' ? 'calendar' : 'crearCampeonato');
   }
 
   const[GuardarCambios, setGuardarCambios] = useState('crearCampeonato')
   const handleGuardar = () =>{
-    setGuardarCambios(GuardarCambios==='crearCampeonato'? 'guardar': 'guardar');
+    setGuardarCambios(GuardarCambios==='crearCampeonato'? 'guardar': 'crearCampeonato');
   }
-  
+
   return (
     <>
-    <RootLayout>
+   
+      <div class="contenedor2" active>
 
-      <AsideBar />
-      <div class="contenedor2">
-
-      <div class="MuestraDeConfirmacion" active>
+    
         {GuardarCambios === 'guardar' && <Guardar/>}
-        </div>
+        
         <div class="contendorPrincipalFormulario">
           <p class="textDeCrearCampeonato">Crea tu campeonato</p>
           <form class="Formulario">
@@ -47,7 +45,7 @@ export default function CrearCampeonato() {
               <div className="selectores">
                 <p>Disciplina</p>
                 <select  >
-                  <option class="opcionesSelector" selected disabled hidden value="">Seleccione</option>
+                  <option selected disabled hidden value="">Seleccione</option>
                   <option >Futbol</option>
                   <option>Futbol sala</option>
                   <option>Microfutbol</option>
@@ -56,7 +54,7 @@ export default function CrearCampeonato() {
               <div className="selectores">
                 <p>Categoria</p>
                 <select  >
-                  <option class="opcionesSelector" selected disabled hidden value="">Seleccione</option>
+                  <option selected disabled hidden value="">Seleccione</option>
                   <option>Femenino</option>
                   <option>Masculino</option>
                   <option>Mixto</option>
@@ -65,7 +63,7 @@ export default function CrearCampeonato() {
               <div className="selectores">
                 <p>Modalidad</p>
                 <select  >
-                  <option class="opcionesSelector" selected disabled hidden value="">Seleccione</option>
+                  <option selected disabled hidden value="">Seleccione</option>
                   <option>Interfichas</option>
                   <option>Relampago</option>
                 </select>
@@ -87,13 +85,13 @@ export default function CrearCampeonato() {
               </fieldset>
             </div>
               <div class="diasDefinidos">
-                <p>Dias definidos</p>
-                <button  > <svg value={setBotonVer} onClick={handleClickAbrir}class="botonVerCalendario" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" 
+                <p class="textoDiasDefinidos">Dias definidos</p>
+                 <svg value={setBotonVer} onClick={handleClickAbrir}class="botonVerCalendario" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" 
                 hover="red"
-                stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M12 18c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /><path d="M19.001 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M19.001 15.5v1.5" /><path d="M19.001 21v1.5" /><path d="M22.032 17.25l-1.299 .75" /><path d="M17.27 20l-1.3 .75" /><path d="M15.97 17.25l1.3 .75" /><path d="M20.733 20l1.3 .75" /></svg></button>
+                stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M12 18c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /><path d="M19.001 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M19.001 15.5v1.5" /><path d="M19.001 21v1.5" /><path d="M22.032 17.25l-1.299 .75" /><path d="M17.27 20l-1.3 .75" /><path d="M15.97 17.25l1.3 .75" /><path d="M20.733 20l1.3 .75" /></svg>
               </div>
               <div class="EspacioCalendario">
-                {BotonVer === 'calendar' &&<Calendarioo/> }
+                {BotonVer === 'calendar' && <Calendarioo/> }
                 </div>
             <div class="AlineacionDeMinYMax">
             <div class="selectores" >
@@ -121,7 +119,6 @@ export default function CrearCampeonato() {
       </div>
 
 
-    </RootLayout>
     </>
   )
 }
