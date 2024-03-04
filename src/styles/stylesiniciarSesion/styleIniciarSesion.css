@@ -1,0 +1,70 @@
+body {
+    background-image: url('../../../public/images/iniciarSesion/fondoIniciar.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.contenedorPrincipal {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(116, 126, 137, 0.6);
+    width: 650px;
+    height: auto;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedorDatos form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campoDato {
+    margin: 15px;
+    width: 280px;
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 30px;
+}
+
+.campoContraseña {
+    margin: 15px;
+    width: 280px;
+    height: 30px;
+    border-radius: 20px;
+    padding-left: 30px;
+}
+
+.enlaceOlvido {
+    font-size: 16px;
+}
+
+.botonInicioSesion {
+    border-radius: 20px;
+    background-color: #C63F3F;
+    height: 30px;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    margin: 15px;
+    padding-left: 30px;
+}
+
+.tituloPrincipal {
+    font-size: 16px;
+    text-align: center;
+}
+
+.etiquetaDato,
+.campoDato,
+.tituloPrincipal,
+.botonInicioSesion,
+.enlaceOlvido {
+    font-weight: bold;
+}
