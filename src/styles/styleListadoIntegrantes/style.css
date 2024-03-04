@@ -1,7 +1,11 @@
+.contenedorVerListadoIntegrantes{
+  z-index: 10;
+}
 .contenedorIntegrantesEqCard {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .integrante {
