@@ -1,6 +1,8 @@
 .ContainerPrincipal{
-    width:100%;
-    overflow-y: auto;
+    margin: auto;
+    width:90%;
+    margin-right: 0px;
+
 
 }
 .contenedorDeTextoJornada{
@@ -20,7 +22,7 @@
     padding: 15px;
     /* margin: auto;
     width: auto; */
-    background-color: rgba(116,126,137,0.3);
+    background-color: rgba(116, 126, 137, 0.233);
 }
 /* module.css */
 
@@ -38,7 +40,7 @@
     font-size: 25px;
     font-family: bold;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .contenedorCard{
@@ -60,16 +62,17 @@
     height: 100%;
     display: flex;
     gap: 10px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
 }
 
-.equipos{
+.ImagenesTexto{
     width: 100%;
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
     justify-content: center;
 

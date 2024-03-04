@@ -1,12 +1,10 @@
-.bodyIniciarSesion{
-background-image: url('../../../public/images/iniciarSesion/fondoIniciar.jpeg');
+.html_iniciarsesion {
+    background-image: url('../../../public/images/iniciarSesion/fondoIniciar.jpeg');
+    background-size: 100%;
     background-repeat: no-repeat;
-    width: 100%;
-        height: 100%;
 }
 
-.contenedorPrincipalInicioSesion {
-    
+.contenedorPrincipal {
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;

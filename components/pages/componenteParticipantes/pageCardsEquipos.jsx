@@ -25,7 +25,7 @@ return(
         <div class="CardFigura">
           <div class="imagenEquipoCard">
             <Image
-              src="/images/imgFases/JUNIOR.jpg"
+              src="/images/imgFases/ESCUDO_JUNIOR.jpg"
               width={70}
               height={70}
               class="equipoLogoCard"
@@ -46,7 +46,7 @@ return(
         <div class="CardFigura">
           <div class="imagenEquipoCard">
             <Image
-              src="/images/imgFases/JUNIOR.jpg"
+              src="/images/imgFases/ESCUDO_JUNIOR.jpg"
               width={70}
               height={70}
               class="equipoLogoCard"
@@ -67,7 +67,7 @@ return(
         <div class="CardFigura">
           <div class="imagenEquipoCard">
             <Image
-              src="/images/imgFases/JUNIOR.jpg"
+              src="/images/imgFases/ESCUDO_JUNIOR.jpg"
               width={70}
               height={70}
               class="equipoLogoCard"
@@ -88,7 +88,7 @@ return(
         <div class="CardFigura">
           <div class="imagenEquipoCard">
             <Image
-              src="/images/imgFases/JUNIOR.jpg"
+              src="/images/imgFases/ESCUDO_JUNIOR.jpg"
               width={70}
               height={70}
               class="equipoLogoCard"

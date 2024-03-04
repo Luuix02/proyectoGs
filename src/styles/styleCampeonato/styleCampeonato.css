@@ -1,6 +1,6 @@
 .contnidoCampeonatos {
 
-    background-color: rgba(116, 126, 137, 0.3);
+    background-color: rgba(126, 126, 126, 0.5);
     width: max-content;
     border-radius: 15px;
     margin-top: 20px;
@@ -8,7 +8,7 @@
     padding: 10px;
     border: 1px solid white;
     margin-left: 180px;
-    height:max-content;
+    height:95vh;
 }
 
 .textoE{
@@ -70,7 +70,7 @@
     margin: 0%;
 }
 
-.titulo{
+.tituloTorneo{
     font-size: large;
     margin: 0%;
 }

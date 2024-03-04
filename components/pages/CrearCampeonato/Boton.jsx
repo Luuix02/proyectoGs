@@ -2,11 +2,6 @@ export default function Boton ({fechaText}) {
     return (
         <div className="selectores">
             <p>{fechaText}</p>
-            <button>
-                <span className="botonCalendar">
-                    {/* <p className="fechas">
-                        dd/mm/aaaa
-                    </p> */}
                     <input  type="date" class="InputDeFechas">
                     {/* <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-calendar-month" width="24" height="24" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -23,8 +18,6 @@ export default function Boton ({fechaText}) {
                         <path d="M10.01 17h.005" />
                     </svg> */}
                     </input>
-                </span>
-            </button>
         </div>
     )
 }
