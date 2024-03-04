@@ -3,9 +3,6 @@
     padding: 10px;
   margin: auto;
 }
-.contenedor2:active{
-    /*backdrop-filter: blur(10px);*/
-}
 
 .textDeCrearCampeonato { 
     margin: 20px;
@@ -288,6 +285,7 @@ input[type="number"]:focus {
     width: auto;
 }
 .contendorConfirmacionCambios{
+    
     background-color: white;
     color: black;
     border-radius: 15px;
@@ -326,7 +324,10 @@ input[type="number"]:focus {
     border: 1px solid white;
 }
 .MuestraDeConfirmacion{
-    
+
+    z-index: 10;
+    background-color: #c5c2c2;
+    opacity: 0.5;
     position: absolute;
     width: 100vw;
     height: 100vh;

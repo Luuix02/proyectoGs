@@ -8,14 +8,14 @@ export default function Guardar() {
     <div class="contendorConfirmacionCambios" >
       <p class="textoConfirmacion">¿Desea confirmar los cambios?</p>
         <div class="AlineacionBotonesConfirmacion">
-            
-              <Link  href={`${path}/campeonatos`} class="BotonesConfirmacion">ddds </Link>
-              
-            
               <button class="BotonesConfirmacion" ><Link href={`${path}/campeonatos`}> 
+           Aceptar
+            </Link></button>
+
+            <button class="BotonesConfirmacion" ><Link href={`${path}/crearCampeonato`}> 
            Cancelar
             </Link></button>
-            <li><Link href={`${path}/campeonatos`} class="BotonesConfirmacion">aceptar</Link></li>
+           
         </div>
     </div>
     </div>
