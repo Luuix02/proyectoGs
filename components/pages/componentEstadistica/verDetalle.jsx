@@ -8,14 +8,14 @@ export default function Detalle() {
         <section className='contenedorDetalle'>
           <div className='contenedorEquipo'>
 
-            <Image src="/images/imageEstadistica/nacional.png" width={500} height={500} className='imageEquipo' />
+            <Image src="/images/imageEstadistica/nacional.png" width={300} height={300} className='imageEquipo' />
             <h1 className='nombreEquipo'>Nacional</h1>
             <div className='contenedorFaltas'>
               <table>
                 <tr className='columnas'>
                   <th><div className='falta amarilla'> </div></th>
                   <th><div className='falta roja'> </div></th>
-                  <th><Image src='/images/imageEstadistica/balon.png' width={55} height={55} /></th>
+                  <th><Image src='/images/imageEstadistica/balon.png' width={30} height={30} /></th>
                 </tr>
               </table>
             </div>
@@ -27,14 +27,14 @@ export default function Detalle() {
           </div>
           <div className='contenedorEquipo'>
 
-            <Image src="/images/imageEstadistica/MILONARIOS.png" width={500} height={500} className='imageEquipo' />
+            <Image src="/images/imageEstadistica/MILONARIOS.png" width={300} height={300} className='imageEquipo' />
             <h1 className='nombreEquipo'>Millonarios</h1>
             <div className='contenedorFaltas'>
               <table>
                 <tr className='columnas'>
                   <th><div className='falta amarilla'> </div></th>
                   <th><div className='falta roja'> </div></th>
-                  <th><Image src='/images/imageEstadistica/balon.png' width={55} height={50} /></th>
+                  <th><Image src='/images/imageEstadistica/balon.png' width={30} height={30} /></th>
                 </tr>
 </table>
 

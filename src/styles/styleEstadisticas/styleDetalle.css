@@ -32,10 +32,12 @@ font-weight: bolder;
 }.marcador{
     display: flex;
     border: 0px;
+    margin: 10%;
 }
 .numeroMarcador{
     font-size:100px;
     font-weight:bolder;
+    color: #ffffff;
 }
 .amarilla{
     background-color: rgb(255, 251, 8);

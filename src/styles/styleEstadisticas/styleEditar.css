@@ -1,4 +1,4 @@
-.contenedorPrincipal{
+.contenedorPrincipal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,4 +40,8 @@
         display: flex;
         gap: 40px;
         margin-left: 40%;
+    }
+    .cronometro .numero .botones{
+        margin-top: 5%;
+    
     }
