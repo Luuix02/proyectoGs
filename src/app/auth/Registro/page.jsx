@@ -29,6 +29,10 @@ export default function Registro() {
             <option value="Prefiero no decirlo">Prefiero no decirlo</option>
           </select>
 
+          <label htmlFor="ficha">N° Ficha</label>
+          <input className='la' type="  tel" id="ficha" name="ficha" placeholder="ej:2669739" required />
+
+
           <br />
           <label htmlFor="email">Email</label>
           <input type="email" id="email" name="email" placeholder="ej:pepito@gmail.com" required />

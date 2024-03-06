@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import '@/styles/styleEstadisticas/styleDetalle.css'
+
 export default function Detalle() {
   return (
       <>
@@ -37,7 +38,6 @@ export default function Detalle() {
                   <th><Image src='/images/imageEstadistica/balon.png' width={30} height={30} /></th>
                 </tr>
 </table>
-
 
             </div>
           </div>

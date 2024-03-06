@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import '@/styles/styleEstadisticas/styleEditar.css'
 
+
 export default function EditarPartido() {
   const[seconds, setSeconds]=useState(0)
   useEffect(()=>{
@@ -45,6 +46,7 @@ setSeconds(seconds+1)
                   <th><Image src='/images/imageEstadistica/balon.png' width={30} height={30} /></th>
                 </tr>
 </table>
+
 
 
             </div>
