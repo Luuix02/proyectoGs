@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import '@/styles/styleEstadisticas/styleEditar.css'
-import Integrantes from './integrantes'
+
 
 export default function EditarPartido() {
   const[seconds, setSeconds]=useState(0)
@@ -47,7 +47,7 @@ setSeconds(seconds+1)
                 </tr>
 </table>
 
-<Integrantes/>
+
 
             </div>
             </div>
