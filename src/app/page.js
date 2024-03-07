@@ -37,14 +37,10 @@ export default function Home() {
           tus ideas y convertir tus campeonatos en experiencias inolvidables.
           ¿Por qué unirte a nosotros? Aquí tienes algunas razones irresistibles:
         </p>
+
       </section >
       <Cards />
-      <div class="boton-footer" >
-        <p>¡Inicia sesión ahora y sé parte de la revolución en la organización de campeonatos!</p>
-        <div>
-          <button type="submit">Iniciar Secion</button>
-        </div>
-      </div>
+
       <section class="section-player">
         <h2 class="title">PARA JUGADORES</h2>
 

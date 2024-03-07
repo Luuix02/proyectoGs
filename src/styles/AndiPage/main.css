@@ -23,6 +23,7 @@
     font-size: 25px;
     margin-right: 50px;
 
+
 }
 
 
@@ -40,14 +41,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
 .photo img {
-    overflow: hidden;
+    object-fit: cover;
     width: 795px;
     height: 500px;
 
 }
+
+
 
 .section-2 {
     display: flex;
@@ -95,7 +101,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.55);
-    width: 88.8%;
+    width: 85%;
     padding-top: 50px;
     padding-bottom: 40px;
 
@@ -124,9 +130,9 @@
     justify-content: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.55);
-    width: 85%;
     margin-top: 30px;
     padding: 35px;
+    width: 85%;
 }
 
 .section-3 {
