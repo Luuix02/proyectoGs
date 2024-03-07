@@ -63,7 +63,7 @@ export default function InicioSesion() {
                             value={password}
                         />
 
-                    <h1 className='enlaceOlvido'>Olvidé mi contraseña</h1>
+                        <Link href={`${path}/recuperarContrasena`}>Olvido contraseña</Link>
 
                     <br />
                         <button className='botonInicioSesion'
