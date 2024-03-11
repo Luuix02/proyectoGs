@@ -63,7 +63,7 @@ export default function InicioSesion() {
                             value={password}
                         />
 
-                    <h1 className='enlaceOlvido'>Olvidé mi contraseña</h1>
+                        <Link href={`${path}/recuperarContrasena`}>Olvido contraseña</Link>
 
                     <br />
                         <button className='botonInicioSesion'
@@ -72,7 +72,7 @@ export default function InicioSesion() {
                         >Iniciar Sesión</button>
 
                     <h1 className='tituloPrincipal'>¿No tienes cuenta? <br />
-                        <Link href={`${path}/Registro`}>Regístrate</Link>
+                        <Link href={`${path}/registro`}>Regístrate</Link>
                     </h1>
 
                 </form>

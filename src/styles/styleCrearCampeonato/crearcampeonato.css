@@ -285,14 +285,13 @@ input[type="number"]:focus {
     width: auto;
 }
 .contendorConfirmacionCambios{
-    
     background-color: white;
     color: black;
     border-radius: 15px;
     border: 1px solid red;
     padding: 15px;
     width: 30%;
-    z-index: 10;
+    z-index: 100%;
 }
 .textoConfirmacion{
     text-align: center;
@@ -324,10 +323,9 @@ input[type="number"]:focus {
     border: 1px solid white;
 }
 .MuestraDeConfirmacion{
-
-    z-index: 10;
-    background-color: #c5c2c2;
-    opacity: 0.5;
+    z-index: 5;
+    background-color: #00000042;
+    /* opacity: 0.5; */
     position: absolute;
     width: 100vw;
     height: 100vh;
