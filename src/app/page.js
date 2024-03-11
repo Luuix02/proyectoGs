@@ -1,4 +1,5 @@
 
+
 import Cards from "../../components/pages/Card";
 
 import Header from "../../components/pages/Navbar";
@@ -107,3 +108,4 @@ export default function Home() {
  
   );
 }
+

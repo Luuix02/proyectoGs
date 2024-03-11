@@ -1,4 +1,4 @@
-html {
+.dar{
     background-image: url('https://as01.epimg.net/masdeporte/imagenes/2021/08/18/reportajes/1629287252_471087_1632935001_noticiareportajes_grande.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,8 +31,8 @@ h1, label, .registro {
 }
 .cuenta{
     font-weight: bold;
-    font-size: 25px;
-    margin-top: 80px;
+    font-size: 15px;
+    margin-top:auto;
     color: rgb(0, 0, 0);
 
 }
@@ -84,6 +84,14 @@ Input::placeholder, Select::placeholder {
     color: #574545; 
     padding-left: 25px;
 }
+
+.parairaotrapagina{
+    color: black;
+    font-size: 15px;
+}
+
+
+
 
 @media (max-width: 1024px) {
     .mayor {
