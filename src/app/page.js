@@ -1,13 +1,15 @@
 
+
 import Cards from "../../components/pages/Card";
 
 import Header from "../../components/pages/Navbar";
 import Subcard from "../../components/pages/Subcard";
-
+import "./page.module.css";
 
 export default function Home() {
   return (
-    <>
+    
+    <body className="bodyLandingPage">
       <div class="Conten">
         <Header />
 
@@ -102,6 +104,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </body>
+ 
   );
 }
+

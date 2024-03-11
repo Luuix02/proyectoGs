@@ -3,7 +3,7 @@ import Image from 'next/image'
 import '../../../src/styles/styleSidebar/styleSidebar.css'
 
 export default function SideBarPrincipal() {
-    const path = 'organizador'
+   
     const pathImg = '/images/IconosSide'
   return (
     <aside className="barraLateral">
@@ -26,7 +26,7 @@ export default function SideBarPrincipal() {
           </li>
           <li className='contenedor'>
             <Image src={`${pathImg}/salir.png`} width={35} height={35}></Image>
-            <Link href={`/inicioSesion`} className='li'>Salir</Link>
+          <Link href={`/`} className='li'>Salir</Link>
           </li >
           </ul>
       </aside>
