@@ -1,6 +1,7 @@
-import './layout.css'
+
 import "./globals.css";
 import '../styles/AndiPage/main.css'
+import './index.css'
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -10,7 +11,7 @@ import '../styles/AndiPage/main.css'
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className='layout'>{children}</body>
+      <body class='layout'>{children}</body>
     </html>
   );
 }
