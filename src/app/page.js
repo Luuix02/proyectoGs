@@ -1,10 +1,11 @@
 
+
 import Cards from "../../components/pages/Card";
 import Footer from "../../components/pages/FooterAndi";
 
 import Header from "../../components/pages/Navbar";
-import Subcard from "../../components/pages/Subcard";
-
+// import Subcard from "../../components/pages/Subcard";
+import "./page.module.css";
 
 export default function Home() {
   return (
@@ -114,3 +115,4 @@ export default function Home() {
     </>
   );
 }
+

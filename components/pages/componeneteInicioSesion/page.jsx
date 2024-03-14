@@ -72,7 +72,7 @@ export default function InicioSesion() {
                         >Iniciar Sesión</button>
 
                     <h1 className='tituloPrincipal'>¿No tienes cuenta? <br />
-                        <Link href={`${path}/Registro`}>Regístrate</Link>
+                        <Link href={`${path}/registro`}>Regístrate</Link>
                     </h1>
 
                 </form>
