@@ -6,7 +6,7 @@ export default function Registro() {
   const path = '/auth';
 
   return (
-    <body className='dar'>
+    <body className='FONDO  '>
 
 
       <div className='mayor class'>

@@ -1,7 +1,7 @@
-.dar{
+.FONDO{
     background-image: url('https://as01.epimg.net/masdeporte/imagenes/2021/08/18/reportajes/1629287252_471087_1632935001_noticiareportajes_grande.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
 }
 
 .divpadre {
