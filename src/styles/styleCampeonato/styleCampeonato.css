@@ -1,14 +1,16 @@
-.contnidoCampeonatos {
 
+.contenedorPageCampeonatos{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
     
+}
+.contnidoCampeonatos {    
     width: 100%;
     border-radius: 15px;
-    margin-top: 20px;
-    max-height: max-content;
     padding: 10px;
-    border: 1px solid white;
-    margin-left: 180px;
-    height:95vh;
+    border: 1px  rgb(0, 0, 0);
+   
 }
 
 .textoE{
@@ -19,6 +21,7 @@
 .cardCampeonato{
     display: flex;
     gap: 20px;
+    
 }
 
 .imagen{
@@ -31,11 +34,12 @@
 .descripcion{
     display: flex;
     gap: 20px;
-    border: 1px solid;
     margin: 15px;
     padding: 15px;
     border-radius: 10px;
     width: max-content;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 5px 0.1px rgba(79, 80, 82, 0.3);
 }
 .texto{
     width: 220px;

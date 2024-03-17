@@ -2,10 +2,13 @@ import Link from "next/link";
 import '../../../src/styles/styleCampeonato/styleCampeonato.css';
 import Image from "next/image";
 import CardCampeonato from "./cardCampeonato";
-import '../../../src/app/globals.css'
+import SideBarPrincipal from "../../common/sidebar/page";
+import RootLayout from "@/app/layout";
 export default function Campeonatos() {
   return (
-    <section className="contnidoCampeonatos fondoApp">
+    <article className="contenedorPageCampeonatos">
+    <SideBarPrincipal/>
+    <section className="contnidoCampeonatos">
           <article className="cardCampeonato">
               <Image src={'/logo.png'} width={150} height={150}></Image>
               <h1 className="w-96 text-2xl">¡Bienvenido a <p className="textoE">GoSport</p>
@@ -18,5 +21,7 @@ export default function Campeonatos() {
           </article>
 
       </section>
+    </article>
   )
 }
+  

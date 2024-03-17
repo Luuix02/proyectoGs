@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import '../../../src/styles/styleFotos/fotos.css'
+import SideBarPrincipal from '../../common/sidebar/page'
 export default function Fotos() {
   return (
-    <section className="body">
+    <article className='contenedorPageFotos' >
+      <SideBarPrincipal/>
+    <section className="body ">
     <h1 className="textI">Comparte tus mejores momentos deportivos</h1>
   <article className="contenedorF">
     <div className="column1">
@@ -16,5 +19,6 @@ export default function Fotos() {
   </article>
   <button className="boton">Publicar</button>
 </section>
+    </article>
   )
 }

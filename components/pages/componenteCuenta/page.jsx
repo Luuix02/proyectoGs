@@ -1,8 +1,11 @@
 import React from 'react'
 import '../../../src/styles/stylePerfil/perfil.css'
 import Image from 'next/image'
+import SideBarPrincipal from '../../common/sidebar/page'
 export default function Perfil() {
   return (
+    <article className='contenedorPagePerfil'>
+      <SideBarPrincipal/>
     <section className="section">
     <h1 className="text-2xl font-bold">Editar Cuenta</h1>
     <hr />
@@ -37,6 +40,7 @@ export default function Perfil() {
       <button className="guardar">Guardar cambios</button>
     </form>
   </section>
+    </article>
   )
 }
 

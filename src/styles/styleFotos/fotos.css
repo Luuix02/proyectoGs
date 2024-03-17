@@ -1,23 +1,25 @@
-.principalFotos{
+.contenedorPageFotos{
     display: flex;
-    gap: 16px;
-}
-.body{
+    flex-direction: row;
+    gap: 60px;
     
-    background-color: rgba(116, 126, 137, 0.3);
-        width: 80%;
-       border-radius: 15px;
-        margin-top: 20px;
-        max-height: max-content;
-        padding: 10px;
-        margin-left:180px;  
-    }
+}
+.body{ 
+    width: 80%;
+    border-radius: 15px;
+    padding: 10px; 
+}
 .contenedorF{
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     padding: 40px;
     justify-content: center;
     align-items: center;
     gap: 25px;
+    margin-left:60vh ;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 0.1px rgba(79, 80, 82, 0.3);
 }
 
 .textI{
@@ -29,7 +31,6 @@
 .column1{
     width: 200px;
     padding: 20px;
-    box-shadow: 0px 3px 5px 0.1px rgba(79, 80, 82, 0.3);
     text-align: center;
 }
 

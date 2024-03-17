@@ -6,6 +6,10 @@ export default function SideBarCampeonato() {
     const pathImg = '/images/IconosSide'
   return (
       <aside className="barraLateral">
+        <div className='headerAsideCam'>
+      <Image src={`${pathImg}/menu.png`}className='imgHCam' width={35} height={35}></Image>
+      <h1 className='textHeaderCam'>Administrador</h1>
+      </div>
           <ul className="lista">
               <div className={`contenedor `}>
                   <Image src={`${pathImg}/estadistica.png`} className='img' width={35} height={35}></Image>
