@@ -8,6 +8,7 @@
   border-radius: 15px;
   padding: 10px;
   border: 1px rgb(0, 0, 0);
+  color: white;
 }
 
 .textoE {
@@ -53,10 +54,12 @@
   border-radius: 5px;
   color: rgb(15, 15, 15);
   font-size: large;
+  font-weight: bold;
 }
 .porciento {
   font-size: 20px;
   margin: 0%;
+  color: black;
 }
 .campeonatosDisponibles {
   display: grid;
@@ -75,4 +78,8 @@
 .tituloTorneo {
   font-size: large;
   margin: 0%;
+}
+
+a{
+  text-decoration: none;
 }

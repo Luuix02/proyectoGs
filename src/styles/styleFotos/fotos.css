@@ -8,10 +8,11 @@
     width: 80%;
     border-radius: 15px;
     padding: 10px; 
+    color: white;
 }
 .contenedorF{
     width: max-content;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(204, 204, 204, 0.5);
     display: flex;
     padding: 40px;
     justify-content: center;

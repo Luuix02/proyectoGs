@@ -7,10 +7,12 @@
 .principalCuenta{
     display: flex;
     gap: 16px;
+    
 }
 .section{
     margin-top: 20px;
    width: 80%;
+   color: white;
 }
 .cambiar{
     margin: 0%;
