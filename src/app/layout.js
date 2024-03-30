@@ -18,9 +18,9 @@ export default function RootLayout({ children }) {
         <body
           className={roboto.className}
           style={{
-            backgroundImage: `url("/image.jpg")`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            // backgroundImage: `url("/image.jpg")`,
+            // backgroundSize: "cover",
+            // backgroundPosition: "center",
           }}
         >
           {children}

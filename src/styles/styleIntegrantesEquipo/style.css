@@ -1,40 +1,53 @@
-
 .contenedorCardEq {
-    margin: 25px; 
+  margin: 25px;
+}
+.contenedorPrincipalCardsEquipos {
+  height: 60vh;
+  margin: 0;
+  margin-left: 235px;
+  padding: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 80px;
+  background-color: rgba(61, 67, 81, 0.371);
+  border-radius: 8px;
+  width: 70%;
 }
 
 .CardFigura {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    margin-bottom: 20px; 
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 .imagenEquipoCard {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .equipoLogoCard {
-    width: 160px;
-    height: 130px;
-    border-radius: 50%;
+  width: 160px;
+  height: 130px;
+  border-radius: 50%;
 }
 
 .nombreEquipoCard {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .botonVerIntegrantesCard {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
