@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
             backgroundImage: `url("/image.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            
           }}
         >
           {children}

@@ -2,7 +2,7 @@ import '../../../src/styles/footerAndi/main.css'
 export default function Footer() {
     return (
         <footer class="footer">
-            <div class="container">
+            <div class="fuct">
                 <div class="footer-content">
                     <h3>GoSport</h3>
                     <p>Vive la emoción de jugar tu deporte favorito</p>

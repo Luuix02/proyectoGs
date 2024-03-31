@@ -2,14 +2,14 @@
 
 import Cards from "../../components/pages/Card";
 import Footer from "../../components/pages/FooterAndi";
-
 import Header from "../../components/pages/Navbar";
-// import Subcard from "../../components/pages/Subcard";
+//import Planilla from "./jugador/planillaInscripcion/page";
+
 import "./page.module.css";
 
 export default function Home() {
   return (
-    <>
+    <div class="pagesPri">
       <div class="Conten">
         <Header />
         <div class="Sub-cont">
@@ -112,7 +112,8 @@ export default function Home() {
       <div class="footerd">
         <Footer />
       </div>
-    </>
+      {/* <Planilla/> */}
+    </div>
   );
 }
 
