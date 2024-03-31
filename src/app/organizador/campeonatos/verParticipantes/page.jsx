@@ -12,7 +12,7 @@ export default function verParticipantes() {
       try {
         const respuesta = await fetch("http://localhost:5000/teams");
         const datos = await respuesta.json();
-        // Procesar los datos para obtener solo los campos name e image_path
+
         const equiposObtenidos = datos.data.map((equipo) => ({
           nombre: equipo.name,
           imagen: equipo.image_path,

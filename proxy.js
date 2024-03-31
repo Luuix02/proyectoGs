@@ -24,6 +24,17 @@ app.get('/teams', async (req, res) => {
   }
 });
 
+app.get('/players', async (req, res) => {
+  try {
+    const response = await fetch('https://api.sportmonks.com/v3/football/players?api_token=f9208yug7macl1syQ2a6aivTns0PqFA6d6s0q86O9uwQmGLF3ffHumAPsIZ9');
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error('Error al obtener los jugadores:', error);
+    res.status(500).json({ error: 'Error al obtener los jugadores' });
+  }
+});
+
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor proxy escuchando en el puerto ${PORT}`);

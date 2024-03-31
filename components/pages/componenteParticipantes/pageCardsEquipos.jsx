@@ -2,24 +2,11 @@
 
 import Image from "next/image";
 import "../../../src/styles/styleIntegrantesEquipo/style.css";
-import React, { useState } from "react";
-import ListadoIntegrantes from "@/app/organizador/campeonatos/verParticipantes/listadoParticipantes/pageListadoPar";
+import BotonVerIntegrantes from "./pageBotonVerIntegrantes";
 
 export default function CardsEquipos({ equipos }) {
-  const [BotonVerParticipantes, setBotonVerParticipantes] =
-    useState("verParticipantes");
-
-  const handleClickOpen = () => {
-    setBotonVerParticipantes(
-      BotonVerParticipantes === "verParticipantes"
-        ? "listadoParticipantes"
-        : "listadoParticipantes"
-    );
-  };
-
   return (
     <>
-      {/* <div className="contenedorPrincipalCardsEquipos"> */}
       {equipos.map((equipo, index) => (
         <div key={index} class="contenedorCardEq">
           <div class="CardFigura">
@@ -32,18 +19,13 @@ export default function CardsEquipos({ equipos }) {
               />
             </div>
             <p class="nombreEquipoCard">{equipo.nombre}</p>
-
-            <button
-              value={setBotonVerParticipantes}
-              onClick={handleClickOpen}
-              class="botonVerIntegrantesCard"
-            >
-              Ver integrantes
-            </button>
+            <BotonVerIntegrantes />
           </div>
+         
         </div>
+      
       ))}
-      {/* </div> */}
+      
     </>
   );
 }
