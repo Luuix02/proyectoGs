@@ -19,31 +19,31 @@ export default function CardsEquipos({ equipos }) {
 
   return (
     <>
-      <div className="contenedorPrincipalCardsEquipos">
-        {equipos.map((equipo, index) => (
-          <div key={index} class="contenedorCardEq">
-            <div class="CardFigura">
-              <div class="imagenEquipoCard">
-                <Image
-                  src={equipo.imagen}
-                  width={70}
-                  height={70}
-                  class="equipoLogoCard"
-                />
-              </div>
-              <p class="nombreEquipoCard">{equipo.nombre}</p>
-
-              <button
-                value={setBotonVerParticipantes}
-                onClick={handleClickOpen}
-                class="botonVerIntegrantesCard"
-              >
-                Ver integrantes
-              </button>
+      {/* <div className="contenedorPrincipalCardsEquipos"> */}
+      {equipos.map((equipo, index) => (
+        <div key={index} class="contenedorCardEq">
+          <div class="CardFigura">
+            <div class="imagenEquipoCard">
+              <Image
+                src={equipo.imagen}
+                width={70}
+                height={70}
+                class="equipoLogoCard"
+              />
             </div>
+            <p class="nombreEquipoCard">{equipo.nombre}</p>
+
+            <button
+              value={setBotonVerParticipantes}
+              onClick={handleClickOpen}
+              class="botonVerIntegrantesCard"
+            >
+              Ver integrantes
+            </button>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
+      {/* </div> */}
     </>
   );
 }

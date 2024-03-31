@@ -27,4 +27,4 @@ app.get('/teams', async (req, res) => {
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor proxy escuchando en el puerto ${PORT}`);
-});
+}); 
