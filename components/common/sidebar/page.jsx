@@ -30,19 +30,35 @@ export default function SideBarPrincipal() {
           </Link>
         </li>
         <li className="contenedorAside">
-          <Image src={`${pathImg}/fotos.png`} width={35} height={35}></Image>
+          <Image 
+          src={`${pathImg}/fotos.png`} 
+          width={35} 
+          height={35}
+          className="img3"
+          >
+          </Image>
           <Link href={`fotos`} className="li">
             Fotos
           </Link>
         </li>
         <li className="contenedorAside">
-          <Image src={`${pathImg}/cuenta.png`} width={35} height={35}></Image>
+          <Image 
+          src={`${pathImg}/cuenta.png`} 
+          width={35} 
+          height={35}
+          className="img4"
+          ></Image>
           <Link href={`perfil`} className="li">
             Cuenta
           </Link>
         </li>
         <li className="contenedorAside">
-          <Image src={`${pathImg}/salir.png`} width={35} height={35}></Image>
+          <Image 
+          src={`${pathImg}/salir.png`} 
+          width={35} 
+          height={35}
+          className="img5"
+          ></Image>
           <Link href={`/`} className="li">
             Salir
           </Link>
