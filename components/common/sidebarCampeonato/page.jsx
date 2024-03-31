@@ -30,19 +30,34 @@ export default function SideBarCampeonato() {
           </Link>
         </li>
         <li className="contenedorAsideCam">
-          <Image src={`${pathImg}/verParticipantes.png`} width={35} height={35}></Image>
+          <Image 
+          src={`${pathImg}/verParticipantes.png`} 
+          width={35} 
+          height={35}
+          className='img3'
+          ></Image>
           <Link href={`${pathUrl}verParticipantes`} className="li">
             Ver Participantes 
           </Link>
         </li>
         <li className="contenedorAsideCam">
-          <Image src={`${pathImg}/derrotero.png`} width={35} height={35}></Image>
+          <Image 
+          src={`${pathImg}/derrotero.png`} 
+          width={35} 
+          height={35}
+          className='img4'
+          ></Image>
           <Link href={`${pathUrl}derrotero/mananaDerr`} className="li">
             Derrotero 
           </Link>
         </li>
         <li className="contenedorAsideCam">
-          <Image src={`${pathImg}/campeonatos.png`} width={35} height={35}></Image>
+          <Image 
+          src={`${pathImg}/campeonatos.png`} 
+          width={35} 
+          height={35}
+          className='img5'
+          ></Image>
           <Link href={`/organizador/campeonatos`} className="li">
             Campeonatos 
           </Link>

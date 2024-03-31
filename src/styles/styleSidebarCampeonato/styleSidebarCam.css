@@ -1,6 +1,6 @@
 .barraLateralCam {
     background-color: rgba(61, 67, 81, 0.8);
-    width: 200px;
+    width: 170px;
     padding: 20px;
     height: 100vh;
     display: flex;
@@ -31,7 +31,10 @@
   }
   
   .img,
-  .img2 {
+  .img2,
+  .img3,
+  .img4,
+  .img5 {
     margin-right: 10px;
   }
   
