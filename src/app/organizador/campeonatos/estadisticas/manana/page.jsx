@@ -12,12 +12,13 @@ import PageEstadisticas from '../../../../../../components/pages/componentEstadi
 export default function Manana() {
   return (
     <>
+    <div className='contenedorCompleto'>
     <SideBarCampeonato/>
         <div >
           <h1 className='jornada'>Mañana</h1>
          <PageEstadisticas/>
         </div>
-   
+        </div>
     </>
   )
 }

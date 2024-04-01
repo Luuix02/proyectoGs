@@ -7,7 +7,7 @@ const path = '/organizador/campeonatos/estadisticas'
 export default function Estadistica (){
 
   return (
-    <>
+    <><div>
       <div className='contenedorPartido ' > 
       <div className=' contenedorImagen'>
           <Image src="/images/imageEstadistica/MILONARIOS.png" width={40} height={40} className='imagen rounded-full' />
@@ -39,6 +39,7 @@ export default function Estadistica (){
         <div className='estadoPartido contenedorBoton'>
           <button className='botonDetalle'><Link href={`${path}/verDetalle`}>ver detalle</Link></button>
         </div>
+    </div>
     </div>
     </>
   )

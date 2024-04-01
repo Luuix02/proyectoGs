@@ -3,3 +3,15 @@
     font-weight: bold;
     padding-left: 50%;
 }
+
+.contenedorCompleto{
+    display: flex;
+
+}
+.contenedorPartidos{
+    margin: 15px;
+    background-color: rgb(142, 145, 145);
+    border-radius: 5%;
+    border: 2px solid black;
+    width: 100%;
+}

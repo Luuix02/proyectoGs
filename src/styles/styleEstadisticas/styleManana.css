@@ -3,3 +3,6 @@
     font-weight: bold;
     padding-left: 50%;
 }
+.contenedorCompleto{
+    display: flex;
+}
