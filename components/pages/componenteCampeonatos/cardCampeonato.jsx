@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+
+
 export default function CardCampeonato() {
   return (
     <article className="descripcion ">
@@ -21,9 +23,9 @@ export default function CardCampeonato() {
                       <h1 className="porciento">0%</h1>
                   </section>
                   <p className="">Fecha de inicio:   15/01/2024</p>
-                  <p className="">Fecha de finalizacion:   12/02/2024</p>
+                  <p className="">Fecha de finalización:   12/02/2024</p>
 
-                  <Link href='campeonatos/estadisticas/tarde'
+                  <Link href='campeonatos/verParticipantes'
                       className="editar">Editar</Link>
               </div>
           </article>

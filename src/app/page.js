@@ -1,38 +1,38 @@
 
 
 import Cards from "../../components/pages/Card";
-
+import Footer from "../../components/pages/FooterAndi";
 import Header from "../../components/pages/Navbar";
-import Subcard from "../../components/pages/Subcard";
+//import Planilla from "./jugador/planillaInscripcion/page";
 
+import "./page.module.css";
 
 export default function Home() {
   return (
-    <>
+    <div class="pagesPri">
       <div class="Conten">
         <Header />
-
         <div class="Sub-cont">
-          <p class="cont-p">Crea campeonatos inolvidables. ¡Dale vida a la competencia
-            y eleva el espíritu deportivo! ¿Estás listo para ser parte
-            de la experiencia? </p>
-          <div>
-            <button type="submit">¡Unete ahora!</button>
+          <div class="Sub-cont-d">
+            <p class="cont-p">Crea campeonatos inolvidables. ¡Dale vida a la competencia
+              y eleva el espíritu deportivo! ¿Estás listo para ser parte
+              de la experiencia? </p>
+            <button className="botonLanding" class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 inline-flex items-center" type="button" disabled="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 101" class="inline w-4 h-4 mr-3 text-white animate-bounce" role="status" aria-hidden="true">
+                <circle fill="#34D399" r="45" cy="50" cx="50"></circle>
+              </svg>
+              Unete ahora
+            </button>
           </div>
-        </div>
-        <div class="photo">
-          <img class="photo-1"
-            src="\images\imgLanding\futbol-sala.png" alt="" />
-          <img class="photo-2"
-            src="\images\imgLanding\section1.png" alt="" />
+
         </div>
       </div>
 
       <section class="section-2">
-        <h2 class="title">PARA ORGANIZADORES</h2>
-
-        <p class="title-2">Domina la organización de tus torneos como  nunca antes</p>
-
+        <div class="error">
+          <h1>PARA ORGANIZADORES</h1>
+        </div>
+        <p class="title-2-p">Domina la organización de tus torneos como  nunca antes</p>
         <p class="title-3">¡Bienvenido a nuestro exclusivo espacio para organizadores de campeonatos!
           En nuestro software, te ofrecemos la plataforma perfecta para dar vida a
           tus ideas y convertir tus campeonatos en experiencias inolvidables.
@@ -42,7 +42,7 @@ export default function Home() {
       </section >
       <Cards />
 
-      <section class="section-player">
+      {/* <section class="section-player">
         <h2 class="title">PARA JUGADORES</h2>
 
         <p class="title-2">Conviértete en campeón: Regístrate para participar de campeonatos exclusivos.</p>
@@ -51,9 +51,8 @@ export default function Home() {
           plataforma diseñada para verdaderos amantes del juego! ¿Por qué deberías unirte a nosotros?
           Aquí tienes razones irresistibles:
         </p>
-      </section>
-
-      <Subcard />
+        <Subcard />
+      </section> */}
 
       <section class="section-3">
         <div class="Bienestar section-3-div">
@@ -75,6 +74,13 @@ export default function Home() {
               <p class="">"Promover la inclusión y la diversidad a través del deporte, creando espacios donde
                 todas las personas, independientemente de sus capacidades físicas o condiciones socioeconómicas, puedan participar
                 y disfrutar de los beneficios del ejercicio físico, fortaleciendo así la cohesión social y el respeto mutuo."</p>
+              <div class="loadingspinner">
+                <div id="square1"></div>
+                <div id="square2"></div>
+                <div id="square3"></div>
+                <div id="square4"></div>
+                <div id="square5"></div>
+              </div>
             </div>
           </div>
 
@@ -103,7 +109,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+      <div class="footerd">
+        <Footer />
+      </div>
+      {/* <Planilla/> */}
+    </div>
   );
 }
 

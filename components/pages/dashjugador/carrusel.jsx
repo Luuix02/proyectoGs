@@ -70,7 +70,7 @@ export default function Carrusel() {
                 src={slide.image}
                 alt={slide.title}
                 layout="fill"
-                objectFit="cover"
+                
               />
               <div className="content_slider">
                 <div>
