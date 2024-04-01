@@ -20,8 +20,8 @@ export default function CardCampeonato() {
       <p className="">Fecha de inicio:   15/01/2024</p>
       <p className="espacio">Fecha de finalizacion:   12/02/2024</p>
 
-      <Link href='/inicioSesion/organizador/campeonatos/estadisticas'
-        className="inscribirme ">Incribirme</Link>
+      <Link href='/inicioSesion/organizador/campeonatos/'
+        className="inscribirme ">Inscribirme</Link>
     </div>
   </article>
   )

@@ -1,329 +1,314 @@
 .contenedor2 {
-    width: 100%;
-    padding: 10px;
+  width: 100%;
+  padding: 10px;
   margin: auto;
 }
 
-.textDeCrearCampeonato { 
-    margin: 20px;
-    font-size: 30px;
-    height: 30px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.textDeCrearCampeonato {
+  margin: 20px;
+  font-size: 30px;
+  height: 30px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.contendorPrincipalFormulario{
-    position: relative;
+.contendorPrincipalFormulario {
+  position: relative;
 }
 
 .Formulario {
-    border-radius: 15px;
-    padding: 30px;
-    background-color: rgba(87, 97, 105, 0.836);
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-    gap: 30px;
-    margin-top: 25px;
-    color: white;
+  border-radius: 15px;
+  padding: 30px;
+  background-color: rgba(87, 97, 105, 0.836);
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  gap: 30px;
+  margin-top: 25px;
+  color: white;
 }
-.name_select_fechas{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.name_select_fechas {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 .form-group {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    position: relative;
-    margin-bottom: 20px;
-    width: 80%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  margin-bottom: 20px;
+  width: 80%;
 }
-
 
 .form-group input {
-    align-content: center;
-    width: 80%;
-    font-size: 25px;
-    border-radius: 10px;
-    background-color: transparent;
-    border: white 1px solid;
-    color: rgb(255, 255, 255);
-    transition: 0.15s all ease;
-    padding: 20px;
-
-
+  align-content: center;
+  width: 80%;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: white 1px solid;
+  color: rgb(255, 255, 255);
+  transition: 0.15s all ease;
+  padding: 20px;
 }
-.form-group input:focus{
-    border:red 1px solid;
+.form-group input:focus {
+  border: rgba(0, 208, 255, 0.982) 1px solid;
 }
 
 .form-group input::placeholder {
-    color: transparent;
+  color: transparent;
 }
 
 .form-group .form-label {
-    position: absolute;
-    text-align: center; 
-    font-size: 18px;
-    padding: 5px 10px;
-    color: rgb(255, 252, 252);
-   pointer-events: none;
-    transition: 0.15s all ease;
-    height: 25px;
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px 10px;
+  color: rgb(255, 252, 252);
+  pointer-events: none;
+  transition: 0.15s all ease;
+  height: 25px;
 }
-.form-label{
-    width: 55%;
+.form-label {
+  width: 55%;
 }
 
-.form-group input:focus+.form-label,
-.form-group input:not(:placeholder-shown)+.form-label {
-    transform: translate(-66px, -25px);
-    background-color: #e94a4a;
-    font-size: 15px;
-    border-radius: 11px;
-    font-size: 16px;
-    color: white;
-    border : 1px rgb(255, 255, 255) solid;
+.form-group input:focus + .form-label,
+.form-group input:not(:placeholder-shown) + .form-label {
+  transform: translate(-66px, -25px);
+  background-color: #12aed1cd;
+  font-size: 15px;
+  border-radius: 11px;
+  font-size: 16px;
+  color: white;
+  border: 1px rgb(255, 255, 255) solid;
 }
 
 .DireccionDeSelectores {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .selectores {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-    padding: 30px 0px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 30px 0px;
 }
-.selectores select{
-    border-radius: 10px;
-    padding: 5px;
-    font-size: 18px;
-    height: 40px;
+.selectores select {
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 18px;
+  height: 40px;
 }
-.selectores select:hover{
-    background-color: #e76e6e;
+.selectores select:hover {
+  background-color: #61d6f7df;
 }
 
 .AlineacionDeFechas {
-    width: 100%;
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
 }
 
 fieldset {
-    width: 20%;
-    border: white solid 1px;
-    padding: 20px;
-    border-radius: 5px;
-    color: white;
+  width: 20%;
+  border: white solid 1px;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
 }
 
 legend {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-
-
-option,select {
-    color: rgb(255, 255, 255);
-    background-color: #f75e59;
+option,
+select {
+  color: rgb(255, 255, 255);
+  background-color: #12aed1cd;
 }
-
-
 
 .fechas {
-    background-color: #f75e59;
-    border-radius: 5px;
-    border: 2px solid black;
+  background-color: #12aed1cd;
+  border-radius: 5px;
+  border: 2px solid black;
 }
 
 .fechas:hover {
-    background-color: #ff0000;
+  background-color: #12aed1cd;
 }
 
-.Dias_Cantidad{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 90px;
+.Dias_Cantidad {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 90px;
 }
 
-.textoDiasDefinidos{
-    font-size: 18px;
-
+.textoDiasDefinidos {
+  font-size: 18px;
 }
-.botonVerCalendario:hover{
-    filter:drop-shadow(
-        0 -0px 0 red
-    )
+.botonVerCalendario:hover {
+  filter: drop-shadow(0 -0px 0 rgb(0, 213, 255));
 }
 
 .minMax {
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 15px;
-    height: 40px;
-    background-color: #f77878;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 40px;
+  background-color: #12aed1cd;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-    margin: 0;
-    position: static;
+  margin: 0;
+  position: static;
 }
 
 input[type="number"] {
-    content: "\25B2";
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 80px;
-    position: relative;
+  content: "\25B2";
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 80px;
+  position: relative;
 }
 
 input[type="number"]::after {
-    content: "\25B2";
-    position: absolute;
-    top: 30%;
-    color: #888;
+  content: "\25B2";
+  position: absolute;
+  top: 30%;
+  color: #888;
 }
 
 input[type="number"]::before {
-    content: "\25BC";
-    position: absolute;
-    bottom: 30%;
-    right: 8px;
-    color: #888;
+  content: "\25BC";
+  position: absolute;
+  bottom: 30%;
+  right: 8px;
+  color: #888;
 }
-
 
 input[type="number"]:focus {
-    background-color: #f0f0f0;
-    color: #333;
+  background-color: #f0f0f0;
+  color: #333;
 }
-.EspacioCalendario{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.EspacioCalendario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.min_max{
-    display: flex;
-    flex-direction: row;
+.min_max {
+  display: flex;
+  flex-direction: row;
 }
-.calendario{
-    width : 70%;
-    
+.calendario {
+  width: 70%;
 }
-.InputDeFechas{
-    background-color: #f77878;
-    padding: 5px;
-    font-size: 20px;
-    border-radius: 10px;
-    color: white;
+.InputDeFechas {
+  background-color: #12aed1cd;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
 }
-.InputDeFechas:hover{
-    background-color: #f75e59;
+.InputDeFechas:hover {
+  background-color: #61d6f7df;
 }
-.AlineacionDeMinYMax{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 70px;
-
+.AlineacionDeMinYMax {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
 }
 
-.BotonGuadar{
-    border-radius: 10px;
-    padding: 15px;
-    border:1px solid white;
-    background-color: #f66a66;
-    cursor: alias;
+.BotonGuadar {
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: #61d6f7df;
+  cursor: alias;
 }
-.BotonGuadar:active{
-    background-color: red;
-
+.BotonGuadar:active {
+  background-color: #12aed1cd;
 }
-.link{
-    width: auto;
+.link {
+  width: auto;
 }
-.contendorConfirmacionCambios{
-    background-color: white;
-    color: black;
-    border-radius: 15px;
-    border: 1px solid red;
-    padding: 15px;
-    width: 30%;
-    z-index: 100%;
+.contendorConfirmacionCambios {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 15px;
+  width: 30%;
+  z-index: 100%;
 }
-.textoConfirmacion{
-    text-align: center;
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    margin: 10px;
+.textoConfirmacion {
+  text-align: center;
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  margin: 10px;
 }
-.AlineacionBotonesConfirmacion{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap:45px;
+.AlineacionBotonesConfirmacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
 }
-.BotonesConfirmacion{
-    position: relative;
-    width: 20%;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    word-wrap: break-word;
-    margin: 10px;
-  
+.BotonesConfirmacion {
+  position: relative;
+  width: 20%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  margin: 10px;
 }
-.BotonesConfirmacion:hover{
-    background-color: #e76e6e;
-    color: white;
-    border: 1px solid white;
+.BotonesConfirmacion:hover {
+  background-color: #61d6f7df;
+  color: white;
+  border: 1px solid white;
 }
-.MuestraDeConfirmacion{
-    z-index: 5;
-    background-color: #00000042;
-    /* opacity: 0.5; */
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.MuestraDeConfirmacion {
+  z-index: 5;
+  background-color: #00000042;
+  /* opacity: 0.5; */
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.DivBotonGuardar{
-    display: flex;
-    justify-content: center;
-    width: 95px;
+.DivBotonGuardar {
+  display: flex;
+  justify-content: center;
+  width: 95px;
+}
+.textDeCrearCampeonato {
+  color: white;
 }

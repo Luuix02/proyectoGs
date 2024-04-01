@@ -37,7 +37,7 @@ export default function CrearCampeonato() {
             </div>
             <div class="form-group">
               <input  type="text" placeholder="Descripcion del campeonato" />
-              <label className="form-label">Descripcion del campeonato</label>
+              <label className="form-label">Descripción del campeonato</label>
               </div>
 
             <div class="DireccionDeSelectores">
@@ -45,9 +45,9 @@ export default function CrearCampeonato() {
                 <p>Disciplina</p>
                 <select  >
                   <option selected disabled hidden value="">Seleccione</option>
-                  <option >Futbol</option>
-                  <option>Futbol sala</option>
-                  <option>Microfutbol</option>
+                  <option >Fútbol</option>
+                  <option>Fútbol sala</option>
+                  <option>Microfútbol</option>
                 </select>
               </div>
               <div className="selectores">
@@ -64,22 +64,22 @@ export default function CrearCampeonato() {
                 <select  >
                   <option selected disabled hidden value="">Seleccione</option>
                   <option>Interfichas</option>
-                  <option>Relampago</option>
+                  <option>Relámpago</option>
                 </select>
               </div>
             </div>
         <div class="AlineacionDeFechas">
             <fieldset>
-              <legend>Fechas de inscripciones</legend>
+              <legend>Fecha de Inscripción</legend>
 
-              <Boton fechaText="Fecha de Inicio" />
-              <Boton fechaText="Fecha de finalizacion" />
+              <Boton fechaText="Fecha de Apertura" />
+              <Boton fechaText="Fecha de Culminación" />
             </fieldset>
             <fieldset>
-              <legend>Fechas de Campeonato</legend>
+              <legend>Fecha del Campeonato</legend>
            
               <Boton fechaText="Fecha de Inicio" />
-              <Boton fechaText="Fecha de Finalizacion" />
+              <Boton fechaText="Fecha de Finalización" />
 
               </fieldset>
             </div>
@@ -97,11 +97,11 @@ export default function CrearCampeonato() {
                 </div> */}
             <div class="AlineacionDeMinYMax">
             <div class="min_max" >
-              <label>Cantidad minima</label>
+              <label>Cantidad mínima</label>
               <input  class="minMax" type="number" name="cantidad" min="0" max="20" step="1" />
             </div>
             <div class="min_max" >
-              <label>Cantidad maxima</label>
+              <label>Cantidad máxima</label>
               <input  class="minMax" type="number" name="cantidad" min="0" max="20" step="1" />
             </div>
             </div>
