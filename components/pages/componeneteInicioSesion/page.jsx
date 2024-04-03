@@ -36,7 +36,6 @@ export default function InicioSesion() {
         validacionRutas()
     }
     return (
-        <html className='html_iniciarsesion'>
         <div className='contenedorPrincipal'>
             <h1 className='tituloPrincipal'>Inicio de Sesión</h1>
             <br /> <br />
@@ -63,7 +62,7 @@ export default function InicioSesion() {
                             value={password}
                         />
 
-                        <Link href={`${path}/recuperarContrasena`}>Olvido contraseña</Link>
+                        <Link className='olvidoContraseña' href={`${path}/recuperarContrasena`}>Olvido contraseña</Link>
 
                     <br />
                         <button className='botonInicioSesion'
@@ -78,6 +77,6 @@ export default function InicioSesion() {
                 </form>
             </div>
             </div>
-        </html>
+            
     );
 }

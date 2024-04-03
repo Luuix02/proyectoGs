@@ -6,7 +6,7 @@ import "../../../styles/styleRecuperarContraseña/styleRecuperarContraseña.css"
 export default function OlvidoContrasena() {
   const path = '/auth';
   return (
-    <html className='html_recuperarContraseña'>
+    < div className='html_recuperarContraseña'>
     <div className='contenedorRecuperarContraseña'>
       <h1 className='tituloRecuperarContraseña'>Recuperar Contraseña</h1>
       <br /> <br />
@@ -27,6 +27,7 @@ export default function OlvidoContrasena() {
         </form>
       </div>
     </div>
-    </html>
+    </div>
+    
   );
 };
