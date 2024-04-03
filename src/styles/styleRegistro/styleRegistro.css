@@ -1,7 +1,7 @@
-.FONDO{
+.FONDO {
     background-image: url('https://as01.epimg.net/masdeporte/imagenes/2021/08/18/reportajes/1629287252_471087_1632935001_noticiareportajes_grande.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .divpadre {
@@ -16,8 +16,10 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+
 }
-.titulo{
+
+.titulo {
     font-size: 26px;
     font-weight: bold;
     display: flex;
@@ -25,19 +27,23 @@
     padding-top: 50px;
 }
 
-h1, label, .registro {
+h1,
+label,
+.registro {
     color: rgb(7, 6, 6);
     font-weight: bold;
 }
-.cuenta{
+
+.cuenta {
     font-weight: bold;
     font-size: 15px;
-    margin-top:auto;
+    margin-top: auto;
     color: rgb(0, 0, 0);
 
 }
 
-Select, Input {
+Select,
+Input {
     color: rgb(70, 37, 37);
     margin: 10px 0;
     border: 2px solid black;
@@ -46,26 +52,44 @@ Select, Input {
     background-color: #A1B9D1;
 }
 
-Select{
+Select {
     width: 428PX;
     padding-left: 30px;
 }
 
-Input{
+Input {
     width: 400PX;
 
 }
 
 .divdatos {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 550px;
+
 }
 
 .divdatos form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+
+
+
 }
+
+.divdatos {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(116, 126, 137, 0.6);
+    border: 3px solid black;
+    border-radius: 15px;
+    width: 600px;
+    padding: 18px;
+
+}
+
 
 .Botonregistros {
     border-radius: 15px;
@@ -76,16 +100,18 @@ Input{
     cursor: pointer;
     margin-top: 10px;
 }
-button{
+
+button {
     font-weight: bold;
 }
 
-Input::placeholder, Select::placeholder {
-    color: #574545; 
+Input::placeholder,
+Select::placeholder {
+    color: #574545;
     padding-left: 25px;
 }
 
-.parairaotrapagina{
+.parairaotrapagina {
     color: black;
     font-size: 15px;
 }
@@ -95,7 +121,7 @@ Input::placeholder, Select::placeholder {
 
 @media (max-width: 1024px) {
     .mayor {
-        width: 80%; 
+        width: 80%;
     }
 }
 
@@ -118,4 +144,3 @@ Input::placeholder, Select::placeholder {
         width: 95%;
     }
 }
-
