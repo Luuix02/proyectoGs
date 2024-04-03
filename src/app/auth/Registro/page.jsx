@@ -32,7 +32,7 @@ export default function Registro() {
                 <option value="selecciona" disabled>Selecciona</option>
                 <option value="Femenino">Femenino</option>
                 <option value="Masculino">Masculino</option>
-                <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                <option value="Prefiero no decirlo">Indefinido</option>
               </select>
 
               <label htmlFor="ficha">N° Ficha</label>
