@@ -93,6 +93,7 @@ Input {
 
 button {
     font-weight: bold;
+    background-color: #12aed1cd;
 }
 
 Input::placeholder,
