@@ -4,6 +4,19 @@ import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+const ConfirmationModal = ({ isOpen, onClose }) => {
+    if (!isOpen) return null;
+
+    return (
+        <div className='confirmationModal'>
+            <h2>Bienvenido!</h2>
+            <p>¡Has iniciado sesión correctamente!</p>
+            <button onClick={onClose}>Cerrar</button>
+        </div>
+    );
+};
+
+
 export default function InicioSesion() {
     const path = '/auth';
     const router = useRouter()
@@ -69,6 +82,7 @@ export default function InicioSesion() {
                             type='submit'
                             onClick={()=> router.push(ruta)}
                         >Iniciar Sesión</button>
+                    <Link href={ruta}></Link>
 
                     <h1 className='tituloPrincipal'>¿No tienes cuenta? <br />
                         <Link href={`${path}/Registro`}>Regístrate</Link>
