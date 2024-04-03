@@ -4,7 +4,8 @@
     flex-direction: column;
     align-items: center;
 }
-.pagesPri{
+
+.pagesPri {
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -12,9 +13,10 @@
     align-items: center;
 
 }
+
 .Sub-cont {
     background-image: url("../../../public/images/Andy/imgplayer.jpg");
-    min-height: 50vw;
+    min-height: 45vw;
     width: 100%;
     object-fit: cover;
     background-size: cover;
@@ -96,10 +98,16 @@
     }
 }
 
-
+.dos-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
 
 .section-2 {
-    margin-top: 40px;
+    margin-top: 25px;
     padding: 20px;
     width: 90%;
     display: flex;
@@ -114,16 +122,12 @@
 .error h1 {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 15px;
 }
 
 
 .title-2-p {
     text-align: start;
     font-size: 30px;
-    padding-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 20px;
 }
 
 .title-2 {
@@ -185,7 +189,7 @@
     justify-content: center;
     flex-direction: column;
     width: 82.5%;
-    padding: 40px;
+
 
 }
 
@@ -201,14 +205,15 @@
     font-size: 1.5rem;
     line-height: 1.5;
     font-weight: bold;
-    font-size: 30px;
+    margin: 15px;
+    margin-left: 50px;
 }
 
 .section-3-p {
     text-align: center;
     font-size: 1.5rem;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
     text-align: justify;
     padding: 10px 50px;
     font-family: Arial, Helvetica, sans-serif;
@@ -267,7 +272,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
     gap: 24px;
 
 }
