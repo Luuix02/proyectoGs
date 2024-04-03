@@ -43,7 +43,7 @@ label,
 }
 
 Select,
-Input {
+Input,button {
     color: rgb(70, 37, 37);
     margin: 10px 0;
     border: 2px solid black;
@@ -52,7 +52,7 @@ Input {
     background-color: #A1B9D1;
 }
 
-Select {
+Select ,button{
     width: 428PX;
     padding-left: 30px;
 }
@@ -83,7 +83,6 @@ Input {
     display: flex;
     justify-content: center;
     background-color: rgba(116, 126, 137, 0.6);
-    border: 3px solid black;
     border-radius: 15px;
     width: 600px;
     padding: 18px;
@@ -91,15 +90,6 @@ Input {
 }
 
 
-.Botonregistros {
-    border-radius: 15px;
-    background-color: #C63F3F;
-    color: white;
-    border: none;
-    padding: 5px 20px;
-    cursor: pointer;
-    margin-top: 10px;
-}
 
 button {
     font-weight: bold;
