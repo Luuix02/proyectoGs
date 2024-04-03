@@ -69,19 +69,22 @@ export default function CrearCampeonato() {
               </div>
             </div>
         <div class="AlineacionDeFechas">
-            <fieldset>
+            <fieldset class="Inscripcion">
               <legend>Fecha de Inscripción</legend>
 
               <Boton fechaText="Fecha de Apertura" />
               <Boton fechaText="Fecha de Culminación" />
-            </fieldset>
-            <fieldset>
+            </fieldset >
+            <fieldset class="Inscripcion">
               <legend>Fecha del Campeonato</legend>
            
               <Boton fechaText="Fecha de Inicio" />
               <Boton fechaText="Fecha de Finalización" />
 
               </fieldset>
+            </div>
+            <div class="BotonVolver">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="Volver"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
             </div>
             </div>
 
@@ -96,7 +99,9 @@ export default function CrearCampeonato() {
               
                 </div> */}
             <div class="AlineacionDeMinYMax">
-            <div class="min_max" >
+              <fieldset class="cantidadJugador">
+                <legend>Cantidad de jugadores</legend>
+                <div class="min_max" >
               <label>Cantidad mínima</label>
               <input  class="minMax" type="number" name="cantidad" min="0" max="20" step="1" />
             </div>
@@ -104,20 +109,23 @@ export default function CrearCampeonato() {
               <label>Cantidad máxima</label>
               <input  class="minMax" type="number" name="cantidad" min="0" max="20" step="1" />
             </div>
-            </div>
-
-          
-            </div>
+              </fieldset>
             
+            </div>
 
-          </form>
-          <div class="DivBotonGuardar">
-            <div class="BotonGuadar " active value={setGuardarCambios} onClick={handleGuardar}>
+            <div class="DivBotonGuardar">
+            <div class="BotonGuadar "  value={setGuardarCambios} onClick={handleGuardar}>
              
               Guardar
               
             </div>
             </div> 
+          
+            </div>
+            
+
+          </form>
+        
         </div>
        
       </div>
