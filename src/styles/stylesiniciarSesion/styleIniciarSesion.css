@@ -39,18 +39,23 @@
     border-radius: 8px;
     background-color: #12aed1cd;
     height: 30px;
+    width: 280px;
     color: black;
     border: none;
     padding: 5px 20px;
     cursor: pointer;
-    margin: 20px;
-    padding-left: 2em; /* Corregí el valor de padding-left */
+    margin: 15px;
+    padding-left: 30px; /* Corregí el valor de padding-left */
 }
 
 
 .tituloPrincipal {
     font-size: 16px;
     text-align: center;
+}
+
+.registrate{
+    color: black;
 }
 
 .etiquetaDato, .campoDato, .tituloPrincipal, .botonInicioSesion, .enlaceOlvido {
