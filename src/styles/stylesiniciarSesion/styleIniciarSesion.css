@@ -1,10 +1,7 @@
-.html_iniciarsesion {
-    background-image: url('../../../public/images/iniciarSesion/fondoIniciar.jpeg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
 .contenedorPrincipal {
+    background-image: url(../../../public/images/iniciarSesion/fondoIniciar.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -21,50 +18,58 @@
 .contenedorDatos form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
+    border-radius: 40px;
 }
 
-.campoDato {
+.campoDato, .campoContraseña {
     margin: 15px;
     width: 280px;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 8px;
     padding-left: 30px;
 }
 
-.campoContraseña {
-    margin: 15px;
-    width: 280px;
-    height: 30px;
-    border-radius: 20px;
-    padding-left: 30px;
-}
-
-.enlaceOlvido {
+.olvidoContraseña {
     font-size: 16px;
+    color:black;
 }
 
 .botonInicioSesion {
-    border-radius: 20px;
-    background-color: #C63F3F;
+    border-radius: 8px;
+    background-color: #12aed1cd;
     height: 30px;
-    color: white;
+    width: 280px;
+    color: black;
     border: none;
     padding: 5px 20px;
     cursor: pointer;
     margin: 15px;
-    padding-left: 80px;
+    padding-left: 30px; /* Corregí el valor de padding-left */
 }
+
 
 .tituloPrincipal {
     font-size: 16px;
     text-align: center;
 }
 
-.etiquetaDato,
-.campoDato,
-.tituloPrincipal,
-.botonInicioSesion,
-.enlaceOlvido {
+.registrate{
+    color: black;
+}
+
+.etiquetaDato, .campoDato, .tituloPrincipal, .botonInicioSesion, .enlaceOlvido {
     font-weight: bold;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedorPrincipal {
+        width: 100%;
+        border-radius: 0; /* Eliminar el redondeo de los bordes */
+    }
+
+    .campoDato, .campoContraseña {
+        width: 90%; /* Utilizar un ancho más pequeño para los campos de entrada */
+    }
 }

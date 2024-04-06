@@ -1,0 +1,42 @@
+
+.modal {
+  background-color: white;
+  padding: 1vw; /* Utiliza un padding relativo al ancho de la pantalla */
+  border-radius: 5px;
+  width: 900px; /* Fija el ancho del modal */
+  position: absolute;
+  top: 50%; /* Centra verticalmente */
+  right: 20%; /* Centra hacia la derecha */
+  transform: translate(0, -50%); /* Corrige la posición vertical */
+}
+
+
+.modal-content {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 10vw; 
+  }
+
+  .close {
+    font-size: 6vw; 
+  }
+}

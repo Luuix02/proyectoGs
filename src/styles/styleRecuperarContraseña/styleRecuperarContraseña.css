@@ -1,12 +1,8 @@
 
-.html_recuperarContraseña {
+.contenedorRecuperarContraseña {
   background-image: url('../../../public/images/recuperarContraseña/depositphotos.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-}
-
-.contenedorRecuperarContraseña {
- 
   margin-top: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -61,18 +57,18 @@
   height: 40px;
   border: none;
   border-radius: 20px; 
-  background-color: #060606;
+  background-color: #12aed1cd;
   color: white;
   font-size: 16px;
   cursor: pointer;
   margin: 15px;
 }
 .botonEnviar {
-  width: 88%;
+  width: 30%;
   height: 40px;
   border: none;
   border-radius: 20px; 
-  background-color: #060606;
+  background-color: #12aed1cd;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -81,7 +77,7 @@
 
 .botoncancelar:hover,
 .botonEnviar:hover {
-  background-color: #555555;
+  background-color: #12aed1cd;
 }
 
 

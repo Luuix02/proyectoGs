@@ -4,6 +4,7 @@ import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+
 export default function InicioSesion() {
     const path = '/auth';
     const router = useRouter()
@@ -36,7 +37,6 @@ export default function InicioSesion() {
         validacionRutas()
     }
     return (
-        <html className='html_iniciarsesion'>
         <div className='contenedorPrincipal'>
             <h1 className='tituloPrincipal'>Inicio de Sesión</h1>
             <br /> <br />
@@ -63,21 +63,22 @@ export default function InicioSesion() {
                             value={password}
                         />
 
-                        <Link href={`${path}/recuperarContrasena`}>Olvido contraseña</Link>
+                        <Link className='olvidoContraseña' href={`${path}/recuperarContrasena`}>Olvido contraseña</Link>
 
                     <br />
                         <button className='botonInicioSesion'
                             type='submit'
                             onClick={()=> router.push(ruta)}
                         >Iniciar Sesión</button>
+                    <Link href={ruta}></Link>
 
                     <h1 className='tituloPrincipal'>¿No tienes cuenta? <br />
-                        <Link href={`${path}/Registro`}>Regístrate</Link>
+                        <Link className="registrate" href={`${path}/Registro`}>Regístrate</Link>
                     </h1>
 
                 </form>
             </div>
             </div>
-        </html>
+            
     );
 }

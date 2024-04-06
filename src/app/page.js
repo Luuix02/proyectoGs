@@ -3,7 +3,6 @@
 import Cards from "../../components/pages/Card";
 import Footer from "../../components/pages/FooterAndi";
 import Header from "../../components/pages/Navbar";
-//import Planilla from "./jugador/planillaInscripcion/page";
 
 import "./page.module.css";
 
@@ -28,19 +27,27 @@ export default function Home() {
         </div>
       </div>
 
-      <section class="section-2">
-        <div class="error">
-          <h1>PARA ORGANIZADORES</h1>
-        </div>
-        <p class="title-2-p">Domina la organización de tus torneos como  nunca antes</p>
-        <p class="title-3">¡Bienvenido a nuestro exclusivo espacio para organizadores de campeonatos!
-          En nuestro software, te ofrecemos la plataforma perfecta para dar vida a
-          tus ideas y convertir tus campeonatos en experiencias inolvidables.
-          ¿Por qué unirte a nosotros? Aquí tienes algunas razones irresistibles:
-        </p>
 
-      </section >
-      <Cards />
+
+      <div class="dos-section">
+        <section class="section-2">
+          <div class="error">
+            <h1>PARA ORGANIZADORES</h1>
+          </div>
+          <p class="title-2-p">Domina la organización de tus torneos como  nunca antes</p>
+          <p class="title-3">¡Bienvenido a nuestro exclusivo espacio para organizadores de campeonatos!
+            En nuestro software, te ofrecemos la plataforma perfecta para dar vida a
+            tus ideas y convertir tus campeonatos en experiencias inolvidables.
+            ¿Por qué unirte a nosotros? Aquí tienes algunas razones irresistibles:
+          </p>
+
+        </section >
+
+        <Cards />
+      </div>
+
+
+
 
       {/* <section class="section-player">
         <h2 class="title">PARA JUGADORES</h2>
@@ -112,8 +119,9 @@ export default function Home() {
       <div class="footerd">
         <Footer />
       </div>
-      {/* <Planilla/> */}
+
     </div>
+
   );
 }
 
