@@ -1,13 +1,10 @@
-import React from 'react'
-import Detalle from '../../../../../../components/pages/componentEstadistica/verDetalle'
-
+import React from "react";
+import Detalle from "../../../../../../components/pages/componentEstadistica/verDetalle";
 
 export default function VerDetalle() {
-  return(
+  return (
     <>
-    <Detalle/>
-
+      <Detalle />
     </>
-  )
-
+  );
 }
