@@ -20,7 +20,7 @@ export default function Estadistica (){
         <p>2</p>
         </div>
         <div className='estadoPartido'>
-          <p >terminado</p>
+          <p className='estadoTitulo'>terminado</p>
         </div>
         
     </div>
@@ -37,7 +37,7 @@ export default function Estadistica (){
           <p>2</p>
         </div>
         <div className='estadoPartido contenedorBoton'>
-          <button className='botonDetalle'><Link href={`${path}/verDetalle`}>ver detalle</Link></button>
+          <button className='botonDetalle'><Link href={`${path}/verDetalle`}><p className='tituloDetalle'>ver Detalle</p></Link></button>
         </div>
     </div>
     </div>

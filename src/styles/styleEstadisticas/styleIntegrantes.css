@@ -1,0 +1,18 @@
+.contenedorIntegrante{
+    display: flex;
+    padding: 14px;
+    background-color: rgba(61, 67, 81, 0.505);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.contenedorIntegrante:hover{
+    transform: translateY(-10px);
+}
+
+.imagenIntegrante{
+    margin-right: 14%;
+}
+.nombreJugador{
+    color: white;
+}

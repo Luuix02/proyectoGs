@@ -1,0 +1,8 @@
+.conteInteUnitario{
+    margin: 2%;
+}
+.contenedorIntegrantes{
+    display: flex;
+    flex-direction: column;
+    
+}

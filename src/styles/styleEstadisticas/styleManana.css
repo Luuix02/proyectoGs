@@ -4,5 +4,10 @@
     padding-left: 50%;
 }
 .contenedorCompleto{
-    display: flex;
+    display: block;
+    background-color: rgba(61, 67, 81, 0.505);
+        margin: 15px;
+        border-radius: 5%;
+    
+
 }

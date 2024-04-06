@@ -1,12 +1,22 @@
 .contenedorPrincipal {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: #747E89;
+    background-color: rgba(61, 67, 81, 0.505);
     width: 80%;
-    height: 90vh;
+    height: 70%;
     margin: 2% 2% 2% 10%;
+    
+}
+.botonesCronometro{
+   margin-left: 35%;
+   
+   
+}
+.divContenedor{
+    display: flex;
+    margin-left:  20%;
 }
 .contenedorEquipo{
     display: grid;
@@ -16,7 +26,7 @@
 }
 .nombreEquipo{
     margin-left: 41%;
-    color: #020202;
+    color: white;
     font-weight: bolder;
     }
     
@@ -41,7 +51,21 @@
         gap: 40px;
         margin-left: 40%;
     }
-    .cronometro .numero .botones{
-        margin-top: 5%;
+    .cronometro{
+        margin-left:  47%;
     
     }
+    .botones{
+        margin: 2%;
+        border-radius: 10px;
+        background-color: #12aed1cd;
+        color: #faf8f8;
+        
+    }
+    .numero{
+        font-size: xx-large;
+        
+
+    }
+    
+    

@@ -3,15 +3,15 @@
     height:50px;
     display: flex;
     align-items: center;
-    width: 90%;
+    
 }
 .btnJornada{
     border-radius: 10px;
     height: 40px;
-    background-color: #C63F3F;
+    background-color: #12aed1cd;
 }
 option .btnJornada{
-    background-color: #C63F3F;
+    background-color: #12aed1cd;
 }
 .contepar{
     border-bottom: 2px solid #ffff;
@@ -26,7 +26,7 @@ margin-left: 10%;
 
 .nombreEquipo{
     margin: 10%;
-    color: #ffff;
+    color: white;
 }
 .faltas{
     width: 35px;
@@ -68,4 +68,14 @@ margin-left: 5%;
 }
 .contenedorBoton{
     width: 73px;
+}
+.botonDetalle{
+    background-color: #12aed1cd;
+    color: white;
+}
+.estadoTitulo{
+    color: white;
+}
+.tituloDetalle{
+    color: white;
 }
