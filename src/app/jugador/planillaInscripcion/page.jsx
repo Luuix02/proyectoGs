@@ -17,8 +17,8 @@ export default function Planilla() {
 
   return (
     <>
-      <RootLayout backgroundImage={false}>
-        <div className="container">
+      <RootLayout backgroundImage={true}>
+        <div className="containerPlanillaIns">
           <div className="Tainer">
             <h2 className="tainer-h2">Planilla Inscripcion Equipo</h2>
 
@@ -63,8 +63,8 @@ export default function Planilla() {
             </div>
           </div>
 
-          <div className="mt-4 table-container tabla w-10/12">
-            <table border="1">
+          <div className="mt-4 table-container tablaIns w-10/12">
+            <table className="tablaPlanillaIns">
               <thead>
                 <tr>
                   <th className="whill th1">N°</th>
@@ -76,8 +76,8 @@ export default function Planilla() {
               <tbody>{filas}</tbody>
             </table>
           </div>
-          <div class="Button">
-            <button> Inscribir </button>
+          <div class="ButtonPlanillaIns">
+            <button className="botonPlanillaInscrip"> Inscribir </button>
           </div>
         </div>
       </RootLayout>
