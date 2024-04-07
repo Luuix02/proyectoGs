@@ -73,7 +73,7 @@ export default function InicioSesion() {
                     <Link href={ruta}></Link>
 
                     <h1 className='tituloPrincipal'>¿No tienes cuenta? <br />
-                        <Link className="registrate" href={`${path}/Registro`}>Regístrate</Link>
+                        <Link className="registrate" href={`${path}/registro`}>Regístrate</Link>
                     </h1>
 
                 </form>

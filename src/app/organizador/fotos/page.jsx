@@ -1,9 +1,12 @@
-import Fotos from '../../../../components/pages/componenteFotos/page'
+import RootLayout from "@/app/layout";
+import Fotos from "../../../../components/pages/componenteFotos/page";
 
 export default function FotosP() {
   return (
-      <>   
-          <Fotos/>
-      </>
-  )
+    <>
+      <RootLayout backgroundImage={true}>
+        <Fotos />
+      </RootLayout>
+    </>
+  );
 }

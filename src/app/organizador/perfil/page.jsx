@@ -1,10 +1,12 @@
-import Perfil from '../../../../components/pages/componenteCuenta/page'
+import RootLayout from "@/app/layout";
+import Perfil from "../../../../components/pages/componenteCuenta/page";
 
 export default function PerfilAdmin() {
   return (
-      <>
-         
-          <Perfil/>
-      </>
-  )
+    <>
+      <RootLayout backgroundImage={true}>
+        <Perfil />
+      </RootLayout>
+    </>
+  );
 }

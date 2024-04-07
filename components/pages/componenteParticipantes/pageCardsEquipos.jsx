@@ -19,6 +19,7 @@ export default function CardsEquipos({ equipos }) {
               />
             </div>
             <p class="nombreEquipoCard">{equipo.nombre}</p>
+         
             <BotonVerIntegrantes />
           </div>
          

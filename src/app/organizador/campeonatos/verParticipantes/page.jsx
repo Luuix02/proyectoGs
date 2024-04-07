@@ -1,5 +1,6 @@
 "use client";
 
+import RootLayout from "@/app/layout";
 import SideBarCampeonato from "../../../../../components/common/sidebarCampeonato/page";
 import CardsEquipos from "../../../../../components/pages/componenteParticipantes/pageCardsEquipos";
 import "../../../../styles/stylePageVerParticipantes/style.css";
@@ -28,10 +29,12 @@ export default function verParticipantes() {
 
   return (
     <>
-      <SideBarCampeonato />
-      <div class="bodyIntegrantes">
-        <CardsEquipos equipos={equipos} />
-      </div>
+      <RootLayout backgroundImage={true}>
+        <SideBarCampeonato />
+        <div class="bodyIntegrantes">
+          <CardsEquipos equipos={equipos} />
+        </div>
+      </RootLayout>
     </>
   );
 }

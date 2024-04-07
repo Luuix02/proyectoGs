@@ -3,7 +3,7 @@ import "../../../src/styles/styleCampeonato/styleCampeonato.css";
 import Image from "next/image";
 import CardCampeonato from "./cardCampeonato";
 import SideBarPrincipal from "../../common/sidebar/page";
-import RootLayout from "@/app/layout";
+
 export default function Campeonatos() {
   return (
     <article className="contenedorPageCampeonatos">

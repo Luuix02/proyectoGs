@@ -1,11 +1,14 @@
-import Campeonatos from '../../../../components/pages/componenteCampeonatos/page'
-
+import RootLayout from "@/app/layout";
+import Campeonatos from "../../../../components/pages/componenteCampeonatos/page";
 
 export default function CampeonatosAdmin() {
   return (
-      <article className=''>
-        <Campeonatos/>   
-      </article>
-      
-  )
+    <>
+      <RootLayout backgroundImage={true}>
+        <article className="">
+          <Campeonatos />
+        </article>
+      </RootLayout>
+    </>
+  );
 }
