@@ -26,9 +26,7 @@ export default function MuestraSelector() {
      
 
           <div class="contenedorCronograma">
-            <span class="FasesCard">
-            <p class="textoFase">FASE 1</p>
-            </span>
+            
          
           {
             mostrarGuardarCambios === "guardarCambios" && <GuardarCronograma
@@ -47,6 +45,9 @@ export default function MuestraSelector() {
               <option value={"manana"}>Jornada Mañana</option>
               <option value={"tarde"}>Jornada Tarde</option>
             </select>
+            <span class="FasesCard">
+            <p class="textoFase">FASE 1</p>
+            </span>
             {selectOption === "manana" && <Manana />}
             {selectOption === "Seleccione Jornada" && <Manana />}
           {selectOption === "tarde" && <Tarde />}
