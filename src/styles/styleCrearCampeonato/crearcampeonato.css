@@ -1,6 +1,6 @@
 .contenedor2 {
   width: 100%;
-  padding: 10px;
+  height: 100%;
   margin: auto;
 }
 
@@ -334,11 +334,33 @@ input[type="number"]:focus {
   padding: 10px;
   word-wrap: break-word;
   margin: 10px;
+  text-align: center;
+  cursor: pointer;
 }
+.BotonesConfirmacionCancelar{
+  width: 22%;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+}
+
 .BotonesConfirmacion:hover {
   background-color: #61d6f7df;
   color: white;
   border: 1px solid white;
+  cursor: pointer;
+}
+.BotonesConfirmacionCancelar:hover{
+  background-color: #61d6f7df;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
 }
 .MuestraDeConfirmacion {
   z-index: 5;
