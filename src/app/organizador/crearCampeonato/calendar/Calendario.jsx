@@ -8,6 +8,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 export default function Calendarioo() {
     return (
         <div class="calendario">
+              <p class="textoDiasDefinidos">Dias definidos</p>
         <FullCalendar class="DiseñoDeCalendario"
             plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
                 headerToolbar={{ 
