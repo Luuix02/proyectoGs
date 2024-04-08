@@ -1,12 +1,25 @@
 "use client";
 import Link from "next/link";
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
+<<<<<<< HEAD
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function InicioSesion() {
   const path = "/auth";
   const router = useRouter();
+=======
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import OlvidoContrasena from '@/app/auth/recuperarContrasena/page';
+
+
+export default function InicioSesion() {
+    const path = '/auth';
+    const router = useRouter()
+    
+    const [RecuperarContrasena, setRecuperarContrasena] = useState('inicioSesion')
+>>>>>>> ae5bcdd0a38db971ca106f1419531f888ae59e90
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -57,6 +70,7 @@ export default function InicioSesion() {
                 value={email}
               />
 
+<<<<<<< HEAD
               <label htmlFor="password" className="etiquetaDato">
                 Contraseña
               </label>
@@ -70,6 +84,25 @@ export default function InicioSesion() {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
               />
+=======
+    const handlerSubmit = (e) => {
+        e.preventDefault()
+        validacionRutas()
+    }
+
+    const handleRecuperarContraseña = () => {
+        setRecuperarContrasena(RecuperarContrasena == "inicioSesion"? "recuperarContrasena": "recuperarContrasena")
+    }
+    return (
+        <>
+         <div class="contenedorMostrarRecuperarContraseña">
+            {RecuperarContrasena=== "recuperarContrasena" && <OlvidoContrasena/>}
+        </div>
+        <div className='contenedorPrincipal'>
+       
+            <h1 className='tituloPrincipal'>Inicio de Sesión</h1>
+            <br /> <br />
+>>>>>>> ae5bcdd0a38db971ca106f1419531f888ae59e90
 
               <Link
                 className="olvidoContraseña"
@@ -88,6 +121,7 @@ export default function InicioSesion() {
               </button>
               <Link href={ruta}></Link>
 
+<<<<<<< HEAD
               <h1 className="tituloPrincipal">
                 ¿No tienes cuenta? <br />
                 <Link className="registrate" href={`${path}/registro`}>
@@ -100,4 +134,24 @@ export default function InicioSesion() {
       </body>
     </>
   );
+=======
+                        <p className='olvidoContraseña' onClick={handleRecuperarContraseña}>Olvido contraseña</p>
+
+                    <br />
+                        <button className='botonInicioSesion'
+                            type='submit'
+                            onClick={()=> router.push(ruta)}
+                        >Iniciar Sesión</button>
+                    <Link href={ruta}></Link>
+
+                    <h1 className='tituloPrincipal'>¿No tienes cuenta? <br />
+                        <Link className="registrate" href={`${path}/registro`}>Regístrate</Link>
+                    </h1>
+
+                </form>
+            </div>
+            </div>
+            </>
+    );
+>>>>>>> ae5bcdd0a38db971ca106f1419531f888ae59e90
 }

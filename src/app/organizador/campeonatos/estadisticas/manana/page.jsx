@@ -8,13 +8,15 @@ import RootLayout from "@/app/layout";
 export default function Manana() {
   return (
     <>
+
       <RootLayout backgroundImage={true}>
         <SideBarCampeonato />
-        <div>
+        <div  className='contenedorCompleto'>
           <h1 className="jornada">Mañana</h1>
           <PageEstadisticas />
         </div>
       </RootLayout>
+
     </>
   );
 }

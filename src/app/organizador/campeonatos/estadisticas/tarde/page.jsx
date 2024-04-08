@@ -9,11 +9,12 @@ export default function Tarde() {
     <>
       <RootLayout backgroundImage={true}>
         <SideBarCampeonato />
-        <div>
+        <div className="contenedorPartidos">
           <h1 className="jornada">Tarde</h1>
           <PageEstadisticas />
         </div>
       </RootLayout>
+
     </>
   );
 }

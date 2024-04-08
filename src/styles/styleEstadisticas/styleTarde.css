@@ -3,3 +3,12 @@
     font-weight: bold;
     padding-left: 50%;
 }
+
+
+.contenedorPartidos{
+    background-color: rgba(61, 67, 81, 0.505);
+    display: block;
+    margin: 15px;
+    border-radius: 5%;
+    
+}

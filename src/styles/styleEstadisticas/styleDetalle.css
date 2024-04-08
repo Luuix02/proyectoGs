@@ -3,10 +3,11 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: #747E89;
+    background-color: rgba(61, 67, 81, 0.505);
     width: 80%;
     height: 90vh;
     margin: 2% 2% 2% 10%;
+    
 }
 .contenedorEquipo{
     display: grid;

@@ -28,7 +28,7 @@ export default function PageEstadisticas() {
         </option>
       </select>
       <p className="tituloFase">FASE 1</p>
-      <div>
+      <div className="partido">
         <Estadistica />
         <Estadistica />
         <Estadistica />

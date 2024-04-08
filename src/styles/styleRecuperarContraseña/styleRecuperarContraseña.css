@@ -3,9 +3,9 @@
   background-image: url('../../../public/images/recuperarContraseña/depositphotos.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-top: 200px;
+  /* margin-top: 200px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
   background: rgba(116, 126, 137, 0.6);
   width: 650px;
   height: auto;
@@ -14,12 +14,32 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  z-index: 30;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.html_recuperarContraseña{
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  background-color: rgba(85, 100, 182, 0.564);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorMostrarRecuperarContraseña{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 10;
 }
 
 .tituloRecuperarContraseña {
   font-size: 24px;
   color: #333333;
   margin-bottom: 20px;
+ 
 }
 
 .contenedorFormulario {
