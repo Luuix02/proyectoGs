@@ -13,8 +13,8 @@ export default function Header() {
                     <div class="links">
                         <Link href={`${path}/registro`}>Registrarse</Link>
                         <Link href={`${path}/inicioSesion`}>Iniciar sesión</Link>
-                        <a href="">Equipo Bienestar</a>
-                        <a href="">Contactanos</a>
+                        <a href="#section_dow">Equipo Bienestar</a>
+                        <a href="#section_ft">Contactanos</a>
                         <a></a>
                     </div>
                 </div>

@@ -1,40 +1,42 @@
 import React from "react";
 import "../../../src/styles/styleRecuperarContraseña/styleRecuperarContraseña.css";
-export default function RecuperarContraseña() {
+export default function RecuperarContraseña({onClose}) {
   return (
     <>
-      <div className="html_recuperarContraseña">
-        <div className="contenedorRecuperarContraseña">
-          <h1 className="tituloRecuperarContraseña">Recuperar Contraseña</h1>
-          <br /> <br />
-          <div className="contenedorFormulario">
-            <form onSubmit={handleSubmit}>
-              <div className="campoConEtiqueta">
-                <label htmlFor="correo" className="etiquetaDato">
-                  Ingresa tu Correo electrónico
-                </label>
-                <input
-                  type="email"
-                  id="correo"
-                  name="correo"
-                  placeholder="ej: pepito@gmail.com"
-                  required
-                  className="campoDato"
-                />
-              </div>
+       <div className="modalBackground">
+      <div className="modalContenido">
+        <span className="cerrarModal" onClick={onClose}>X</span>
+        <div className="contenedorPrincipalRecuperarClave">
+          <div className="inputsLlenarFor">
+            <form action="recuperarContraseña" className="formularioRecuperarClave">
+              <label className="emailTitle" htmlFor="email">Email</label>
+              <input className="llenarEmail"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ej:pepito@gmail.com"
+                required
+              />
 
-              <div className="botonesRecuperarContraseña">
-                <button type="button" className="botoncancelar">
-                  Cancelar
-                </button>
-                <button type="submit" className="botonEnviar">
-                  Enviar
-                </button>
-              </div>
+              <label className="contraseñaTitle" htmlFor="password">Contraseña</label>
+              <input className="llenarContraseña"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="***********"
+                required
+              />
             </form>
+
+            <div className="botonesRecuperarClave">
+              <button className="botonCancelar" onClick={onClose}>Cancelar</button>
+              <button className="botonEnviar">Enviar</button>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+ 
     </>
-  );
+  )
 }
