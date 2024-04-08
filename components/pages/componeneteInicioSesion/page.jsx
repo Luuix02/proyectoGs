@@ -3,11 +3,14 @@ import Link from 'next/link';
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import OlvidoContrasena from '@/app/auth/recuperarContrasena/page';
 
 
 export default function InicioSesion() {
     const path = '/auth';
     const router = useRouter()
+    
+    const [RecuperarContrasena, setRecuperarContrasena] = useState('inicioSesion')
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -36,8 +39,17 @@ export default function InicioSesion() {
         e.preventDefault()
         validacionRutas()
     }
+
+    const handleRecuperarContraseña = () => {
+        setRecuperarContrasena(RecuperarContrasena == "inicioSesion"? "recuperarContrasena": "recuperarContrasena")
+    }
     return (
+        <>
+         <div class="contenedorMostrarRecuperarContraseña">
+            {RecuperarContrasena=== "recuperarContrasena" && <OlvidoContrasena/>}
+        </div>
         <div className='contenedorPrincipal'>
+       
             <h1 className='tituloPrincipal'>Inicio de Sesión</h1>
             <br /> <br />
 
@@ -63,7 +75,7 @@ export default function InicioSesion() {
                             value={password}
                         />
 
-                        <Link className='olvidoContraseña' href={`${path}/recuperarContrasena`}>Olvido contraseña</Link>
+                        <p className='olvidoContraseña' onClick={handleRecuperarContraseña}>Olvido contraseña</p>
 
                     <br />
                         <button className='botonInicioSesion'
@@ -79,6 +91,6 @@ export default function InicioSesion() {
                 </form>
             </div>
             </div>
-            
+            </>
     );
 }

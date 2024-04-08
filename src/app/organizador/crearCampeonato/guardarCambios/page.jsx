@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Guardar() {
+export default function Guardar({cerrarCancelar}) {
   
   const path ='/organizador';
   return (  
@@ -8,13 +8,13 @@ export default function Guardar() {
     <div class="contendorConfirmacionCambios" >
       <p class="textoConfirmacion">¿Desea confirmar los cambios?</p>
         <div class="AlineacionBotonesConfirmacion">
-              <button class="BotonesConfirmacion" ><Link href={`${path}/campeonatos`}> 
+            <Link type="button" class="BotonesConfirmacion" href={`${path}/campeonatos`}> 
            Aceptar
-            </Link></button>
+            </Link>
 
-            <button class="BotonesConfirmacion" ><Link href={`${path}/crearCampeonato`}> 
+            <button type="button" onClick={cerrarCancelar} class="BotonesConfirmacionCancelar"> 
            Cancelar
-            </Link></button>
+            </button>
            
         </div>
     </div>

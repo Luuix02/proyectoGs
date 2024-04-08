@@ -4,7 +4,7 @@ import Modal from '../../../../components/pages/componenteModal/page.jsx'; // As
 import "../../../styles/styleRecuperarContraseña/styleRecuperarContraseña.css";
 
 export default function OlvidoContrasena() {
-  const path = '/auth';
+  
   const [showModal, setShowModal] = useState(false); // Estado para controlar la apertura del modal
 
   const openModal = () => {

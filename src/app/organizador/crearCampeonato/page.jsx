@@ -6,14 +6,14 @@ import Calendarioo from "./calendar/Calendario";
 import Boton from "../../../../components/pages/CrearCampeonato/Boton";
 import Guardar from "./guardarCambios/page";
 import RootLayout from "@/app/layout";
-
+import Link from "next/link"
 export default function CrearCampeonato() {
   // const [BotonVer, setBotonVer] = useState('crearCampeonato')
 
   // const handleClickAbrir = () =>{
   //   setBotonVer(BotonVer == 'crearCampeonato' ? 'calendar' : 'crearCampeonato');
   // }
-
+  const path = "/organizador"
   const [GuardarCambios, setGuardarCambios] = useState("crearCampeonato");
   const handleGuardar = () => {
     setGuardarCambios(
@@ -21,11 +21,16 @@ export default function CrearCampeonato() {
     );
   };
 
+  const handleCerrarCancelar = () => {
+    setGuardarCambios(!GuardarCambios)
+  }
   return (
     <>
       <RootLayout backgroundImage={true}>
-        <div class="contenedor2" active>
-          {GuardarCambios === "guardar" && <Guardar />}
+        <div class="contenedor2" >
+          {GuardarCambios === "guardar" && <Guardar
+              cerrarCancelar= {handleCerrarCancelar}
+               />}
 
           <div class="contendorPrincipalFormulario">
             <p class="textDeCrearCampeonato">Crea tu campeonato</p>
@@ -93,6 +98,7 @@ export default function CrearCampeonato() {
                   </fieldset>
                 </div>
                 <div class="BotonVolver">
+                  <Link href={`${path}/campeonatos`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -110,6 +116,8 @@ export default function CrearCampeonato() {
                     <path d="M5 12l6 6" />
                     <path d="M5 12l6 -6" />
                   </svg>
+                  </Link>
+                
                 </div>
               </div>
 
@@ -156,6 +164,7 @@ export default function CrearCampeonato() {
                     class="BotonGuadar "
                     value={setGuardarCambios}
                     onClick={handleGuardar}
+                
                   >
                     Guardar
                   </div>
