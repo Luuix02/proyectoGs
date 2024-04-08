@@ -15,7 +15,6 @@ export default function Header() {
                         <Link href={`${path}/inicioSesion`}>Iniciar sesión</Link>
                         <a href="">Equipo Bienestar</a>
                         <a href="">Contactanos</a>
-                       
                         <a></a>
                     </div>
                 </div>
