@@ -3,11 +3,22 @@ import Link from "next/link";
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
+import RecuperarContraseña from "../ComponenteRecuperarContraseña/page";
+
 
 export default function InicioSesion() {
   const path = "/auth";
   const router = useRouter();
+
+  const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] = useState(false);
+
+  const abrirRecuperarContraseña = () => {
+    setMostrarRecuperarContraseña(true);
+  };
+
+  const cerrarRecuperarContraseña = () => {
+    setMostrarRecuperarContraseña(false);
+  };
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,21 +48,13 @@ export default function InicioSesion() {
     validacionRutas();
   };
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    setModalIsOpen(true);
-  }
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  }
 
   return (
+    <>
     <div
       style={{
         backgroundImage:
-          "url(https://img.freepik.com/fotos-premium/objeto-pelota-futbol-fondo-abstracto_262243-569.jpg)",
+          "url(https://png.pngtree.com/background/20230625/original/pngtree-goal-achieved-3d-rendering-of-soccer-ball-in-net-with-stadium-picture-image_4053419.jpg)",
         width: "100vw",
         height: "100vh",
         backgroundSize: "cover",
@@ -106,21 +109,24 @@ export default function InicioSesion() {
           </form>
 
           <div className="enlacesAdicionales">
-            <Link
-              className="olvidoContraseña"
-              href= "#" onClick={openModal}
-            >
+              <span className="olvidarContraseña" onClick={abrirRecuperarContraseña}>
+
               ¿Olvidaste tu contraseña?
-
-            </Link>
-            {/* <OlvidoContrasena></OlvidoContrasena> */}
-
+              </span>
+            
+            
             <Link className="registrateIniciar" href={`${path}/registro`}>
               ¿No tienes cuenta?
             </Link>
           </div>
         </div>
       </div>
+      {mostrarRecuperarContraseña && (
+     <RecuperarContraseña onClose={cerrarRecuperarContraseña}/>
+        
+      )}
     </div>
+   
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import Cards from "../../components/pages/Card";
+import RecuperarContraseña from "../../components/pages/ComponenteRecuperarContraseña/page";
 import Footer from "../../components/pages/FooterAndi";
 import Header from "../../components/pages/Navbar";
 import RootLayout from "./layout";

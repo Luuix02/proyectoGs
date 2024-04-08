@@ -1,123 +1,68 @@
-
-.contenedorRecuperarContraseña {
-  background-image: url('../../../public/images/recuperarContraseña/depositphotos.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
-  /* margin-top: 200px;
-  margin-left: auto;
-  margin-right: auto; */
-  background: rgba(116, 126, 137, 0.6);
-  width: 650px;
-  height: auto;
-  border-radius: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  z-index: 30;
-  border-radius: 15px;
-  border: 1px solid black;
+.botonCancelar,
+.botonEnviar {
+  background-color: #12aed1cd; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espacio interior */
+  margin-right: 10px; /* Margen derecho */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
 }
-.html_recuperarContraseña{
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  position: absolute;
-  background-color: rgba(85, 100, 182, 0.564);
+
+/* Estilos para el botón Cancelar */
+.botonCancelar {
+  background-color: #666; /* Cambia el color de fondo para el botón Cancelar */
+}
+
+/* Estilos para el botón Enviar */
+.botonEnviar {
+  background-color: #12aed1cd; /* Cambia el color de fondo para el botón Enviar */
+}
+
+/* Efecto de hover para los botones */
+.botonCancelar:hover,
+.botonEnviar:hover {
+  background-color: #0a7b98cd; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Alineación horizontal de los botones */
+.botonesRecuperarClave {
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Espacia los elementos horizontalmente */
+}
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.742); /* Fondo oscuro semitransparente */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.contenedorMostrarRecuperarContraseña{
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  z-index: 10;
+  margin-top: 50px;
+  margin-left: 105px;
 }
 
-.tituloRecuperarContraseña {
-  font-size: 24px;
-  color: #333333;
-  margin-bottom: 20px;
- 
+/* Estilos para el contenedor del modal */
+.modalContenedor {
+  background-color: rgb(197, 34, 34);
+  padding: 20px;
+  border-radius: 5px;
 }
-
-.contenedorFormulario {
-  margin-bottom: 20px;
-}
-
-.campoConEtiqueta {
-  margin-bottom: 15px;
-}
-
-.etiquetaDato {
-  font-weight: bold;
-}
-
-.campoDato {
-  width: 40%;
-  height: 40px;
-  border: none;
-  border-radius: 20px; 
-  background-color: #f1ebeb;
+.emailTitle{
   color: white;
-  font-size: 16px;
+}
+.contraseñaTitle{
+  color:white
+}
+.cerrarModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
-  margin: 15px;
-}
-
-.botonesRecuperarContraseña {
-  display: flex;
-  justify-content: space-between;
-  gap: 80px; 
-}
-
-.botoncancelar{
-  width: 30%;
-  height: 40px;
-  border: none;
-  border-radius: 20px; 
-  background-color: #12aed1cd;
   color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 15px;
-}
-.botonEnviar {
-  width: 30%;
-  height: 40px;
-  border: none;
-  border-radius: 20px; 
-  background-color: #12aed1cd;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 15px;
-}
-
-.botoncancelar:hover,
-.botonEnviar:hover {
-  background-color: #12aed1cd;
-}
-
-
-@media screen and (max-width: 768px) {
-  .contenedorRecuperarContraseña {
-    padding: 10px;
-  }
-
-  .campoDato {
-    max-width: 100%;
-  }
-
-  .botonesRecuperarContraseña {
-    flex-direction: column;
-  }
-
-  .botoncancelar,
-  .botonEnviar {
-    width: 100%;
-    margin-top: 10px;
-    padding-left: 0; 
-  }
 }

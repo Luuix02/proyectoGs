@@ -2,21 +2,21 @@
   background-repeat: no-repeat;
   margin-top: 5%;
   background: rgba(40, 42, 44, 0.647);
-  width: 50vh;
+  width: 60%;
   max-width: 650px;
-  height: auto;
+  height: 35%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  box-shadow: 0 0 10px rgb(6, 10, 125);
+  box-shadow: 0 0 10px rgb(205, 207, 210);
   margin-left: 5%;
   margin-right: auto;
 }
 @media (min-width: 768px) {
   .contenedorPrincipalInicioSe {
-    margin-left: 28%;
+    margin-left: 34%;
   }
 }
 
@@ -35,6 +35,7 @@
   height: 30px;
   border-radius: 8px;
   padding-left: 30px;
+  color: black;
 }
 
 .olvidoContraseña {
@@ -91,6 +92,7 @@
 
 .campoDato,
 .campoContraseña {
+ 
   width: 90%;
 }
 
@@ -131,6 +133,8 @@
   margin-top: 20px;
   font-size: 12px;
   padding: 15px;
+  cursor: pointer;
+  color: white;
 }
 
 .contraseñaFor {
