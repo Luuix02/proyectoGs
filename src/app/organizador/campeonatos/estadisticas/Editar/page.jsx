@@ -1,18 +1,15 @@
-<<<<<<< HEAD
-import React from 'react'
-import EditarPartido from '../../../../../../components/pages/componentEstadistica/editar.jsx'
-=======
-import React from "react";
-import EditarPartido from "../../../../../../components/pages/componentEstadistica/editar";
 
->>>>>>> d59ad724d2e132d497f68405b68233a5346998b4
+
+import EditarPartido from "../../../../../../components/pages/componentEstadistica/editar";
+import RootLayout from "@/app/layout";
+
 
 export default function Editar() {
   return (
     <>
-      
+       <RootLayout backgroundImage={true}>
         <EditarPartido />
-      
+        </RootLayout>
     </>
   );
 }

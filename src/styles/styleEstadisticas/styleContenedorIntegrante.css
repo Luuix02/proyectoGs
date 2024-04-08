@@ -6,3 +6,8 @@
     flex-direction: column;
     
 }
+.botonIntegrante{
+    border-radius: 10px;
+    height: 40px;
+    background-color: #12aed1cd;
+}
