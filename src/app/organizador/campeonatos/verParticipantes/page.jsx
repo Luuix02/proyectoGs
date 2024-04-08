@@ -27,6 +27,7 @@ export default function verParticipantes() {
     obtenerEquiposDesdeAPI();
   }, []);
 
+
   return (
     <>
       <RootLayout backgroundImage={true}>

@@ -1,5 +1,7 @@
 .contenedorCardEq {
-  margin: 15px;
+  margin: 10px;
+ 
+
 }
 
 .CardFigura {
@@ -8,7 +10,7 @@
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 200px;
+  width: 180px;
   margin-bottom: 20px;
   margin: 0px;
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
@@ -48,4 +50,66 @@
   background-color: #fbfeff;
   border-color: #12aed1cd;
   color: #000000;
+}
+
+.tituloIntegrantes{
+    font-size: 2em;
+    color: #ffffff;
+    width: 80%;
+    margin-left: 5rem;
+    animation: changeColor 3s infinite alternate;
+  }
+  @keyframes changeColor {
+    0% {
+      color: #ffffff;
+    }
+    50% {
+      color: #97e9f2;
+    }
+    100% {
+      color: #12aed1cd;
+    }
+  }
+
+.tituloSelect{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.selectedJornadas{
+ margin-left: -25px;
+  margin-bottom: 15px;
+  
+}
+.jornadaSeleccionada{
+  margin-top: -38px;
+  margin-left: 390px;
+}
+.selectorJornadasEquipos{
+  padding: 10px;
+  margin: 15px;
+  border-radius: 10px;
+}
+.selectorJornadasEquipos:hover{
+  background-color: #12aed1cd;
+}
+.fasesEquiposCard{
+font-size: 15px;
+color: white;
+border-radius: 8px;
+border-bottom: none;
+background-color: #3d4351cc;
+width: 88%;
+height: 20px;
+margin-bottom: 20px;
+margin-right: 10px;
+padding: 10px;
+}
+.fasesEquiposCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.fasesEquiposCard:hover{
+  transform: translateY(-10px);
+box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
 }
