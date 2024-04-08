@@ -1,25 +1,13 @@
 "use client";
 import Link from "next/link";
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
-<<<<<<< HEAD
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
 
 export default function InicioSesion() {
   const path = "/auth";
   const router = useRouter();
-=======
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import OlvidoContrasena from '@/app/auth/recuperarContrasena/page';
-
-
-export default function InicioSesion() {
-    const path = '/auth';
-    const router = useRouter()
-    
-    const [RecuperarContrasena, setRecuperarContrasena] = useState('inicioSesion')
->>>>>>> ae5bcdd0a38db971ca106f1419531f888ae59e90
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -48,110 +36,91 @@ export default function InicioSesion() {
     e.preventDefault();
     validacionRutas();
   };
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  }
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  }
+
   return (
-    <>
-      <body className="bodyIniciarSesion">
-        <div className="contenedorPrincipal">
-          <h1 className="tituloPrincipal">Inicio de Sesión</h1>
-          <br /> <br />
-          <div className="contenedorDatos">
-            <form action="datos" onSubmit={handlerSubmit}>
-              <label htmlFor="email" className="etiquetaDato">
-                Correo electrónico
-              </label>
-              <input
-                type="text"
-                id="email"
-                name="email"
-                placeholder="ej: pepito@gmail.com"
-                required
-                className="campoDato"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-              />
+    <div
+      style={{
+        backgroundImage:
+          "url(https://img.freepik.com/fotos-premium/objeto-pelota-futbol-fondo-abstracto_262243-569.jpg)",
+        width: "100vw",
+        height: "100vh",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div className="contenedorPrincipalInicioSe">
+        <h1 className="tituloPrincipal">Inicia sesión ahora</h1>
+        <br />
+        <div className="contenedorDatos">
+          <form action="datos" onSubmit={handlerSubmit}>
+            <label htmlFor="email" className="etiquetaDato correoFor">
+              Correo electrónico
+            </label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="ej: pepito@gmail.com"
+              required
+              className="campoDato"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+            />
+            <br />
 
-<<<<<<< HEAD
-              <label htmlFor="password" className="etiquetaDato">
-                Contraseña
-              </label>
-              <input
-                className="campoContraseña"
-                type="password"
-                id="password"
-                name="password"
-                placeholder="***********"
-                required
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-              />
-=======
-    const handlerSubmit = (e) => {
-        e.preventDefault()
-        validacionRutas()
-    }
+            <label htmlFor="password" className="etiquetaDato contraseñaFor">
+              Contraseña
+            </label>
+            <input
+              className="campoContraseña"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="*********"
+              required
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+            />
 
-    const handleRecuperarContraseña = () => {
-        setRecuperarContrasena(RecuperarContrasena == "inicioSesion"? "recuperarContrasena": "recuperarContrasena")
-    }
-    return (
-        <>
-         <div class="contenedorMostrarRecuperarContraseña">
-            {RecuperarContrasena=== "recuperarContrasena" && <OlvidoContrasena/>}
-        </div>
-        <div className='contenedorPrincipal'>
-       
-            <h1 className='tituloPrincipal'>Inicio de Sesión</h1>
-            <br /> <br />
->>>>>>> ae5bcdd0a38db971ca106f1419531f888ae59e90
+            <br />
+            <button
+              className="botonInicioSesion"
+              type="submit"
+              onClick={() => router.push(ruta)}
+            >
+              Iniciar Sesión
+            </button>
+          </form>
 
-              <Link
-                className="olvidoContraseña"
-                href={`${path}/recuperarContrasena`}
-              >
-                Olvido contraseña
-              </Link>
+          <div className="enlacesAdicionales">
+            <Link
+              className="olvidoContraseña"
+              href= "#" onClick={openModal}
+            >
+              ¿Olvidaste tu contraseña?
 
-              <br />
-              <button
-                className="botonInicioSesion"
-                type="submit"
-                onClick={() => router.push(ruta)}
-              >
-                Iniciar Sesión
-              </button>
-              <Link href={ruta}></Link>
+            </Link>
+            {/* <OlvidoContrasena></OlvidoContrasena> */}
 
-<<<<<<< HEAD
-              <h1 className="tituloPrincipal">
-                ¿No tienes cuenta? <br />
-                <Link className="registrate" href={`${path}/registro`}>
-                  Regístrate
-                </Link>
-              </h1>
-            </form>
+            <Link className="registrateIniciar" href={`${path}/registro`}>
+              ¿No tienes cuenta?
+            </Link>
           </div>
         </div>
-      </body>
-    </>
+      </div>
+    </div>
   );
-=======
-                        <p className='olvidoContraseña' onClick={handleRecuperarContraseña}>Olvido contraseña</p>
-
-                    <br />
-                        <button className='botonInicioSesion'
-                            type='submit'
-                            onClick={()=> router.push(ruta)}
-                        >Iniciar Sesión</button>
-                    <Link href={ruta}></Link>
-
-                    <h1 className='tituloPrincipal'>¿No tienes cuenta? <br />
-                        <Link className="registrate" href={`${path}/registro`}>Regístrate</Link>
-                    </h1>
-
-                </form>
-            </div>
-            </div>
-            </>
-    );
->>>>>>> ae5bcdd0a38db971ca106f1419531f888ae59e90
 }

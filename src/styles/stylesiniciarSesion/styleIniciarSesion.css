@@ -1,40 +1,23 @@
-.bodyIniciarSesion {
-  background-image: url(https://img.freepik.com/fotos-premium/objeto-pelota-futbol-fondo-abstracto_262243-569.jpg);
-  background-size: cover;
+.contenedorPrincipalInicioSe {
   background-repeat: no-repeat;
-  background-position: center;
-}
-.contenedorPrincipal {
-<<<<<<< HEAD
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 5%;
   background: rgba(40, 42, 44, 0.647);
-  width: 650px;
+  width: 50vh;
+  max-width: 650px;
   height: auto;
-  border-radius: 40px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-=======
-    background-image: url(../../../public/images/iniciarSesion/fondoIniciar.jpeg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-     background: rgba(116, 126, 137, 0.6); 
-    width: 650px;
-    height: auto;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
->>>>>>> ae5bcdd0a38db971ca106f1419531f888ae59e90
+  box-shadow: 0 0 10px rgb(6, 10, 125);
+  margin-left: 5%;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .contenedorPrincipalInicioSe {
+    margin-left: 28%;
+  }
 }
 
 .contenedorDatos form {
@@ -47,7 +30,7 @@
 
 .campoDato,
 .campoContraseña {
-  margin: 15px;
+  margin: 10px;
   width: 280px;
   height: 30px;
   border-radius: 8px;
@@ -55,30 +38,46 @@
 }
 
 .olvidoContraseña {
-  font-size: 16px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .botonInicioSesion {
   border-radius: 8px;
   background-color: #12aed1cd;
-  height: 30px;
-  width: 280px;
-  color: black;
-  border: none;
-  padding: 5px 20px;
+  height: 35px;
+  width: 295px;
   cursor: pointer;
-  margin: 15px;
-  padding-left: 30px; /* Corregí el valor de padding-left */
+  margin: 10px;
+  padding-left: 30px;
+}
+
+.botonInicioSesion {
+  transition: transform 0.2s ease;
+}
+
+.botonInicioSesion:hover {
+  transform: scale(1.05);
 }
 
 .tituloPrincipal {
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
+  margin-bottom: 10px;
+  animation: changeColor 3s infinite alternate;
 }
-
-.registrate {
-  color: black;
+@keyframes changeColor {
+  0% {
+    color: #12aed1;
+  }
+  50% {
+    color: #97e9f2;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+.registrateIniciar {
+  color: #ffffff;
 }
 
 .etiquetaDato,
@@ -87,17 +86,56 @@
 .botonInicioSesion,
 .enlaceOlvido {
   font-weight: bold;
+  color: #ffffff;
 }
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-  .contenedorPrincipal {
-    width: 100%;
-    border-radius: 0; /* Eliminar el redondeo de los bordes */
-  }
+.campoDato,
+.campoContraseña {
+  width: 90%;
+}
 
-  .campoDato,
-  .campoContraseña {
-    width: 90%; /* Utilizar un ancho más pequeño para los campos de entrada */
+.contenedorPrincipalInicioSe {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.campoDato::placeholder,
+.campoContraseña::placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.campoDato:focus::placeholder,
+.campoContraseña:focus::placeholder {
+  transform: translateY(-23px);
+}
+
+.campoDato:not(:focus)::placeholder,
+.campoContraseña:not(:focus)::placeholder {
+  transform: translateY(0);
+}
+
+.enlacesAdicionales {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.contraseñaFor {
+  margin-right: 280px;
+}
+.correoFor {
+  margin-right: 230px;
 }

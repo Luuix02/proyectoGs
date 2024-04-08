@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Modal from '../../../../components/pages/componenteModal/page.jsx'; // Asegúrate de tener la ruta correcta al componente Modal
-import "../../../styles/styleRecuperarContraseña/styleRecuperarContraseña.css";
+
 
 export default function OlvidoContrasena() {
   
@@ -41,13 +41,12 @@ export default function OlvidoContrasena() {
           </form>
         </div>
       </div>
-
-      {/* Modal */}
-      <Modal isOpen={showModal} onClose={closeModal}>
-        <h2>Correo enviado</h2>
-        <p>Se ha enviado un correo electrónico para restablecer tu contraseña.</p>
-        <button onClick={closeModal}>Cerrar</button>
-      </Modal>
-    </div>
+   {/* Modal */}
+       <Modal isOpen={showModal} onClose={closeModal}>
+         <h2>Correo enviado</h2>
+         <p>Se ha enviado un correo electrónico para restablecer tu contraseña.</p>
+         <button onClick={closeModal}>Cerrar</button>
+       </Modal>
+     </div>
   );
 }
