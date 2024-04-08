@@ -31,8 +31,8 @@ export default function Estadistica (){
           <Image src="/images/imageEstadistica/MILONARIOS.png" width={40} height={40} className='imagen rounded-full'/>
         <p className='nombreEquipo'>Nacional</p>
         </div>
-        <button className='faltas amarillas '><Link href={`${path}/Editar`}> 0</Link></button>
-        <button className='faltas rojas '><Link href={`${path}/Editar`}> 0</Link></button>
+        <button className='faltas amarillas '><Link href={`${path}/editar`}> 0</Link></button>
+        <button className='faltas rojas '><Link href={`${path}/editar`}> 0</Link></button>
         <div className='marcador'>
           <p>2</p>
         </div>
