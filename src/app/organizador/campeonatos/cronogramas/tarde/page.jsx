@@ -4,8 +4,10 @@ import "../../../../../styles/styleCronograma/Cronograma.css"
 export default function Tarde() {
     return (
         <>
+        <div class="ContenedorCardCronograma">
             <section class="contenedorDeTextoJornada">
-                <h1 class="texto">TARDE</h1>
+
+                <h1 class="texto">JORNADA TARDE</h1>
             </section>
             <div class="contenedorEquipos">
                 <ComponenteCronograma
@@ -39,9 +41,7 @@ export default function Tarde() {
                     imagen1={""}
                     imagen2={""}
                 />
-
-
-
+</div>
             </div>
         </>
     )

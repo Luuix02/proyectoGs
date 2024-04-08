@@ -3,8 +3,12 @@ import Link from "next/link";
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+<<<<<<< HEAD
+// import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
+=======
 import RecuperarContraseña from "../ComponenteRecuperarContraseña/page";
 
+>>>>>>> dfb9952b7a8af02a0c97f4ae7c482edae15830cb
 
 export default function InicioSesion() {
   const path = "/auth";

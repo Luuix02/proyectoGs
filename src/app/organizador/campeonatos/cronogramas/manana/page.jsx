@@ -7,7 +7,7 @@ export default function Manana() {
     return (
         <>
             <section class="contenedorDeTextoJornada">
-                <h1 class="texto">MAÑANA</h1>
+                <h1 class="texto">JORNADA MAÑANA</h1>
             </section>
             <div class="contenedorEquipos">
 
