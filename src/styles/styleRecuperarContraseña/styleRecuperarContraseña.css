@@ -1,68 +1,82 @@
 .botonCancelar,
 .botonEnviar {
-  background-color: #12aed1cd; /* Color de fondo */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Espacio interior */
-  margin-right: 10px; /* Margen derecho */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 16px; /* Tamaño de fuente */
-  cursor: pointer; /* Cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  background-color: #12aed1cd; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
 }
 
-/* Estilos para el botón Cancelar */
+
 .botonCancelar {
-  background-color: #666; /* Cambia el color de fondo para el botón Cancelar */
+  background-color: #12aed1cd; 
+  margin-top: 60px;
 }
 
-/* Estilos para el botón Enviar */
+
 .botonEnviar {
-  background-color: #12aed1cd; /* Cambia el color de fondo para el botón Enviar */
+  background-color: #12aed1cd; 
+  margin-top: 60px;
 }
 
-/* Efecto de hover para los botones */
 .botonCancelar:hover,
 .botonEnviar:hover {
-  background-color: #0a7b98cd; /* Cambia el color de fondo al pasar el ratón */
+  background-color: #0a7b98cd;
 }
 
-/* Alineación horizontal de los botones */
+
 .botonesRecuperarClave {
-  display: flex; /* Usa flexbox */
-  justify-content: space-between; /* Espacia los elementos horizontalmente */
+  display: flex; 
+  justify-content: space-between;
 }
 
 .modalBackground {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 50%;
   height: 50%;
-  background-color: rgba(0, 0, 0, 0.742); /* Fondo oscuro semitransparente */
+  background-color: rgb(255, 255, 255); 
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  margin-left: 105px;
+  margin-top: 250px;
+  margin-left: 545px;
+  border-radius: 20px;
 }
 
-/* Estilos para el contenedor del modal */
-.modalContenedor {
-  background-color: rgb(197, 34, 34);
+
+.modalContenido {
+  width: 50%;
+  height: 30%;
+ background-color: #66666671;
   padding: 20px;
   border-radius: 5px;
+  border-radius: 20px;
 }
 .emailTitle{
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .contraseñaTitle{
-  color:white
+  color:rgb(0, 0, 0)
 }
 .cerrarModal {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
-  color: white;
+  color: rgb(11, 11, 11);
+}
+.llenarEmail{
+  border-radius: 8px;
+  padding-left: 30px;
+}
+.llenarContraseña{
+  border-radius: 8px;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  
 }

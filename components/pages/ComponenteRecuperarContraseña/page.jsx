@@ -17,7 +17,7 @@ export default function RecuperarContraseña({onClose}) {
                 placeholder="ej:pepito@gmail.com"
                 required
               />
-
+<br />
               <label className="contraseñaTitle" htmlFor="password">Contraseña</label>
               <input className="llenarContraseña"
                 type="password"

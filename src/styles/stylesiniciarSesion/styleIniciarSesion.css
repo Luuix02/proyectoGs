@@ -1,10 +1,10 @@
 .contenedorPrincipalInicioSe {
   background-repeat: no-repeat;
-  margin-top: 5%;
+  margin-top: 1%;
   background: rgba(40, 42, 44, 0.647);
-  width: 60%;
-  max-width: 650px;
-  height: 35%;
+  width: 90%;
+  max-width: 770px;
+  height: 50%;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -14,9 +14,9 @@
   margin-left: 5%;
   margin-right: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 771px) {
   .contenedorPrincipalInicioSe {
-    margin-left: 34%;
+    margin-left: 32%;
   }
 }
 
@@ -25,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   border-radius: 40px;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 
 .campoDato,
@@ -61,14 +61,14 @@
 }
 
 .tituloPrincipal {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   margin-bottom: 10px;
   animation: changeColor 3s infinite alternate;
 }
 @keyframes changeColor {
   0% {
-    color: #12aed1;
+    color: #d3d3d78a;
   }
   50% {
     color: #97e9f2;
@@ -131,7 +131,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 13px;
   padding: 15px;
   cursor: pointer;
   color: white;
