@@ -10,5 +10,7 @@
     display: block;
     margin: 15px;
     border-radius: 5%;
-    
+    width: 84%;
+    right:15px;
+    position: absolute;
 }
