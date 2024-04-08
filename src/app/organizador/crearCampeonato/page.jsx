@@ -8,11 +8,6 @@ import Guardar from "./guardarCambios/page";
 import RootLayout from "@/app/layout";
 import Link from "next/link"
 export default function CrearCampeonato() {
-  // const [BotonVer, setBotonVer] = useState('crearCampeonato')
-
-  // const handleClickAbrir = () =>{
-  //   setBotonVer(BotonVer == 'crearCampeonato' ? 'calendar' : 'crearCampeonato');
-  // }
   const path = "/organizador"
   const [GuardarCambios, setGuardarCambios] = useState("crearCampeonato");
   const handleGuardar = () => {

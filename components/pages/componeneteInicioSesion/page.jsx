@@ -3,7 +3,7 @@ import Link from "next/link";
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
+// import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
 
 export default function InicioSesion() {
   const path = "/auth";
