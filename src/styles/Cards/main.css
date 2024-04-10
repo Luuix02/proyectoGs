@@ -3,31 +3,9 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     text-align: center;
-    margin: 10px 35px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-    
-
-}
-
-
-.card-2 {
-    width: 300px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    margin: 10px 35px;
+    margin: 30px 0px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
 }
-
-.card-2 img {
-    width: 300px;
-    height: 320px;
-    object-fit: cover;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-
 
 .card-1 img {
     width: 300px;
@@ -57,14 +35,19 @@
     padding-top: 30px;
     flex-wrap: wrap;
 
+
 }
 
 .section-card {
-    width: 88.8%;
+    width: 96%;
     padding-bottom: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .card-item:hover {
     transform: translateY(-5px);
 }
-

@@ -50,82 +50,82 @@ export default function InicioSesion() {
 
   return (
     <>
-    <div
-      style={{
-        backgroundImage:
-          "url(https://png.pngtree.com/background/20230625/original/pngtree-goal-achieved-3d-rendering-of-soccer-ball-in-net-with-stadium-picture-image_4053419.jpg)",
-        width: "100vw",
-        height: "100vh",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div className="contenedorPrincipalInicioSe">
-        <h1 className="tituloPrincipal">Inicia sesión ahora</h1>
-        <br />
-        <div className="contenedorDatos">
-          <form action="datos" onSubmit={handlerSubmit}>
-            <label htmlFor="email" className="etiquetaDato correoFor">
-              Correo electrónico
-            </label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="ej: pepito@gmail.com"
-              required
-              className="campoDato"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-            <br />
+      <div
+        style={{
+          backgroundImage:
+            "url(https://png.pngtree.com/background/20230625/original/pngtree-goal-achieved-3d-rendering-of-soccer-ball-in-net-with-stadium-picture-image_4053419.jpg)",
+          width: "100vw",
+          height: "100vh",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div className="contenedorPrincipalInicioSe">
+          <h1 className="tituloPrincipal">Inicia sesión ahora</h1>
+          <br />
+          <div className="contenedorDatos">
+            <form action="datos" onSubmit={handlerSubmit}>
+              <label htmlFor="email" className="etiquetaDato correoFor">
+                Correo electrónico
+              </label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="ej: pepito@gmail.com"
+                required
+                className="campoDato"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+              <br />
 
-            <label htmlFor="password" className="etiquetaDato contraseñaFor">
-              Contraseña
-            </label>
-            <input
-              className="campoContraseña"
-              type="password"
-              id="password"
-              name="password"
-              placeholder="*********"
-              required
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-            />
+              <label htmlFor="password" className="etiquetaDato contraseñaFor">
+                Contraseña
+              </label>
+              <input
+                className="campoContraseña"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="*********"
+                required
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
 
-            <br />
-            <button
-              className="botonInicioSesion"
-              type="submit"
-              onClick={() => router.push(ruta)}
-            >
-              Iniciar Sesión
-            </button>
-          </form>
+              <br />
+              <button
+                className="botonInicioSesion"
+                type="submit"
+                onClick={() => router.push(ruta)}
+              >
+                Iniciar Sesión
+              </button>
+            </form>
 
-          <div className="enlacesAdicionales">
+            <div className="enlacesAdicionales">
               <span className="olvidarContraseña" onClick={abrirRecuperarContraseña}>
 
-              ¿Olvidaste tu contraseña?
+                ¿Olvidaste tu contraseña?
               </span>
-            
-            
-            <Link className="registrateIniciar" href={`${path}/registro`}>
-              ¿No tienes cuenta?
-            </Link>
+
+
+              <Link className="registrateIniciar" href={`${path}/registro`}>
+                ¿No tienes cuenta?
+              </Link>
+            </div>
           </div>
         </div>
+        {mostrarRecuperarContraseña && (
+          <RecuperarContraseña onClose={cerrarRecuperarContraseña} />
+
+        )}
       </div>
-      {mostrarRecuperarContraseña && (
-     <RecuperarContraseña onClose={cerrarRecuperarContraseña}/>
-        
-      )}
-    </div>
-   
+
     </>
   );
 }
