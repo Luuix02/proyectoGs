@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from "next/image";
 import '../../../src/styles/StyleNavbar/main.css'
 export default function Header() {
     const path = '/auth'
@@ -8,7 +9,7 @@ export default function Header() {
             <nav>
                 <div class='containerPrincipal'>
                     <div class="logo">
-                        <img src="" alt="Logo" />
+                    <Image src={"/logoGos.png"} width={260} height={60}></Image>
                     </div>
                     <div class="links">
                         <Link href={`${path}/registro`}>Registrarse</Link>
