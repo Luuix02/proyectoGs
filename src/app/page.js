@@ -29,6 +29,41 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Seccion Administrador */}
+
+          <div className="section-admin">
+            <div className="admin-lapto">
+              <img className="flotante"
+                src="\images\Andy\ordenador.png" alt="img" />
+            </div>
+
+            <div className="admin-icons">
+              <div className="admin-text">
+                <h3 className="admin-title">PARA ORGANIZADORES</h3>
+                <p className="admin-title-p">Domina la organización de tus torneos como nunca antes</p>
+                <p className="admin-title-sp">la plataforma
+                  perfecta para dar vida a tus ideas y convertir tus campeonatos
+                  en experiencias inolvidables.</p>
+              </div>
+
+              <div className="admin-rest">
+                <div className="admin-icon">
+                  <img className="animation"
+                  src="images\Andy\editor.png" alt="img" />
+                  <p className="admin-icon-p">Facilidad de creación</p>
+                </div>
+                <div className="admin-icon">
+                  <img className="animation"
+                  src="images\Andy\project.png" alt="img" />
+                  <p className="admin-icon-p">Estadísticas en tiempo real</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* ADMIN */}
+
           <div class="dos-section" >
             <section class="section-2">
               <div class="error">
@@ -36,6 +71,7 @@ export default function Home() {
               </div>
               <p class="title-2-p">
                 Domina la organización de tus torneos como nunca antes
+
               </p>
               <p class="title-3">
                 ¡Bienvenido a nuestro exclusivo espacio para organizadores de

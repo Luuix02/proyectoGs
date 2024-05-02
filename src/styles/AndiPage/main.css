@@ -637,3 +637,92 @@
         0 0 50px rgb(0, 140, 255),
         0 0 100px rgb(0, 140, 255);
 }
+
+
+/* Seccion Admin */
+
+.section-admin{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-lapto{
+    background-color: rgb(245, 244, 244);
+    width: 50vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.flotante{
+    transform: translateY(0px);
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+@keyframes float {
+    0% {transform: translate(0px, 0);}
+    50% {transform: translate(15px, 0);}
+    100% {transform: translate(-0px, 0);}
+}
+
+.admin-text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.admin-title{
+    padding-top: 30px; 
+    font-size: 25px;
+}
+
+.admin-title-p{
+    padding-top: 25px;
+    font-size: 25px;
+}
+
+.admin-title-sp{
+    padding-top: 10px;
+
+    white-space: 2px;
+    padding-right: 30px;
+}
+
+.admin-rest{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.admin-icon img{
+    object-fit: contain;
+    width: 90px;
+
+}
+.admin-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.admin-icon-p{
+    margin-left: 100px;
+}
+
+/* Animacion Iconos */
+
+.animation{
+    transform: translateY(0px);
+    animation: Source 7s ease-in-out infinite;
+}
+
+@keyframes Source {
+    0% {transform: translate(0px, 0);}
+    50% {transform: translate(15px, 0);}
+    100% {transform: translate(-0px, 0);}
+}

@@ -1,3 +1,9 @@
 .fondoApp{
     background-color: #4778A3;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

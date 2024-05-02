@@ -9,7 +9,10 @@ export default function Header() {
             <nav>
                 <div class='containerPrincipal'>
                     <div class="logo">
-                    <Image src={"/logoGos.png"} width={260} height={60}></Image>
+                        <img src="\logoGos.png" alt=""/>
+                    </div>
+                    <div>
+                        <h1>GoSport</h1>
                     </div>
                     <div class="links">
                         <Link href={`${path}/registro`}>Registrarse</Link>
