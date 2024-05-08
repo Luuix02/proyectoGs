@@ -2,7 +2,6 @@ import Cards from "../../components/pages/Card";
 import RecuperarContraseña from "../../components/pages/ComponenteRecuperarContraseña/page";
 import Footer from "../../components/pages/FooterAndi";
 import Header from "../../components/pages/Navbar";
-import Subcard from "../../components/pages/Subcard";
 import RootLayout from "./layout";
 
 import "./page.module.css";
@@ -12,6 +11,7 @@ export default function Home() {
     <>
       <RootLayout backgroundImage={false}>
         <div class="pagesPri">
+
           <div class="Conten">
             <Header />
             <div class="Sub-cont">
@@ -32,6 +32,7 @@ export default function Home() {
           {/* Seccion Administrador */}
 
           <div className="section-admin">
+            
             <div className="admin-lapto">
               <img className="flotante"
                 src="\images\Andy\ordenador.png" alt="img" />
@@ -47,16 +48,17 @@ export default function Home() {
               </div>
 
               <div className="admin-rest">
+
                 <div className="admin-icon">
                   <img className="animation"
-                  src="images\Andy\editor.png" alt="img" />
-                  <p className="admin-icon-p">Facilidad de creación</p>
+                    src="images\Andy\editor.png" alt="img" />
+                  <div className="admin-info">
+                    <p className="admin-icon-p">Facilidad de creación</p>
+                    <p className="admin-icon-p">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
+                  </div>
                 </div>
-                <div className="admin-icon">
-                  <img className="animation"
-                  src="images\Andy\project.png" alt="img" />
-                  <p className="admin-icon-p">Estadísticas en tiempo real</p>
-                </div>
+
+              
               </div>
             </div>
 
@@ -64,26 +66,8 @@ export default function Home() {
 
           {/* ADMIN */}
 
-          <div class="dos-section" >
-            <section class="section-2">
-              <div class="error">
-                <h1>PARA ORGANIZADORES</h1>
-              </div>
-              <p class="title-2-p">
-                Domina la organización de tus torneos como nunca antes
+          <Cards />
 
-              </p>
-              <p class="title-3">
-                ¡Bienvenido a nuestro exclusivo espacio para organizadores de
-                campeonatos! En nuestro software, te ofrecemos la plataforma
-                perfecta para dar vida a tus ideas y convertir tus campeonatos
-                en experiencias inolvidables. ¿Por qué unirte a nosotros? Aquí
-                tienes algunas razones irresistibles:
-              </p>
-            </section>
-
-            <Cards />
-          </div>
 
           {/* <section class="section-player">
         <h2 class="title">PARA JUGADORES</h2>
@@ -94,7 +78,6 @@ export default function Home() {
           plataforma diseñada para verdaderos amantes del juego! ¿Por qué deberías unirte a nosotros?
           Aquí tienes razones irresistibles:
         </p>
-        <Subcard/>
       </section>  */}
 
           <section class="section-3" id="section_dow">

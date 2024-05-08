@@ -98,89 +98,6 @@
     }
 }
 
-.dos-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* background-image: url("../../../public/images/Andy/Dre.png"); */
-    width: 100%;
-    object-fit: cover;
-    background-color: rgba(216, 216, 216, 0.6);
-}
-
-.section-2 {
-    margin-top: 20px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-}
-
-.error {
-    display: grid;
-    place-content: center;
-}
-
-.error h1 {
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.title-2-p {
-    text-align: start;
-    font-size: 30px;
-    color: black;
-    padding: 0px 24px;
-
-}
-.title-2 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 30px;
-    padding-bottom: 40px;
-    padding-top: 20px;
-}
-
-
-.title-3 {
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    line-height: 1.6;
-    text-align: center;
-    padding: 0px 3px;
-}
-
-.boton-footer {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.55);
-    width: 85%;
-    padding-top: 50px;
-    padding-bottom: 40px;
-
-
-}
-
-.boton-footer p {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-weight: bold;
-    padding-bottom: 70px;
-}
-
-.boton-footer button {
-    background-color: #C63F3F;
-    padding: 15px;
-    width: 230px;
-    border-radius: 10px;
-    font-weight: bold;
-    padding-top: 20px;
-
-}
-
 
 .title {
     text-align: center;
@@ -531,33 +448,7 @@
     }
 }
 
-.section-player {
-    width: 100%;
-    padding-top: 70px;
-    background-image: url("");
-    object-fit: cover;
-    background-size: cover;
-}
 
-.section-4 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.55);
-    width: 85%;
-    margin-top: 30px;
-    padding: 60px;
-}
-
-.section-4-h3 {
-    line-height: 1.5;
-    font-weight: bold;
-    padding-bottom: 50px;
-    font-size: 35px;
-    text-align: center;
-    margin: 50px;
-
-}
 
 .section-3-div {
     display: flex;
@@ -708,11 +599,19 @@
     justify-content: start;
     align-items: center;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .admin-icon-p{
     margin-left: 100px;
 }
+
+.admin-info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 
 /* Animacion Iconos */
 

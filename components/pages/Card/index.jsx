@@ -19,19 +19,10 @@ export default function Cards() {
                         <h4 class="card-t">Cronogramas personalizados</h4>
                         <p class="card-t1">Elabora tus cronogramas flexibles y personalizables para adaptarse a cualquier estilo de campeonato.</p>
                     </div>
-                    <div class="card-1">
-                        <img src="\images\Cards\card-7.png" alt="img" />
-                        <h4 class="card-t">Diversion y Futbol</h4>
-                        <p class="card-t1">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
-                    </div>
+                    
                 </div>
 
-                <div class="row envi">
-                    <div class="card-1">
-                        <img src="\images\Cards\card-8.png" alt="img" />
-                        <h4 class="card-t">Estadísticas en tiempo real</h4>
-                        <p class="card-t1">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
-                    </div>
+                <div class="row ">
                     <div class="card-1">
                         <img src="\images\Cards\Card-4.jpg" alt="img" />
                         <h4 class="card-t">Estadísticas en tiempo real</h4>
@@ -43,9 +34,9 @@ export default function Cards() {
                         <p class="card-t1">Explora quiénes son todos los participantes y capitanes de los equipos.</p>
                     </div>
                     <div class="card-1">
-                        <img src="\images\Cards\Card-6.jpg" alt="img" />
-                        <h4 class="card-t">  Comparte los mejores momentos</h4>
-                        <p class="card-t1">Comparte los momentos inolvidables del campeonato con la posibilidad de agregar fotos que serán visibles para tus jugadores.</p>
+                        <img src="\images\Cards\card-8.png" alt="img" />
+                        <h4 class="card-t">Estadísticas en tiempo real</h4>
+                        <p class="card-t1">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
                     </div>
                 </div>
             </section>
