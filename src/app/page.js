@@ -1,4 +1,5 @@
 import Cards from "../../components/pages/Card";
+import RecuperarContraseña from "../../components/pages/ComponenteRecuperarContraseña/page";
 import Footer from "../../components/pages/FooterAndi";
 import Header from "../../components/pages/Navbar";
 import RootLayout from "./layout";
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <RootLayout backgroundImage={false}>
         <div class="pagesPri">
+
           <div class="Conten">
             <Header />
             <div class="Sub-cont">
@@ -19,47 +21,53 @@ export default function Home() {
                   eleva el espíritu deportivo! ¿Estás listo para ser parte de la
                   experiencia?{" "}
                 </p>
-                <button
-                  className="botonLanding"
-                  class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 inline-flex items-center"
-                  type="button"
-                  disabled=""
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 100 101"
-                    class="inline w-4 h-4 mr-3 text-white animate-bounce"
-                    role="status"
-                    aria-hidden="true"
-                  >
-                    <circle fill="#34D399" r="45" cy="50" cx="50"></circle>
-                  </svg>
-                  Unete ahora
+                <button class="shadow__btn">
+                  Unete Ahora
                 </button>
+
               </div>
             </div>
           </div>
 
-          <div class="dos-section">
-            <section class="section-2">
-              <div class="error">
-                <h1>PARA ORGANIZADORES</h1>
-              </div>
-              <p class="title-2-p">
-                Domina la organización de tus torneos como nunca antes
-              </p>
-              <p class="title-3">
-                ¡Bienvenido a nuestro exclusivo espacio para organizadores de
-                campeonatos! En nuestro software, te ofrecemos la plataforma
-                perfecta para dar vida a tus ideas y convertir tus campeonatos
-                en experiencias inolvidables. ¿Por qué unirte a nosotros? Aquí
-                tienes algunas razones irresistibles:
-              </p>
-            </section>
+          {/* Seccion Administrador */}
 
-            <Cards />
+          <div className="section-admin">
+            
+            <div className="admin-lapto">
+              <img className="flotante"
+                src="\images\Andy\ordenador.png" alt="img" />
+            </div>
+
+            <div className="admin-icons">
+              <div className="admin-text">
+                <h3 className="admin-title">PARA ORGANIZADORES</h3>
+                <p className="admin-title-p">Domina la organización de tus torneos como nunca antes</p>
+                <p className="admin-title-sp">la plataforma
+                  perfecta para dar vida a tus ideas y convertir tus campeonatos
+                  en experiencias inolvidables.</p>
+              </div>
+
+              <div className="admin-rest">
+
+                <div className="admin-icon">
+                  <img className="animation"
+                    src="images\Andy\editor.png" alt="img" />
+                  <div className="admin-info">
+                    <p className="admin-icon-p">Facilidad de creación</p>
+                    <p className="admin-icon-p">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
+                  </div>
+                </div>
+
+              
+              </div>
+            </div>
+
           </div>
+
+          {/* ADMIN */}
+
+          <Cards />
+
 
           {/* <section class="section-player">
         <h2 class="title">PARA JUGADORES</h2>
@@ -70,10 +78,9 @@ export default function Home() {
           plataforma diseñada para verdaderos amantes del juego! ¿Por qué deberías unirte a nosotros?
           Aquí tienes razones irresistibles:
         </p>
-        <Subcard />
-      </section> */}
+      </section>  */}
 
-          <section class="section-3">
+          <section class="section-3" id="section_dow">
             <div class="Bienestar section-3-div">
               <h1 class="section-3-h1">Equipo Bienestar al Aprendiz</h1>
               <h5 class="section-3-h5"> ¿Quiénes somos?</h5>
@@ -112,7 +119,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="section-3-p4">
+              <div className="section-3-p4" id="section_ft">
                 <div className="section-3-p4-div">
                   <h4 class="section-3-p2">GoSport DG</h4>
                   <p class="section-3-pp ">

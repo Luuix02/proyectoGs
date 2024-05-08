@@ -98,87 +98,6 @@
     }
 }
 
-.dos-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: url("../../../public/images/Andy/Dre.png");
-    width: 100%;
-    object-fit: cover;
-}
-
-.section-2 {
-    margin-top: 25px;
-    padding: 20px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-}
-
-.error {
-    display: grid;
-    place-content: center;
-}
-
-.error h1 {
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.title-2-p {
-    text-align: start;
-    font-size: 30px;
-    color: black;
-}
-
-.title-2 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 30px;
-    padding-bottom: 40px;
-    padding-top: 20px;
-}
-
-
-.title-3 {
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    line-height: 1.6;
-    text-align: center;
-}
-
-.boton-footer {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.55);
-    width: 85%;
-    padding-top: 50px;
-    padding-bottom: 40px;
-
-
-}
-
-.boton-footer p {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    font-weight: bold;
-    padding-bottom: 70px;
-}
-
-.boton-footer button {
-    background-color: #C63F3F;
-    padding: 15px;
-    width: 230px;
-    border-radius: 10px;
-    font-weight: bold;
-    padding-top: 20px;
-
-}
-
 
 .title {
     text-align: center;
@@ -529,33 +448,7 @@
     }
 }
 
-.section-player {
-    width: 100%;
-    padding-top: 70px;
-    background-image: url("");
-    object-fit: cover;
-    background-size: cover;
-}
 
-.section-4 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.55);
-    width: 85%;
-    margin-top: 30px;
-    padding: 60px;
-}
-
-.section-4-h3 {
-    line-height: 1.5;
-    font-weight: bold;
-    padding-bottom: 50px;
-    font-size: 35px;
-    text-align: center;
-    margin: 50px;
-
-}
 
 .section-3-div {
     display: flex;
@@ -610,4 +503,125 @@
 
 .section-3-subdiv img {
     width: 100%;
+}
+
+.shadow__btn {
+    margin-left: 55px;
+    padding: 20px 25px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.shadow__btn {
+    background-color: #12aed1cd;
+}
+
+.shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(0, 140, 255),
+        0 0 25px rgb(0, 140, 255),
+        0 0 50px rgb(0, 140, 255),
+        0 0 100px rgb(0, 140, 255);
+}
+
+
+/* Seccion Admin */
+
+.section-admin{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-lapto{
+    background-color: rgb(245, 244, 244);
+    width: 50vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.flotante{
+    transform: translateY(0px);
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+@keyframes float {
+    0% {transform: translate(0px, 0);}
+    50% {transform: translate(15px, 0);}
+    100% {transform: translate(-0px, 0);}
+}
+
+.admin-text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.admin-title{
+    padding-top: 30px; 
+    font-size: 25px;
+}
+
+.admin-title-p{
+    padding-top: 25px;
+    font-size: 25px;
+}
+
+.admin-title-sp{
+    padding-top: 10px;
+
+    white-space: 2px;
+    padding-right: 30px;
+}
+
+.admin-rest{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.admin-icon img{
+    object-fit: contain;
+    width: 90px;
+
+}
+.admin-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.admin-icon-p{
+    margin-left: 100px;
+}
+
+.admin-info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/* Animacion Iconos */
+
+.animation{
+    transform: translateY(0px);
+    animation: Source 7s ease-in-out infinite;
+}
+
+@keyframes Source {
+    0% {transform: translate(0px, 0);}
+    50% {transform: translate(15px, 0);}
+    100% {transform: translate(-0px, 0);}
 }

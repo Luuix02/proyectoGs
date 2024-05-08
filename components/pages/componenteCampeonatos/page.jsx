@@ -10,7 +10,7 @@ export default function Campeonatos() {
       <SideBarPrincipal />
       <section className="contnidoCampeonatos">
         <article className="cardCampeonato">
-          <Image src={"/logo.png"} width={150} height={150}></Image>
+          <Image src={"/goSport1.png"} width={160} height={160}></Image>
           <h1 className="">
             ¡Bienvenido a <p className="textoE">GoSport</p>
             lugar para crear y gestionar tus campeonatos de fútbol!

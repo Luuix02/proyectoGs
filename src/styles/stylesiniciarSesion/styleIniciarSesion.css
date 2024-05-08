@@ -1,75 +1,145 @@
-.contenedorPrincipal {
-    background-image: url(../../../public/images/iniciarSesion/fondoIniciar.jpeg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-     background: rgba(116, 126, 137, 0.6); 
-    width: 650px;
-    height: auto;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+.contenedorPrincipalInicioSe {
+  background-repeat: no-repeat;
+  margin-top: 1%;
+  background: rgba(40, 42, 44, 0.647);
+  width: 90%;
+  max-width: 770px;
+  height: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(205, 207, 210);
+  margin-left: 5%;
+  margin-right: auto;
+}
+@media (min-width: 771px) {
+  .contenedorPrincipalInicioSe {
+    margin-left: 32%;
+  }
 }
 
 .contenedorDatos form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-    border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  margin-top: 50px;
 }
 
-.campoDato, .campoContraseña {
-    margin: 15px;
-    width: 280px;
-    height: 30px;
-    border-radius: 8px;
-    padding-left: 30px;
+.campoDato,
+.campoContraseña {
+  margin: 10px;
+  width: 280px;
+  height: 30px;
+  border-radius: 8px;
+  padding-left: 30px;
+  color: black;
 }
 
 .olvidoContraseña {
-    font-size: 16px;
-    color:black;
+  color: rgb(255, 255, 255);
 }
 
 .botonInicioSesion {
-    border-radius: 8px;
-    background-color: #12aed1cd;
-    height: 30px;
-    width: 280px;
-    color: black;
-    border: none;
-    padding: 5px 20px;
-    cursor: pointer;
-    margin: 15px;
-    padding-left: 30px; /* Corregí el valor de padding-left */
+  border-radius: 8px;
+  background-color: #12aed1cd;
+  height: 35px;
+  width: 295px;
+  cursor: pointer;
+  margin: 10px;
+  padding-left: 30px;
 }
 
+.botonInicioSesion {
+  transition: transform 0.2s ease;
+}
+
+.botonInicioSesion:hover {
+  transform: scale(1.05);
+}
 
 .tituloPrincipal {
-    font-size: 16px;
-    text-align: center;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: changeColor 3s infinite alternate;
+}
+@keyframes changeColor {
+  0% {
+    color: #d3d3d78a;
+  }
+  50% {
+    color: #97e9f2;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+.registrateIniciar {
+  color: #ffffff;
 }
 
-.registrate{
-    color: black;
+.etiquetaDato,
+.campoDato,
+.tituloPrincipal,
+.botonInicioSesion,
+.enlaceOlvido {
+  font-weight: bold;
+  color: #ffffff;
 }
 
-.etiquetaDato, .campoDato, .tituloPrincipal, .botonInicioSesion, .enlaceOlvido {
-    font-weight: bold;
+.campoDato,
+.campoContraseña {
+ 
+  width: 90%;
 }
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
-    .contenedorPrincipal {
-        width: 100%;
-        border-radius: 0; /* Eliminar el redondeo de los bordes */
-    }
+.contenedorPrincipalInicioSe {
+  animation: fadeIn 0.8s ease;
+}
 
-    .campoDato, .campoContraseña {
-        width: 90%; /* Utilizar un ancho más pequeño para los campos de entrada */
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.campoDato::placeholder,
+.campoContraseña::placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.campoDato:focus::placeholder,
+.campoContraseña:focus::placeholder {
+  transform: translateY(-23px);
+}
+
+.campoDato:not(:focus)::placeholder,
+.campoContraseña:not(:focus)::placeholder {
+  transform: translateY(0);
+}
+
+.enlacesAdicionales {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 13px;
+  padding: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.contraseñaFor {
+  margin-right: 280px;
+}
+.correoFor {
+  margin-right: 230px;
 }

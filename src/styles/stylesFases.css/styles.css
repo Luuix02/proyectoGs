@@ -2,7 +2,7 @@
 .contenedorEquiposDerr {
     /* width: 100%; */
     height: auto;
-    border: 1px solid;
+    border: 1px solid white;
     margin: 15px 0;
     position: relative;
     border-radius: 5px;
@@ -15,7 +15,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .seccionVersusEq {
@@ -43,12 +43,14 @@
     margin-left: -10px;
     font-weight: bold;
     width: 300px;
+    color: white;
     /* margin: 10px; */
 }
 .ContenedorEquiposPrin {
     width: 300px; 
     margin: 10px; 
     margin-left: 270px;
+    color: white;
 }
 
 .ContenedorEquiposSec {
@@ -58,6 +60,7 @@
     height: 768.88px;
     margin-top: 170px;
     margin-left: -35px;
+    color: white;
    
 
 }
@@ -66,12 +69,14 @@
     margin: 10px;
     margin-top: 320px;
     margin-left: -100px;
+    color: white;
 }
 .ContenedorEquiposCuar{
     width: 300px; 
     margin: 10px;
     margin-top: 320px;
     margin-left: -30px;
+    color: white;
 
 }
 .ContenedorEquiposQuin{
@@ -79,23 +84,27 @@
     margin: 10px;
     margin-top: -780px;
     margin-left: 1510px;
+    color: white;
 }
 .ContenedorEquiposSeis{
     width: 300px; 
     margin: 10px;
     margin-top: -940px;
     margin-left: 2060px;
+    color: white;
 }
 .ContenedorFinal{
     width: 300px; 
     margin: 10px;
     margin-top: -460px;
     margin-left: 750px; 
+    color: white;
 }
 .ContenedorEqGanador{
     width: 300px; 
 margin-left: -305px;
     margin-top: -850px;
+    color: white;
 
 }
 

@@ -1,11 +1,12 @@
-@media (max-width: 2500px) {
+@media (max-width: 2300px) {
     .bodyDerrotero {
-        /* background-color: rgb(45, 50, 105); */
+        background-color: rgba(61, 67, 81, 0.371);
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center;
         max-width: 2500px; 
         margin: 0 auto;
+        
     }
 }

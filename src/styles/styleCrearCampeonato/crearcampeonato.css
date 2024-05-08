@@ -43,14 +43,15 @@
   justify-content: center;
   align-content: center;
   position: relative;
-  margin-bottom: 20px;
-  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  width: 90%;
 }
 
 .form-group input {
   align-content: center;
-  width: 80%;
-  font-size: 25px;
+  width: 90%;
+  font-size: 15px;
   border-radius: 10px;
   background-color: transparent;
   border: white 1px solid;
@@ -96,8 +97,8 @@
   display: flex;
   flex-direction: row;
   gap: 40px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .selectores {
@@ -186,11 +187,12 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .textoDiasDefinidos {
   font-size: 18px;
+  text-align: center;
 }
 .botonVerCalendario:hover {
   filter: drop-shadow(0 -0px 0 rgb(0, 213, 255));
@@ -363,9 +365,8 @@ input[type="number"]:focus {
   cursor: pointer;
 }
 .MuestraDeConfirmacion {
-  z-index: 5;
-  background-color: #00000042;
-  /* opacity: 0.5; */
+  z-index:50;
+  background-color: #05050542;
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -377,6 +378,7 @@ input[type="number"]:focus {
   display: flex;
   justify-content: end;
   align-items: end;
+  margin: auto;
  width: 100%;
 }
 .textDeCrearCampeonato {

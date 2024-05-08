@@ -1,22 +1,50 @@
 .ContainerPrincipal {
+  width: 76%;
+  height: auto;
   margin: auto;
-  width: 90%;
-  margin-right: 0px;
-  display: flex;
-  flex-direction: column;
 }
 .contenedorDeTextoJornada {
   text-align: center;
   width: 100%;
 }
 .contenedorCronograma {
-  width: 100%;
   position: absolute;
+  background-color: rgba(119, 118, 129, 0.64);
+  width: auto;
+  height: auto;
+  margin: auto;
+  margin: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15px;
+}
+.AlineacionSelectorYFase{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: auto;
+}
+.ContenedorCardCronograma{
+
+  top: 0px;
+}
+.AnchoDeFase1{
+  width: 70%;
 }
 .selectorJornada {
-  padding: 10px;
-  margin: 15px;
   border-radius: 10px;
+  height: 40px;
+  width:11% ;
+  font-size: 15px;
+  font-weight: 300;
+  position: absolute;
+  top: 98px;
+  right: 90px;
 }
 
 .principalEquipos {
@@ -28,19 +56,22 @@
 /* module.css */
 
 .contenedorEquipos {
-  width: 80%;
+  width: 90%;
   border-radius: 10px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgba(119, 118, 129, 0.64);
+
+  gap: 5px;
 }
 .texto {
   font-size: 25px;
-  font-family: bold;
-  text-align: center;
+  font-weight:300 ;
+  text-align: start;
   color:white;
+  z-index: 10;
+  margin-left: 190px;
 }
 
 .contenedorCard {
@@ -48,7 +79,7 @@
   margin: 30px;
   height: 150px;
   background-color: white;
-  width: 30%;
+  width: 28%;
   transition: ease-in-out 0.3s;
   display: flex;
 }
@@ -81,7 +112,7 @@
   flex-direction: column;
   text-align: center;
   font-size: 18px;
-  font-family: bold;
+  font-weight: 300;
   gap: 15px;
 }
 label {
@@ -94,4 +125,113 @@ input {
 }
 input::placeholder {
   color: black;
+}
+.MuestraDeConfirmacionCronograma {
+  z-index: 50;
+  background-color: #12121242;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0px;
+}
+.contendorConfirmacionCambiosCronograma {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 15px;
+  width: 30%;
+  z-index: 100%;
+}
+.textoConfirmacion {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin: 10px;
+}
+.AlineacionBotonesConfirmacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+}
+.BotonesConfirmacion {
+  position: relative;
+  width: 20%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.BotonesConfirmacion:hover {
+  background-color: #12aed1cd;
+  color: white;
+  cursor: pointer;
+}
+.GuardarBoton{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 6%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+.AlineacionBotonGuardar{
+  display: flex;
+  justify-content: end;
+  margin-right: 25px;
+  width: 100%;
+}
+
+.GuardarBoton:hover {
+  background-color: #12aed1cd;
+  color: white;
+  cursor: pointer;
+}
+.BotonesConfirmacionCancelar{
+  width: 22%;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+}
+.BotonesConfirmacionCancelar:hover {
+  background-color: #12aed1cd;
+  color: white;
+  cursor: pointer;
+}
+.FasesCard{
+  font-size: 15px;
+  color: white;
+  border-radius: 8px;
+  border-bottom: none;
+  background-color: #3d4351cc;
+  width: 88%;
+  height: auto;
+  margin-bottom: 25px;
+}
+.FasesCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+}
+
+.textoFase{
+  margin-left: 20px;
 }
