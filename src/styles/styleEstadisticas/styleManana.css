@@ -1,13 +1,13 @@
 .jornada {
-    color: #090909;
+    color: #fdfcfc;
     font-weight: bold;
     padding-left: 50%;
 }
 .contenedorCompleto{
     display: block;
     background-color: rgba(61, 67, 81, 0.505);
-        margin: 15px;
         border-radius: 5%;
-    
+    margin-left: 15%;
 
+        
 }

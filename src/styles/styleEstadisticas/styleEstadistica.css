@@ -1,5 +1,4 @@
  .contenedorPartido {
-    border:1px #ffff;
     height:50px;
     display: flex;
     align-items: center;
@@ -14,7 +13,7 @@ option .btnJornada{
     background-color: #12aed1cd;
 }
 .contepar{
-    border-bottom: 2px solid #ffff;
+    border-bottom: 2px solid #fcfafa;
 }
 .contenedorImagen{
     display: flex;
@@ -46,9 +45,8 @@ margin-left: 10%;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-left:20%;
+    border-right: #fcfafa 2px solid ;
    font-size:larger;
-border-right: 2px solid #ffff;
 height: 50px;
 width: 200px;
 

@@ -10,11 +10,13 @@ export default function Manana() {
     <>
 
       <RootLayout backgroundImage={true}>
+        
         <SideBarCampeonato />
         <div  className='contenedorCompleto'>
           <h1 className="jornada">Mañana</h1>
           <PageEstadisticas />
         </div>
+        
       </RootLayout>
 
     </>

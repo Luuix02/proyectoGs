@@ -11,7 +11,7 @@ export default function Estadistica (){
       <div className='contenedorPartido ' > 
       <div className=' contenedorImagen'>
           <Image src="/images/imageEstadistica/MILONARIOS.png" width={40} height={40} className='imagen rounded-full' />
-          <Image src="/images/imageEstadistica/Nacional.png" width={40} height={40} className='imagen rounded-full' />
+          
         <p className='nombreEquipo'>Millonarios</p>
         </div>
         <button className='faltas amarillas '><Link href={`${path}/editar`}>0</Link></button>
@@ -28,7 +28,7 @@ export default function Estadistica (){
       <div className=' contenedorImagen'>
           <Image src="/images/imageEstadistica/nacional.png" width={40} height={40} className='imagen rounded-full'/>
 
-          <Image src="/images/imageEstadistica/MILONARIOS.png" width={40} height={40} className='imagen rounded-full'/>
+         
         <p className='nombreEquipo'>Nacional</p>
         </div>
         <button className='faltas amarillas '><Link href={`${path}/editar`}> 0</Link></button>
