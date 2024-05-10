@@ -1,9 +1,8 @@
 import Cards from "../../components/pages/Card";
 import RecuperarContraseña from "../../components/pages/ComponenteRecuperarContraseña/page";
-import Footer from "../../components/pages/FooterAndi";
+import Footer from "../../components/pages/FooterLanding";
 import Header from "../../components/pages/Navbar";
 import RootLayout from "./layout";
-
 import "./page.module.css";
 
 export default function Home() {
@@ -32,33 +31,54 @@ export default function Home() {
           {/* Seccion Administrador */}
 
           <div className="section-admin">
-            
+
             <div className="admin-lapto">
               <img className="flotante"
-                src="\images\Andy\ordenador.png" alt="img" />
+                src="\images\landing\ordenador.png" alt="img" />
             </div>
 
             <div className="admin-icons">
               <div className="admin-text">
                 <h3 className="admin-title">PARA ORGANIZADORES</h3>
-                <p className="admin-title-p">Domina la organización de tus torneos como nunca antes</p>
-                <p className="admin-title-sp">la plataforma
-                  perfecta para dar vida a tus ideas y convertir tus campeonatos
-                  en experiencias inolvidables.</p>
+                <p className="admin-title-p">Optimiza la gestión de tus torneos con nuestra plataforma, convierte tus ideas en experiencias inolvidables.</p>
               </div>
 
               <div className="admin-rest">
 
                 <div className="admin-icon">
-                  <img className="animation"
-                    src="images\Andy\editor.png" alt="img" />
+                  <div className="admin-icon-img">
+                    <img className="animation-1"
+                      src="images\landing\administracion.png" alt="img" />
+                  </div>
                   <div className="admin-info">
                     <p className="admin-icon-p">Facilidad de creación</p>
-                    <p className="admin-icon-p">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
+                    <p className="admin-icon-st">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
+                  </div>
+
+                </div>
+                <div className="admin-icon">
+                  <div className="admin-icon-img">
+                    <img className="animation-1"
+                      src="images\landing\bingo.png" alt="img" />
+                  </div>
+                  <div className="admin-info">
+                    <p className="admin-icon-p">Sorteo automático de equipos</p>
+                    <p className="admin-icon-st">Di adiós a las complicaciones. Deja que nuestro sistema inteligente distribuya los equipos de manera justa y aleatoria.</p>
                   </div>
                 </div>
+                <div className="admin-icon">
+                  <div className="admin-icon-img">
+                    <img className="animation"
+                      src="images\landing\project.png" alt="img" />
+                  </div>
+                  <div className="admin-info">
+                    <p className="admin-icon-p">Cronogramas personalizados</p>
+                    <p className="admin-icon-st">Di adiós a las complicaciones. Deja que nuestro sistema inteligente distribuya los equipos de manera justa y aleatoria.</p>
+                  </div>
 
-              
+
+                </div>
+
               </div>
             </div>
 
@@ -66,7 +86,7 @@ export default function Home() {
 
           {/* ADMIN */}
 
-          <Cards />
+          {/* <Cards /> */}
 
 
           {/* <section class="section-player">

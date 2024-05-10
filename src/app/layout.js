@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Roboto } from "next/font/google";
-import "../styles/AndiPage/main.css";
+import "../styles/loanding/main.css";
 import "./index.css";
 
 const roboto = Roboto({
@@ -10,15 +10,15 @@ const roboto = Roboto({
 export default function RootLayout({ children, backgroundImage }) {
   const backgroundStyle = backgroundImage
     ? {
-        backgroundImage: `url("/image.jpg")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }
+      backgroundImage: `url("/image.jpg")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }
     : {};
 
   return (
     <>
-    
+
       <html lang="en">
         <body className={roboto.className} style={backgroundStyle}>
           {children}

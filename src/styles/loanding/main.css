@@ -15,7 +15,7 @@
 }
 
 .Sub-cont {
-    background-image: url("../../../public/images/Andy/imgplayer.jpg");
+    background-image: url("../../../public/images/landing/imgplayer.jpg");
     min-height: 45vw;
     width: 100%;
     object-fit: cover;
@@ -120,6 +120,7 @@
     font-weight: bold;
     text-align: center;
     font-size: 30px;
+    margin-top: 40px;
 }
 
 .section-3-h5 {
@@ -532,15 +533,15 @@
 
 /* Seccion Admin */
 
-.section-admin{
-
+.section-admin {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
+
 }
 
-.admin-lapto{
+.admin-lapto {
     background-color: rgb(245, 244, 244);
     width: 50vw;
     height: 100vh;
@@ -548,80 +549,181 @@
     place-content: center;
 }
 
-.flotante{
+
+.flotante {
     transform: translateY(0px);
-    animation: float 4s ease-in-out infinite;
-    filter: drop-shadow(5px 5px 10px black);
+    animation: float 5s infinite;
 }
 
 @keyframes float {
-    0% {transform: translate(0px, 0);}
-    50% {transform: translate(15px, 0);}
-    100% {transform: translate(-0px, 0);}
+    0% {
+        transform: translate(0px, 0);
+    }
+
+    50% {
+        transform: translate(15px, 0);
+    }
+
+    100% {
+        transform: translate(-0px, 0);
+    }
 }
 
-.admin-text{
+
+
+
+.admin-text {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
+    margin-bottom: 25px;
 }
 
-.admin-title{
-    padding-top: 30px; 
+.admin-title {
+    padding-top: 50px;
     font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
 }
 
-.admin-title-p{
+.admin-title-p {
     padding-top: 25px;
-    font-size: 25px;
+    font-size: 20px;
+    margin-top: 15px;
 }
 
-.admin-title-sp{
-    padding-top: 10px;
-
-    white-space: 2px;
-    padding-right: 30px;
-}
-
-.admin-rest{
-    padding-top: 30px;
+.admin-rest {
+    padding-top: 20px;
     padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-around;
+
+
+
 }
 
-.admin-icon img{
+.admin-icon img {
     object-fit: contain;
-    width: 90px;
+    width: 120px;
 
 }
+
 .admin-icon {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 15px;
     flex-wrap: wrap;
+    padding-bottom: 20px;
+    width: 50vw;
 }
 
-.admin-icon-p{
-    margin-left: 100px;
+.admin-icon-img {
+    width: 40%;
 }
 
-.admin-info{
+.admin-icon-p {
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.admin-icon-st {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 17px;
+    padding-right: 4px;
+}
+
+.admin-info {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 60%;
 }
 
 
 /* Animacion Iconos */
 
-.animation{
+.animation {
     transform: translateY(0px);
     animation: Source 7s ease-in-out infinite;
 }
 
 @keyframes Source {
-    0% {transform: translate(0px, 0);}
-    50% {transform: translate(15px, 0);}
-    100% {transform: translate(-0px, 0);}
+    0% {
+        transform: translate(0px, 0);
+    }
+
+    50% {
+        transform: translate(15px, 0);
+    }
+
+    100% {
+        transform: translate(-0px, 0);
+    }
+}
+
+.animation-1 {
+    animation: pulsing 2s infinite;
+}
+
+@keyframes pulsing {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animation-2 {
+    transform: translateY(0px);
+    animation: slide 2s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(50%);
+    }
+
+    0% {
+        transform: translate(0);
+    }
+}
+
+.animation-3 {
+    transform: translateY(0px);
+    animation: bouncing 1s infinite;
+}
+
+@keyframes bouncing {
+
+    0%,
+    50% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-35px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
 }
