@@ -542,11 +542,13 @@
 }
 
 .admin-lapto {
-    background-color: rgb(245, 244, 244);
-    width: 50vw;
+    background-color: rgb(42, 92, 177); 
+    width: 49vw;
     height: 100vh;
     display: grid;
     place-content: center;
+    border-radius: 0 100%  100% 0;
+
 }
 
 
@@ -567,7 +569,7 @@
     100% {
         transform: translate(-0px, 0);
     }
-}
+} 
 
 
 
@@ -727,3 +729,7 @@
         transform: translateY(-15px);
     }
 }
+
+/* Sesion Jugador */
+
+

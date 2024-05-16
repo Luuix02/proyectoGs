@@ -5,6 +5,8 @@ import Header from "../../components/pages/Navbar";
 import RootLayout from "./layout";
 import "./page.module.css";
 
+import Aos from "aos";
+
 export default function Home() {
   return (
     <>
@@ -34,7 +36,7 @@ export default function Home() {
 
             <div className="admin-lapto">
               <img className="flotante"
-                src="\images\landing\ordenador.png" alt="img" />
+                src="\images\landing\video.png" alt="img" />
             </div>
 
             <div className="admin-icons">
@@ -83,9 +85,12 @@ export default function Home() {
             </div>
 
           </div>
+          
 
-          {/* ADMIN */}
+          {/* Sesion Jugador */}
 
+
+          
           {/* <Cards /> */}
 
 
