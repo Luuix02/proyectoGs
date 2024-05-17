@@ -85,25 +85,59 @@ export default function Home() {
             </div>
 
           </div>
-          
+
 
           {/* Sesion Jugador */}
 
+          <div className="section-player">
 
-          
-          {/* <Cards /> */}
+            <div className="player-icons">
+              <div className="player-text">
+                <h3 className="admin-title">PARA JUGADORES</h3>
+                <p className="admin-title-p">Regístrate y participa en campeonatos exclusivos en nuestra plataforma para amantes del juego.</p>
+              </div>
 
+              <div className="player-rest">
 
-          {/* <section class="section-player">
-        <h2 class="title">PARA JUGADORES</h2>
+                <div className="admin-icon">
+                  <div className="player-icon-img">
+                    <img className="animation-1"
+                      src="images\landing\estadisticas.png" alt="img" />
+                  </div>
+                  <div className="admin-info">
+                    <p className="admin-icon-p">Explora campeonatos </p>
+                    <p className="admin-icon-st">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
+                  </div>
+                </div>
+                <div className="admin-icon">
+                  <div className="admin-icon-img">
+                    <img className="animation-1"
+                      src="images\landing\view.png" alt="img" />
+                  </div>
+                  <div className="admin-info">
+                    <p className="admin-icon-p">Visualiza participantes</p>
+                    <p className="admin-icon-st">Explora quiénes son todos los participantes y capitanes de los equipos.</p>
+                  </div>
+                </div>
+                <div className="admin-icon">
+                  <div className="admin-icon-img">
+                    <img className="animation"
+                      src="images\landing\bingo.png" alt="img" />
+                  </div>
+                  <div className="admin-info">
+                    <p className="admin-icon-p">Estadísticas en tiempo real</p>
+                    <p className="admin-icon-st">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
+                  </div>
+                </div>
 
-        <p class="title-2">Conviértete en campeón: Regístrate para participar de campeonatos exclusivos.</p>
+              </div>
+            </div>
+            <div className="player-lapto">
+              <img className="flotante"
+                src="\images\landing\chat.png" alt="img" />
+            </div>
 
-        <p class="title-3">¡Sumérgete en la acción y vive la pasión de cada campeonato en nuestra
-          plataforma diseñada para verdaderos amantes del juego! ¿Por qué deberías unirte a nosotros?
-          Aquí tienes razones irresistibles:
-        </p>
-      </section>  */}
+          </div>
 
           <section class="section-3" id="section_dow">
             <div class="Bienestar section-3-div">
