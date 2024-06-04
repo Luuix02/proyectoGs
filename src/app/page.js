@@ -1,13 +1,22 @@
-import Cards from "../../components/pages/Card";
+
+'use client'
+
 import RecuperarContraseña from "../../components/pages/ComponenteRecuperarContraseña/page";
 import Footer from "../../components/pages/FooterLanding";
 import Header from "../../components/pages/Navbar";
 import RootLayout from "./layout";
-import "./page.module.css";
 
-import Aos from "aos";
+
+import Aos from 'aos'
+import 'aos/dist/aos.css';
+import React, { useEffect } from 'react';
 
 export default function Home() {
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <RootLayout backgroundImage={false}>
@@ -34,7 +43,7 @@ export default function Home() {
 
           <div className="section-admin">
 
-            <div className="admin-lapto">
+            <div className="admin-lapto" data-aos="fade-right">
               <img className="flotante"
                 src="\images\landing\video.png" alt="img" />
             </div>
