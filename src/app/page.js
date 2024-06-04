@@ -1,11 +1,11 @@
 
 'use client'
 
-import RecuperarContraseña from "../../components/pages/ComponenteRecuperarContraseña/page";
 import Footer from "../../components/pages/FooterLanding";
 import Header from "../../components/pages/Navbar";
 import RootLayout from "./layout";
 
+import '../styles/loanding/main.css';
 
 import Aos from 'aos'
 import 'aos/dist/aos.css';
@@ -43,7 +43,7 @@ export default function Home() {
 
           <div className="section-admin">
 
-            <div className="admin-lapto" data-aos="fade-right">
+            <div className="admin-pc" data-aos="fade-right" >
               <img className="flotante"
                 src="\images\landing\video.png" alt="img" />
             </div>
@@ -58,7 +58,7 @@ export default function Home() {
 
                 <div className="admin-icon">
                   <div className="admin-icon-img">
-                    <img className="animation-1"
+                    <img data-aos="zoom-in-down"
                       src="images\landing\administracion.png" alt="img" />
                   </div>
                   <div className="admin-info">
@@ -69,7 +69,7 @@ export default function Home() {
                 </div>
                 <div className="admin-icon">
                   <div className="admin-icon-img">
-                    <img className="animation-1"
+                    <img data-aos="zoom-in-down"
                       src="images\landing\bingo.png" alt="img" />
                   </div>
                   <div className="admin-info">
@@ -79,7 +79,7 @@ export default function Home() {
                 </div>
                 <div className="admin-icon">
                   <div className="admin-icon-img">
-                    <img className="animation"
+                    <img data-aos="zoom-in-down"
                       src="images\landing\project.png" alt="img" />
                   </div>
                   <div className="admin-info">
@@ -177,13 +177,7 @@ export default function Home() {
                     beneficios del ejercicio físico, fortaleciendo así la
                     cohesión social y el respeto mutuo."
                   </p>
-                  <div class="loadingspinner">
-                    <div id="square1"></div>
-                    <div id="square2"></div>
-                    <div id="square3"></div>
-                    <div id="square4"></div>
-                    <div id="square5"></div>
-                  </div>
+
                 </div>
               </div>
 
@@ -197,16 +191,7 @@ export default function Home() {
                     desarrollo de habilidades socioemocionales apoyando al
                     proceso de formacion integral.
                   </p>
-
-                  <div class="loadingspinner">
-                    <div id="square1"></div>
-                    <div id="square2"></div>
-                    <div id="square3"></div>
-                    <div id="square4"></div>
-                    <div id="square5"></div>
-                  </div>
                 </div>
-
                 <div className="section-3-subdiv">
                   <img src="\images\BienesApren\Colombia.jpg" alt="" />
                 </div>
