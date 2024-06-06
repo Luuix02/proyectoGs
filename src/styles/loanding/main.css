@@ -231,22 +231,35 @@
 /* Seccion Admin */
 
 .section-admin {
+    margin-top: 1px;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
+    column-gap: 5vw;
 
 }
 
 .admin-pc {
-    background-color: rgb(42, 92, 177); 
-    width: 49vw;
+    background-color: rgb(42, 92, 177);
+    width: 45vw;
     height: 100vh;
     display: grid;
     place-content: center;
-    border-radius: 0 100%  100% 0;
+    border-radius: 0 100% 100% 0;
+    filter: drop-shadow(0px 5px 10px black)
 }
 
+.admin-icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    width: 50vw;
+}
 
 .flotante {
     transform: translateY(0px);
@@ -265,7 +278,7 @@
     100% {
         transform: translate(-0px, 0);
     }
-} 
+}
 
 
 
@@ -309,16 +322,6 @@
 
 }
 
-.admin-icon {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-    width: 50vw;
-}
 
 .admin-icon-img {
     width: 40%;
@@ -354,12 +357,12 @@
     display: flex;
     flex-direction: row;
     padding-top: 1rem;
-    column-gap: 2rem;
+    column-gap: 5vw;
 
 }
 
-.player-icons{
-    width: 51vw;
+.player-icons {
+    width: 50vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -368,15 +371,16 @@
 }
 
 .player-lapto {
-    background-color: rgb(182, 187, 195);
-    width: 49vw;
+    background-color: rgb(42, 92, 177);
+    width: 45vw;
     height: 100vh;
     display: grid;
     place-content: center;
-    border-radius: 100% 0 0 100%;
+    border-radius:  100% 5px  5px 100%;
+    filter:drop-shadow(10px 10px 25px black)
+
 
 }
-
 
 .flotante {
     transform: translateY(0px);
@@ -426,7 +430,7 @@
     flex-direction: column;
     height: 80vh;
     justify-content: space-around;
-    padding-left: 3.5rem;
+    padding-left: 4rem;
 }
 
 .admin-icon img {
@@ -444,11 +448,11 @@
     flex-wrap: wrap;
     padding-bottom: 20px;
     width: 50vw;
-    margin-left: 1rem;
 }
 
 .player-icon-img {
     width: 40%;
+
 }
 
 .admin-icon-p {
@@ -480,19 +484,11 @@
 
 }
 
-.admin-lapto{
+.admin-lapto {
     width: 51vw;
 }
 
-.admin-lapto {
-    background-color: rgb(42, 92, 177); 
-    width: 49vw;
-    height: 100vh;
-    display: grid;
-    place-content: center;
-    border-radius: 0 100%  100% 0;
 
-}
 
 
 .flotante {
@@ -574,5 +570,3 @@
     flex-wrap: wrap;
     width: 60%;
 }
-
-

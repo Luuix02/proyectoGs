@@ -102,7 +102,7 @@ export default function Home() {
 
             <div className="player-icons">
               <div className="player-text">
-                <h3 className="admin-title">PARA JUGADORES</h3>
+                <h3 className="admin-title" data-aos="fade-up-right" >PARA JUGADORES</h3>
                 <p className="admin-title-p">Regístrate y participa en campeonatos exclusivos en nuestra plataforma para amantes del juego.</p>
               </div>
 
@@ -110,7 +110,7 @@ export default function Home() {
 
                 <div className="admin-icon">
                   <div className="player-icon-img">
-                    <img className="animation-1"
+                    <img data-aos="zoom-in-down"
                       src="images\landing\estadisticas.png" alt="img" />
                   </div>
                   <div className="admin-info">
@@ -120,7 +120,7 @@ export default function Home() {
                 </div>
                 <div className="admin-icon">
                   <div className="admin-icon-img">
-                    <img className="animation-1"
+                    <img data-aos="zoom-in-down"
                       src="images\landing\view.png" alt="img" />
                   </div>
                   <div className="admin-info">
@@ -130,7 +130,7 @@ export default function Home() {
                 </div>
                 <div className="admin-icon">
                   <div className="admin-icon-img">
-                    <img className="animation"
+                    <img data-aos="zoom-in-down"
                       src="images\landing\bingo.png" alt="img" />
                   </div>
                   <div className="admin-info">
@@ -141,7 +141,7 @@ export default function Home() {
 
               </div>
             </div>
-            <div className="player-lapto">
+            <div className="player-lapto" data-aos="fade-left">
               <img className="flotante"
                 src="\images\landing\chat.png" alt="img" />
             </div>
