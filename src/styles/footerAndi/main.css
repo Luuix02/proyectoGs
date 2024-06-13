@@ -1,55 +1,81 @@
-.footer {
-    background-color: #333;
-    padding: 10px 0px;
-    font-family: 'Play', sans-serif;
-    text-align: center;
+/* General styles for footer */
+footer {
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    width: 100vw;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    height: 10vh;
 }
 
-.footer .row {
-    width: 100%;
-    margin: 1% 0%;
-    padding: 0.6% 0%;
-    color: gray;
-    font-size: 0.8em;
+/* Dark mode styles */
+footer.dark {
+    background-color: #1f2937;
+    /* Gray-800 */
+    border-top: 1px solid #4b5563;
+    /* Gray-600 */
 }
 
-.footer .row a {
+footer span {
+    font-size: 1rem;
+    color: #6b7280;
+    /* Gray-500 */
+}
+
+footer span.dark {
+    color: #9ca3af;
+    /* Gray-400 */
+}
+
+footer a {
     text-decoration: none;
-    color: gray;
-    transition: 0.5s;
+    color: inherit;
 }
 
-.footer .row a:hover {
-    color: #fff;
+footer a:hover {
+    text-decoration: underline;
 }
 
-.footer .row ul {
-    width: 100%;
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin-right: 1.5rem;
+    /* Gray-500 */
 }
 
-.footer .row ul li {
-    display: inline-block;
-    margin: 0px 30px;
+footer ul.dark {
+    color: #9ca3af;
+    /* Gray-400 */
 }
 
-.footer .row a i {
-    font-size: 2em;
-    margin: 0% 1%;
+footer ul li {
+    margin-right: 1rem;
+    list-style: none;
+    font-size: 1rem;
 }
 
-@media (max-width:720px) {
-    .footer {
-        text-align: left;
-        padding: 5%;
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    footer ul {
+        margin-top: 0;
     }
 
-    .footer .row ul li {
-        display: block;
-        margin: 10px 0px;
-        text-align: left;
-    }
-
-    .footer .row a i {
-        margin: 0% 3%;
+    footer ul li {
+        margin-right: 1.5rem;
     }
 }

@@ -11,6 +11,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
 
+
 export default function Home() {
 
   useEffect(() => {
@@ -99,54 +100,23 @@ export default function Home() {
           {/* Sesion Jugador */}
 
           <div className="section-player">
+            <div className="player-contenido">
+              <h1>Para Jugadores</h1>
+              <p className="">Regístrate y participa en campeonatos exclusivos en nuestra plataforma para amantes del juego.</p>
 
-            <div className="player-icons">
-              <div className="player-text">
-                <h3 className="admin-title" data-aos="fade-up-right" >PARA JUGADORES</h3>
-                <p className="admin-title-p">Regístrate y participa en campeonatos exclusivos en nuestra plataforma para amantes del juego.</p>
-              </div>
-
-              <div className="player-rest">
-
-                <div className="admin-icon">
-                  <div className="player-icon-img">
-                    <img data-aos="zoom-in-down"
-                      src="images\landing\estadisticas.png" alt="img" />
-                  </div>
-                  <div className="admin-info">
-                    <p className="admin-icon-p">Explora campeonatos </p>
-                    <p className="admin-icon-st">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
-                  </div>
-                </div>
-                <div className="admin-icon">
-                  <div className="admin-icon-img">
-                    <img data-aos="zoom-in-down"
-                      src="images\landing\view.png" alt="img" />
-                  </div>
-                  <div className="admin-info">
-                    <p className="admin-icon-p">Visualiza participantes</p>
-                    <p className="admin-icon-st">Explora quiénes son todos los participantes y capitanes de los equipos.</p>
-                  </div>
-                </div>
-                <div className="admin-icon">
-                  <div className="admin-icon-img">
-                    <img data-aos="zoom-in-down"
-                      src="images\landing\bingo.png" alt="img" />
-                  </div>
-                  <div className="admin-info">
-                    <p className="admin-icon-p">Estadísticas en tiempo real</p>
-                    <p className="admin-icon-st">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
-                  </div>
-                </div>
-
+              <div className="admin-info">
+                <p className="admin-icon-p">Facilidad de creación</p>
+                <p className="admin-icon-st">Crea campeonatos en cuestión de minutos con nuestro proceso intuitivo y amigable.</p>
               </div>
             </div>
-            <div className="player-lapto" data-aos="fade-left">
-              <img className="flotante"
-                src="\images\landing\chat.png" alt="img" />
-            </div>
 
+            <div class="player-cr7">
+              <img class="img-cr7" data-aos="fade-left"
+                src="\images\landing\cr7.png" alt="img" />
+            </div>
           </div>
+
+
 
           <section class="section-3" id="section_dow">
             <div class="Bienestar section-3-div">
@@ -183,7 +153,7 @@ export default function Home() {
 
               <div className="section-3-p4" id="section_ft">
                 <div className="section-3-p4-div">
-                  <h4 class="section-3-p2">GoSport DG</h4>
+                  <h4 class="section-3-p2">GoSport</h4>
                   <p class="section-3-pp ">
                     Uno de nuestros propósitos es fomentar la practica del
                     deporte y la actividad fisica para el desarrollo de habitos
