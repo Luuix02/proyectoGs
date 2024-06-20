@@ -5,12 +5,28 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
 import RecuperarContraseña from "../ComponenteRecuperarContraseña/page";
+import { loginUser } from "../../../src/lib/api";
 
 export default function InicioSesion() {
+  const [correo, setCorreo] = useState("");
+  const [contrasena, setContrasena] = useState("");
+  const [error, setError] = useState();
   const path = "/auth";
   const router = useRouter();
 
-  const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] = useState(false);
+  const ruta = ("/organizador/campeonatos");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      loginUser(correo, contrasena)  
+    } catch (error) {
+      setError(error.response.data.message);
+    }
+  };
+
+  const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] =
+    useState(false);
 
   const abrirRecuperarContraseña = () => {
     setMostrarRecuperarContraseña(true);
@@ -20,41 +36,39 @@ export default function InicioSesion() {
     setMostrarRecuperarContraseña(false);
   };
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [ruta, setRuta] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  
 
-  const datosJugador = {
-    email: "pepitoPerez@gmail.com",
-    password: "1234",
-  };
-  const datosAdmin = {
-    email: "pedrito@soy.sena.edu.co",
-    password: "1234",
-  };
+  // const datosJugador = {
+  //   email: "pepitoPerez@gmail.com",
+  //   password: "1234",
+  // };
+  // const datosAdmin = {
+  //   email: "pedrito@soy.sena.edu.co",
+  //   password: "1234",
+  // };
 
-  const validacionRutas = () => {
-    if (email === datosJugador.email && password === datosJugador.password) {
-      setRuta("/jugador/dashboard");
-    } else if (email === datosAdmin.email && password === datosAdmin.password) {
-      setRuta("/organizador/campeonatos");
-    } else {
-      console.log("Datos incorrectos");
-    }
-  };
+  // const validacionRutas = () => {
+  //   if (email === datosJugador.email && password === datosJugador.password) {
+  //     setRuta("/jugador/dashboard");
+  //   } else if (email === datosAdmin.email && password === datosAdmin.password) {
+  //     setRuta("/organizador/campeonatos");
+  //   } else {
+  //     console.log("Datos incorrectos");
+  //   }
+  // };
 
-  const handlerSubmit = (e) => {
-    e.preventDefault();
-    validacionRutas();
-  };
-
+  // const handlerSubmit = (e) => {
+  //   e.preventDefault();
+  //   validacionRutas();
+  // };
 
   return (
     <>
       <div
         style={{
-          backgroundImage:
-            "url('/images/iniciarSesion/imgIn.png')",
+          backgroundImage: "url('/images/iniciarSesion/imgIn.png')",
           width: "100vw",
           height: "100vh",
           backgroundSize: "cover",
@@ -68,19 +82,20 @@ export default function InicioSesion() {
           <h1 className="tituloPrincipal">Inicia sesión ahora</h1>
           <br />
           <div className="contenedorDatos">
-            <form action="datos" onSubmit={handlerSubmit}>
+            {error && <p>{error}</p>}
+            <form onSubmit={handleSubmit}>
               <label htmlFor="email" className="etiquetaDato correoFor">
                 Correo electrónico
               </label>
               <input
                 type="text"
-                id="email"
-                name="email"
+                id="correo"
+                name="correo"
                 placeholder="ej: pepito@gmail.com"
                 required
                 className="campoDato"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
+                onChange={(e) => setCorreo(e.target.value)}
+                value={correo}
               />
               <br />
 
@@ -89,13 +104,13 @@ export default function InicioSesion() {
               </label>
               <input
                 className="campoContraseña"
-                type="password"
-                id="password"
-                name="password"
+                type="contrasena"
+                id="contrasena"
+                name="contrasena"
                 placeholder="*********"
                 required
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
+                onChange={(e) => setContrasena(e.target.value)}
+                value={contrasena}
               />
 
               <br />
@@ -109,11 +124,12 @@ export default function InicioSesion() {
             </form>
 
             <div className="enlacesAdicionales">
-              <span className="olvidarContraseña" onClick={abrirRecuperarContraseña}>
-
+              <span
+                className="olvidarContraseña"
+                onClick={abrirRecuperarContraseña}
+              >
                 ¿Olvidaste tu contraseña?
               </span>
-
 
               <Link className="registrateIniciar" href={`${path}/registro`}>
                 ¿No tienes cuenta?
@@ -123,10 +139,8 @@ export default function InicioSesion() {
         </div>
         {mostrarRecuperarContraseña && (
           <RecuperarContraseña onClose={cerrarRecuperarContraseña} />
-
         )}
       </div>
-
     </>
   );
 }

@@ -11,7 +11,7 @@
   align-items: center;
   padding: 20px;
   box-shadow: 0 0 10px rgb(205, 207, 210);
-  margin-left: 10%;
+  margin-left: 10;
   margin-right: auto;
 }
 @media (min-width: 771px) {
