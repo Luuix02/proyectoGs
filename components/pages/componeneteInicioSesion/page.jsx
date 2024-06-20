@@ -3,7 +3,8 @@ import Link from "next/link";
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-// import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
+import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
+import RecuperarContraseña from "../ComponenteRecuperarContraseña/page";
 
 export default function InicioSesion() {
   const path = "/auth";
@@ -53,7 +54,7 @@ export default function InicioSesion() {
       <div
         style={{
           backgroundImage:
-            "url(https://png.pngtree.com/background/20230625/original/pngtree-goal-achieved-3d-rendering-of-soccer-ball-in-net-with-stadium-picture-image_4053419.jpg)",
+            "url('/images/iniciarSesion/imgIn.png')",
           width: "100vw",
           height: "100vh",
           backgroundSize: "cover",

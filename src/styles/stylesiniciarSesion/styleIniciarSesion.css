@@ -2,8 +2,8 @@
   background-repeat: no-repeat;
   margin-top: 1%;
   background: rgba(40, 42, 44, 0.647);
-  width: 90%;
-  max-width: 770px;
+  width: 100%;
+  max-width: 880px;
   height: 50%;
   border-radius: 20px;
   display: flex;
@@ -11,7 +11,7 @@
   align-items: center;
   padding: 20px;
   box-shadow: 0 0 10px rgb(205, 207, 210);
-  margin-left: 5%;
+  margin-left: 10%;
   margin-right: auto;
 }
 @media (min-width: 771px) {
