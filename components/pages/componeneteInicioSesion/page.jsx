@@ -10,59 +10,34 @@ import { loginUser } from "../../../src/lib/api";
 export default function InicioSesion() {
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");
-  const [error, setError] = useState();
-  const path = "/auth";
+  const [error, setError] = useState(null);
+  const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] =
+    useState(false);
   const router = useRouter();
-
-  const ruta = ("/organizador/campeonatos");
+  const ruta = "/organizador/campeonatos";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(null);
     try {
-      loginUser(correo, contrasena)  
+      const data = await loginUser(correo, contrasena);
+      localStorage.setItem("token", data.token);
+      router.push(ruta);
     } catch (error) {
-      setError(error.response.data.message);
+      if (error.response && error.response.status === 403) {
+        setError(
+          "Las credenciales proporcionadas no son válidas. Por favor, verifica tus datos e intenta de nuevo."
+        );
+      } else {
+        setError(
+          "Ocurrió un error al intentar iniciar sesión. Por favor, inténtalo de nuevo más tarde."
+        );
+      }
     }
   };
 
-  const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] =
-    useState(false);
-
-  const abrirRecuperarContraseña = () => {
-    setMostrarRecuperarContraseña(true);
-  };
-
-  const cerrarRecuperarContraseña = () => {
-    setMostrarRecuperarContraseña(false);
-  };
-
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  
-
-  // const datosJugador = {
-  //   email: "pepitoPerez@gmail.com",
-  //   password: "1234",
-  // };
-  // const datosAdmin = {
-  //   email: "pedrito@soy.sena.edu.co",
-  //   password: "1234",
-  // };
-
-  // const validacionRutas = () => {
-  //   if (email === datosJugador.email && password === datosJugador.password) {
-  //     setRuta("/jugador/dashboard");
-  //   } else if (email === datosAdmin.email && password === datosAdmin.password) {
-  //     setRuta("/organizador/campeonatos");
-  //   } else {
-  //     console.log("Datos incorrectos");
-  //   }
-  // };
-
-  // const handlerSubmit = (e) => {
-  //   e.preventDefault();
-  //   validacionRutas();
-  // };
+  const abrirRecuperarContraseña = () => setMostrarRecuperarContraseña(true);
+  const cerrarRecuperarContraseña = () => setMostrarRecuperarContraseña(false);
 
   return (
     <>
@@ -84,7 +59,7 @@ export default function InicioSesion() {
           <div className="contenedorDatos">
             {error && <p>{error}</p>}
             <form onSubmit={handleSubmit}>
-              <label htmlFor="email" className="etiquetaDato correoFor">
+              <label htmlFor="correo" className="etiquetaDato correoFor">
                 Correo electrónico
               </label>
               <input
@@ -98,13 +73,15 @@ export default function InicioSesion() {
                 value={correo}
               />
               <br />
-
-              <label htmlFor="password" className="etiquetaDato contraseñaFor">
+              <label
+                htmlFor="contrasena"
+                className="etiquetaDato contraseñaFor"
+              >
                 Contraseña
               </label>
               <input
                 className="campoContraseña"
-                type="contrasena"
+                type="password"
                 id="contrasena"
                 name="contrasena"
                 placeholder="*********"
@@ -112,17 +89,11 @@ export default function InicioSesion() {
                 onChange={(e) => setContrasena(e.target.value)}
                 value={contrasena}
               />
-
               <br />
-              <button
-                className="botonInicioSesion"
-                type="submit"
-                onClick={() => router.push(ruta)}
-              >
+              <button className="botonInicioSesion" type="submit">
                 Iniciar Sesión
               </button>
             </form>
-
             <div className="enlacesAdicionales">
               <span
                 className="olvidarContraseña"
@@ -130,16 +101,15 @@ export default function InicioSesion() {
               >
                 ¿Olvidaste tu contraseña?
               </span>
-
-              <Link className="registrateIniciar" href={`${path}/registro`}>
+              <Link className="registrateIniciar" href="/registro">
                 ¿No tienes cuenta?
               </Link>
             </div>
           </div>
+          {mostrarRecuperarContraseña && (
+            <RecuperarContraseña onClose={cerrarRecuperarContraseña} />
+          )}
         </div>
-        {mostrarRecuperarContraseña && (
-          <RecuperarContraseña onClose={cerrarRecuperarContraseña} />
-        )}
       </div>
     </>
   );
