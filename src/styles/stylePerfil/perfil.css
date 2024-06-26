@@ -1,7 +1,7 @@
 .contenedorPagePerfil{
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 80px;
     
 }
 .principalCuenta{
@@ -10,7 +10,7 @@
     
 }
 .section{
-    margin-top: 20px;
+   margin-top: 20px;
    width: 80%;
    color: white;
 }
@@ -22,18 +22,19 @@
     display: flex;
     gap: 20px;
 }
-.formulario{
+.formulario {
     display: grid;
-    padding: 20px;
+    padding: 100px; /* Aumentar el padding */
     background-color: rgba(116, 126, 137, 0.3);
-    width: 40rem;
+    width: 100rem;
     border-radius: 15px;
     margin-top: 20px;
-    max-height: max-content;  
-    margin: 5rem 25%;   
+    margin: 5rem auto; /* Centrar en la pantalla */
     justify-content: center;
-    gap: 8px;
+    gap: 100px;
+    box-sizing: border-box; /* Incluir padding en el ancho y alto */
 }
+
 
 .contenedorFormulario{
     display: grid;
@@ -49,8 +50,8 @@
 }
 
 .cajaTexto{
-    width: 200px;
-    height: 24px;
+    width: 300px;
+    height: 30px;
     border-radius: 6px;
     padding-left: 10px;
     margin-bottom: 10px;
@@ -59,7 +60,7 @@
     background-color: #12aed1cd;
     color: aliceblue;
     border-radius: 5px;
-    height: 30px;
+    height: 40px;
     width: max-content;
     font-weight: bolder;
     
@@ -67,6 +68,6 @@
 
 .text{
     margin: 0%;
-    padding-top: 5px;
-    color: white;
+    padding-top: 9px;
+    color: rgb(10, 9, 9);
 }

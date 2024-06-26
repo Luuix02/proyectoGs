@@ -22,8 +22,8 @@ export default function Perfil() {
         <label htmlFor="" className="pr-5">Nombre</label>
         <label htmlFor="" className="pr-3">Apellidos</label>
         <label htmlFor="" className="pr-4">Telefono</label>
-        <label htmlFor="" className="pr-10">Email</label>
-        <label htmlFor="">Password </label>
+        <label htmlFor="" className="pr-10">Correo</label>
+        <label htmlFor="">Contraseña</label>
         </div>
         <div className='contenedorCajas'>
     <input type="text" 
@@ -34,8 +34,10 @@ export default function Perfil() {
     className='cajaTexto'/>
     <input type="text" 
     className='cajaTexto'/>
-    <h1 className="text">Cambiar password</h1>
-        </div>
+    <input type="text" 
+    className='cajaTexto'/>
+    <h1 className="text">Olvido contraseña</h1>
+        </div> 
       </article>
       <button className="guardar">Guardar cambios</button>
     </form>
