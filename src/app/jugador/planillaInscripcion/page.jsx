@@ -1,15 +1,25 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import "../../../styles/Planilla/main.css";
 import RootLayout from "@/app/layout";
+import { useForm } from "react-hook-form";
 
 
 export default function Planilla() {
+  const [image, setImage]=useState()
+  const [estadoImg, setEstadoImg] = useState(false)
+  const [searchJugador, setSearchJugador]=useState()
+  const {
+    register, 
+         handleSubmit,
+         formState:{errors}} =useForm()
   const filas = [];
   for (let i = 1; i <= 10; i++) {
     filas.push(
       <tr key={i}>
-        <td className="whill">{i}</td>
-        <td></td>
+        <td className="whill"
+        onChange={e=> setSearchJugador(e.target.value)}>{i}</td>
+        <input type="text"></input>
         <td></td>
         <td></td>
       </tr>
@@ -37,7 +47,7 @@ export default function Planilla() {
                     <label className="mt-4-label" htmlFor="address">
                       Capitan
                     </label>
-                    <input className="mt-4-input" id="address" />
+                    <input className="mt-4-input" id="address" {...register('capitan')}/>
                   </div>
 
                   <div className="tunder">
@@ -50,6 +60,7 @@ export default function Planilla() {
                         className="m-4-input"
                         id="city"
                         type="text"
+                        {...register('contactoUno')}
                       />
                     </div>
 
@@ -62,6 +73,7 @@ export default function Planilla() {
                         className="m-4-input"
                         id="state"
                         type="text"
+                        {...register('contactoDos')}
                       />
                     </div>
                     <div class="custom-select">
@@ -69,23 +81,15 @@ export default function Planilla() {
                       <select id="options" name="options" >
                         <option value="option1">Mañana</option>
                         <option value="option2">Tarde</option>
-                        
+                        {}
                       </select>
                     </div>
-                    <div className="vmm">
-                      <div class="card">
-                        <input type="file" id="fileInput" accept="image/*" />
-                        <label for="fileInput">
-                          <div class="image-container">
-                            <img src="\images\Andy\icono.jpg" alt="Placeholder" id="previewImage" />
-                          </div>
-                          <div class="overlay">
-                            <span>Click to upload</span>
-                          </div>
-                        </label>
-                        <p class="photo-description">Foto del equipo</p>
-                      </div>
-                    </div>
+                    {estadoImg ? 
+                    <div class="card">
+                    <img src={image} alt="" />
+                    </div> :
+                    <input type="file" className="inpuntImg" />
+                  }
                   </div>
                 </div>
               </div>

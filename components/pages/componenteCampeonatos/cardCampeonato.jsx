@@ -69,7 +69,7 @@ export default function CardCampeonato() {
                                     <td>{task.fechaFin}</td>
                                     <td>{task.tamanoEquipos}</td>
                                     <td>
-                                        <button className="action-button" onClick={() => handleDelete(task._id)}>Eliminar</button>
+                                        {/* <button className="action-button" onClick={() => handleDelete(task._id)}>Eliminar</button> */}
                                     </td>
                                 </tr>
                             ))}

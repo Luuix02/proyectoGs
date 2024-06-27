@@ -18,18 +18,49 @@ export default function Perfil() {
     setModalOpen(false);
   };
 
+
+  const [file,setFile]= useState(null);
+  const [imagen,setImagen]= useState(null);
+
   return (
     <article className='contenedorPagePerfil'>
       <SideBarPrincipal />
       <section className="section">
-        <form action="" className="formulario">
-          <div className='textPerfil'>
+        {/* <form action="" className="formulario"> */}
+          {/* <div className='textPerfil'> */}
             <label htmlFor="">Foto de Perfil</label>
-            <div className='imagenPerfil'>
-              <Image src={'/Images/iconosSide/fotos.png'} width={60} height={60} />
+        
+              <form className='imagenPerfil' onSubmit={ async (e)=>{
+                e.preventDefault();
+
+                const formData = new FormData();
+                formData.append('image', file)
+
+                const respuesta = await fetch('/api', {
+                  method: "POST" ,
+                  body: formData
+                 
+                })
+                const data =  await respuesta.json()
+                console.log(data);
+                setImagen(data.url);
+              }}>
+              {/* <Image src={'/Images/iconosSide/fotos.png'} alt='' width={60} height={60}  /> */}
+              <input type='file'onChange={(e)=>{
+                setFile(e.target.files[0])
+              }} />
               <p className='cambiar'>cambiar foto</p>
-            </div>
-          </div>
+
+              <button type='submit'>Enviar </button>
+              </form>
+              {
+                imagen&&(
+                  <img src={imagen} alt=""/>
+                )
+              }
+             
+           
+          {/* </div> */}
           <article className='contenedorFormulario'>
             <div className='textoFmo'>
               <label htmlFor="" className="pr-5">Nombre</label>
@@ -48,7 +79,7 @@ export default function Perfil() {
             </div>
           </article>
           <button className="guardar">Guardar cambios</button>
-        </form>
+        {/* </form> */}
       </section>
       <Modal isOpen={modalOpen} onClose={closeModal} /> {/* Renderiza el Modal aquí */}
     </article>

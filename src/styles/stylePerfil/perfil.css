@@ -19,7 +19,8 @@
 }
 
 .textPerfil{
- 
+    display: flex;
+    justify-content: center;
     gap: 50px;
 }
 .formulario {
