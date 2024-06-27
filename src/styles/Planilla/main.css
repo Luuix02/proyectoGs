@@ -16,14 +16,16 @@
 }
 
 th,
-td {
+td , input{
   border: 1px solid rgb(103, 103, 103);
   padding: 6px;
   text-align: center;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.7);
 }
-
+th,td, input{
+  width: 400px;
+}
 .th {
   width: 30px;
   text-align: center;
@@ -198,9 +200,6 @@ td {
   color: #000;
 }
 
-input[type="file"] {
-  display: none;
-}
 
 .PlanHl{
   display: flex;
@@ -270,8 +269,6 @@ input[type="file"] {
   width: 100px;
 }
 
-
-.vmm{
-  display: flex;
-  flex-direction: row;
+.inpuntImg{
+  margin-left: 40px;
 }
