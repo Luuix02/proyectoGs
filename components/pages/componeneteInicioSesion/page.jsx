@@ -5,56 +5,54 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
 import RecuperarContraseña from "../ComponenteRecuperarContraseña/page";
+import { loginUser } from "../../../src/lib/api";
 
 export default function InicioSesion() {
-  const path = "/auth";
+  const [correo, setCorreo] = useState("");
+  const [contrasena, setContrasena] = useState("");
+  const [error, setError] = useState(null);
+  const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] =
+    useState(false);
   const router = useRouter();
+  const ruta = "/organizador/campeonatos";
 
-  const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] = useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null);
+    try {
+      const data = await loginUser(correo, contrasena);
+      localStorage.setItem("token", data.token);
 
-  const abrirRecuperarContraseña = () => {
-    setMostrarRecuperarContraseña(true);
-  };
-
-  const cerrarRecuperarContraseña = () => {
-    setMostrarRecuperarContraseña(false);
-  };
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [ruta, setRuta] = useState("");
-
-  const datosJugador = {
-    email: "pepitoPerez@gmail.com",
-    password: "1234",
-  };
-  const datosAdmin = {
-    email: "pedrito@soy.sena.edu.co",
-    password: "1234",
-  };
-
-  const validacionRutas = () => {
-    if (email === datosJugador.email && password === datosJugador.password) {
-      setRuta("/jugador/dashboard");
-    } else if (email === datosAdmin.email && password === datosAdmin.password) {
-      setRuta("/organizador/campeonatos");
-    } else {
-      console.log("Datos incorrectos");
+      const userRole = data.user.rol;
+      if(userRole === "jugador") {
+        router.push("/jugador/dashboard");
+      }else if (userRole === "organizador"){
+        router.push("/organizador/campeonatos");
+      } else {
+        setError("Rol desconocido")
+      }
+        
+    } catch (error) {
+      if (error.response && error.response.status === 403) {
+        setError(
+          "Las credenciales proporcionadas no son válidas. Por favor, verifica tus datos e intenta de nuevo."
+        );
+      } else {
+        setError(
+          "Ocurrió un error al intentar iniciar sesión. Por favor, inténtalo de nuevo más tarde."
+        );
+      }
     }
   };
 
-  const handlerSubmit = (e) => {
-    e.preventDefault();
-    validacionRutas();
-  };
-
+  const abrirRecuperarContraseña = () => setMostrarRecuperarContraseña(true);
+  const cerrarRecuperarContraseña = () => setMostrarRecuperarContraseña(false);
 
   return (
     <>
       <div
         style={{
-          backgroundImage:
-            "url('/images/iniciarSesion/imgIn.png')",
+          backgroundImage: "url('/images/iniciarSesion/imgIn.png')",
           width: "100vw",
           height: "100vh",
           backgroundSize: "cover",
@@ -68,65 +66,60 @@ export default function InicioSesion() {
           <h1 className="tituloPrincipal">Inicia sesión ahora</h1>
           <br />
           <div className="contenedorDatos">
-            <form action="datos" onSubmit={handlerSubmit}>
-              <label htmlFor="email" className="etiquetaDato correoFor">
+            {error && <p>{error}</p>}
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="correo" className="etiquetaDato correoFor">
                 Correo electrónico
               </label>
               <input
                 type="text"
-                id="email"
-                name="email"
+                id="correo"
+                name="correo"
                 placeholder="ej: pepito@gmail.com"
                 required
                 className="campoDato"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
+                onChange={(e) => setCorreo(e.target.value)}
+                value={correo}
               />
               <br />
-
-              <label htmlFor="password" className="etiquetaDato contraseñaFor">
+              <label
+                htmlFor="contrasena"
+                className="etiquetaDato contraseñaFor"
+              >
                 Contraseña
               </label>
               <input
                 className="campoContraseña"
                 type="password"
-                id="password"
-                name="password"
+                id="contrasena"
+                name="contrasena"
                 placeholder="*********"
                 required
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
+                onChange={(e) => setContrasena(e.target.value)}
+                value={contrasena}
               />
-
               <br />
-              <button
-                className="botonInicioSesion"
-                type="submit"
-                onClick={() => router.push(ruta)}
-              >
+              <button className="botonInicioSesion" type="submit">
                 Iniciar Sesión
               </button>
             </form>
-
             <div className="enlacesAdicionales">
-              <span className="olvidarContraseña" onClick={abrirRecuperarContraseña}>
-
+              <span
+                className="olvidarContraseña"
+                onClick={abrirRecuperarContraseña}
+              >
                 ¿Olvidaste tu contraseña?
               </span>
-
-
-              <Link className="registrateIniciar" href={`${path}/registro`}>
+              <Link className="registrateIniciar" href="/registro">
                 ¿No tienes cuenta?
               </Link>
             </div>
           </div>
+          {mostrarRecuperarContraseña && (
+            <RecuperarContraseña onClose={cerrarRecuperarContraseña} />
+          )}
         </div>
-        {mostrarRecuperarContraseña && (
-          <RecuperarContraseña onClose={cerrarRecuperarContraseña} />
-
-        )}
       </div>
-
     </>
   );
 }
