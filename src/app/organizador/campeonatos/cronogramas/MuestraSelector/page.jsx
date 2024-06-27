@@ -8,6 +8,7 @@ import { useState } from "react";
 import GuardarCronograma from "../guardarCambios/page";
 
 export default function MuestraSelector() {
+  
   const [selectOption, setSelectOption] = useState("Seleccione Jornada");
   const [mostrarGuardarCambios, setMostrarGuardarCambios] = useState("cronogramas")
   const handleChange = (event) => {
