@@ -22,7 +22,16 @@ export default function InicioSesion() {
     try {
       const data = await loginUser(correo, contrasena);
       localStorage.setItem("token", data.token);
-      router.push(ruta);
+
+      const userRole = data.user.rol;
+      if(userRole === "jugador") {
+        router.push("/jugador/dashboard");
+      }else if (userRole === "organizador"){
+        router.push("/organizador/campeonatos");
+      } else {
+        setError("Rol desconocido")
+      }
+        
     } catch (error) {
       if (error.response && error.response.status === 403) {
         setError(
