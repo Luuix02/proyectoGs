@@ -1,7 +1,7 @@
 .contenedorPagePerfil{
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 30px;
     
 }
 .principalCuenta{
@@ -19,19 +19,19 @@
 }
 
 .textPerfil{
-    display: flex;
-    gap: 20px;
+ 
+    gap: 50px;
 }
 .formulario {
     display: grid;
-    padding: 100px; /* Aumentar el padding */
+    padding: 10px; /* Aumentar el padding */
     background-color: rgba(116, 126, 137, 0.3);
-    width: 100rem;
+    width: 80rem;
     border-radius: 15px;
     margin-top: 20px;
     margin: 5rem auto; /* Centrar en la pantalla */
     justify-content: center;
-    gap: 100px;
+    gap: 80px;
     box-sizing: border-box; /* Incluir padding en el ancho y alto */
 }
 
@@ -50,17 +50,17 @@
 }
 
 .cajaTexto{
-    width: 300px;
+    width: 500px;
     height: 30px;
     border-radius: 6px;
-    padding-left: 10px;
+    padding-left: 30px;
     margin-bottom: 10px;
 }
 .guardar{
     background-color: #12aed1cd;
     color: aliceblue;
     border-radius: 5px;
-    height: 40px;
+    height: 30px;
     width: max-content;
     font-weight: bolder;
     
