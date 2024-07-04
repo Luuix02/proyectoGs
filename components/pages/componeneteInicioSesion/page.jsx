@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
 import RecuperarContraseña from "../ComponenteRecuperarContraseña/page";
 import { loginUser } from "../../../src/lib/api";
+import Cookies from "js-cookie";
 
 export default function InicioSesion() {
   const [correo, setCorreo] = useState("");
@@ -14,24 +15,25 @@ export default function InicioSesion() {
   const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] =
     useState(false);
   const router = useRouter();
-  const ruta = "/organizador/campeonatos";
+  // const ruta = "/organizador/campeonatos";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
     try {
       const data = await loginUser(correo, contrasena);
-      localStorage.setItem("token", data.token);
+      Cookies.set("token", data.token, { path: "/" });
+      //  console.log(Cookies.get('jwt'));
+      // localStorage.setItem("token", data.token);
 
       const userRole = data.user.rol;
-      if(userRole === "jugador") {
+      if (userRole === "jugador") {
         router.push("/jugador/dashboard");
-      }else if (userRole === "organizador"){
+      } else if (userRole === "organizador") {
         router.push("/organizador/campeonatos");
       } else {
-        setError("Rol desconocido")
+        setError("Rol desconocido");
       }
-        
     } catch (error) {
       if (error.response && error.response.status === 403) {
         setError(

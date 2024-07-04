@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { v2 as cloudinary } from 'cloudinary';
-import { resolve } from "styled-jsx/css";
+
 
     // Configuration
     cloudinary.config({ 
@@ -10,6 +10,7 @@ import { resolve } from "styled-jsx/css";
     });
 
 export async function POST(request){
+    
     const data = await request.formData();
     const image = data.get("image")
 
@@ -21,7 +22,8 @@ export async function POST(request){
     const buffer = Buffer.from(bytes)
 
     const response = await new Promise((resolve, reject) =>{
-        cloudinary.uploader.upload_stream({}, (err, result)=>{
+        cloudinary.uploader
+        .upload_stream({}, (err, result)=>{
             if(err){
                 reject(err)
             }
@@ -30,8 +32,10 @@ export async function POST(request){
         .end(buffer)
     })
 
+    console.log(response)
+
     return NextResponse.json({
-        message: "logo de equipo subido correctamente",
+        message: "Imagen Subida",
         url: response.secure_url,
     })
 } 

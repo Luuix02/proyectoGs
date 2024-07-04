@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import "../../../styles/styleCrearCampeonato/crearcampeonato.css";
-import Calendarioo from "./calendar/Calendario";
+import Calendarioo from "../../../../components/pages/calendar/Calendario";
 import Boton from "../../../../components/pages/CrearCampeonato/Boton";
 import Guardar from "./guardarCambios/page";
 import RootLayout from "@/app/layout";
