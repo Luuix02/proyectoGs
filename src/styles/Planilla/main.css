@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   min-width: 100vw;
-  height: 100vh;
+  height: 80vh;
 
 }
 
@@ -75,7 +75,6 @@ th,td, input{
 .Tainer {
   margin-top: 16px;
   display: flex;
-  flex-direction: column;
   background-color: rgb(227, 227, 227);
   border-radius: 12px;
   padding: 16px;
@@ -108,10 +107,35 @@ th,td, input{
   padding: 1px 2px;
 }
 
+.buscador-compañeros{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btnBuscar{
+  width: 120px;
+  height: 40px;
+}
+.buscador-compañeros h1{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.buscador-compañeros input{
+  height: 48px;
+  margin-top: 10px;
+}
 .tunder {
   margin-top: 1rem;
   display: flex;
-  flex-direction: row;
+  gap: 10px;
 }
 
 .m-4-input {
@@ -123,9 +147,7 @@ th,td, input{
   padding: 1px 2px;
 }
 
-.flex-1 label {
-  padding-right: 20px;
-}
+
 
 .whill {
   background-color: #12aed1cd;
@@ -138,24 +160,19 @@ th,td, input{
 
 
 .card {
-  width: 250px;
-  position: absolute;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  height: 180px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  top: 14%;
-  left: 70%;
-
+  gap: 20px;
 }
 
-.card img {
 
-  object-fit: cover;
+.card img {
+  object-fit: fill;
   transition: transform 0.3s ease;
+  width: 250px;
+  height: 150px;
 }
 
 .card:hover img {
@@ -223,12 +240,9 @@ th,td, input{
   display: inline-flex;
   /* Cambiamos display a inline-flex */
   align-items: center;
+  margin-top: 20px;
 }
 
-.custom-select label {
-  margin-right: 10px;
-  /* Negrita para la etiqueta */
-}
 
 .custom-select select {
   appearance: none;
@@ -258,10 +272,6 @@ th,td, input{
   transform: translateY(-50%);
   pointer-events: none;
   color: #666;
-}
-
-.custom-select{
-  margin-left: 30px;
 }
 
 .custom-select select {

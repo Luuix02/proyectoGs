@@ -1,6 +1,23 @@
+'use client'
 import Link from "next/link";
 import "../../../src/styles/styleDashJugador/styleCard.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 export default function CardCampeonato() {
+  const [campeonatos, setCampenatos] = useState()
+  const token = Cookies.get('token')
+  useEffect(()=>{
+    const obtenerCampeonatos =async()=>{
+    const response = await axios.get('http://localhost:3001/inscripcionEquipos',{
+      headers:{
+        Authorization: token
+      }
+    })
+
+    setCampenatos(response.data)
+    }
+  })
+
   return (
     <article className="cardCampeonato">
       <div className="column">
