@@ -1,144 +1,127 @@
-.contenedorPrincipalInicioSe {
-  background-repeat: no-repeat;
-  margin-top: 1%;
-  background: rgba(40, 42, 44, 0.647);
-  width: 100%;
-  max-width: 880px;
-  height: 50%;
-  border-radius: 20px;
+.contenedorPadreLogin {
+  background-image: url("/images/iniciarSesion/imgIn.png");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  box-shadow: 0 0 10px rgb(205, 207, 210);
-  margin-left: 10;
-  margin-right: auto;
-}
-@media (min-width: 771px) {
-  .contenedorPrincipalInicioSe {
-    margin-left: 32%;
-  }
+  position: fixed;
+  left: 0;
+  z-index: 1000;
 }
 
-.contenedorDatos form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 40px;
-  margin-top: 50px;
+.contenedorSecunLogin {
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 450px;
+  width: 90%;
+  height: 470px;
+  margin-left: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.858);
+  animation: cambioColor 4s infinite alternate;
 }
-
-.campoDato,
-.campoContraseña {
-  margin: 10px;
-  width: 280px;
-  height: 30px;
-  border-radius: 8px;
-  padding-left: 30px;
-  color: black;
-}
-
-.olvidoContraseña {
-  color: rgb(255, 255, 255);
-}
-
-.botonInicioSesion {
-  border-radius: 8px;
-  background-color: #12aed1cd;
-  height: 35px;
-  width: 295px;
-  cursor: pointer;
-  margin: 10px;
-  padding-left: 30px;
-}
-
-.botonInicioSesion {
-  transition: transform 0.2s ease;
-}
-
-.botonInicioSesion:hover {
-  transform: scale(1.05);
-}
-
-.tituloPrincipal {
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 10px;
-  animation: changeColor 3s infinite alternate;
-}
-@keyframes changeColor {
+@keyframes cambioColor {
   0% {
-    color: #d3d3d78a;
+    background-color: #ffffff;
   }
   50% {
-    color: #97e9f2;
+    background-color: #dfe6e9a7;
   }
   100% {
-    color: #ffffff;
+    background-color: #efefef51;
   }
 }
-.registrateIniciar {
-  color: #ffffff;
+
+.contenedorSecunLogin h1 {
+  text-align: center;
+  margin-bottom: 35px;
 }
 
-.etiquetaDato,
-.campoDato,
-.tituloPrincipal,
-.botonInicioSesion,
-.enlaceOlvido {
+.contenedorSecunLogin form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedorSecunLogin label {
   font-weight: bold;
-  color: #ffffff;
 }
 
-.campoDato,
-.campoContraseña {
-  width: 90%;
+.contenedorSecunLogin input {
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #ffffffcd;
+  border: 1px solid #181818;
+  border-radius: 5px;
 }
 
-.contenedorPrincipalInicioSe {
-  animation: fadeIn 0.8s ease;
+.contenedorSecunLogin button {
+  padding: 10px;
+  background-color: #12aed1cd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #181818;
+  cursor: pointer;
+  margin-top: 40px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.enlacesAdicionales span,
+.enlacesAdicionales a {
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-.campoDato::placeholder,
-.campoContraseña::placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.campoDato:focus::placeholder,
-.campoContraseña:focus::placeholder {
-  transform: translateY(-23px);
-}
-
-.campoDato:not(:focus)::placeholder,
-.campoContraseña:not(:focus)::placeholder {
-  transform: translateY(0);
+.etiquetaDato {
+  margin-bottom: 10px;
+  color: #0a0707;
 }
 
 .enlacesAdicionales {
-  display: flex;
-  justify-content: space-between;
   margin-top: 20px;
-  font-size: 13px;
-  padding: 15px;
-  cursor: pointer;
-  color: white;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-.contraseñaFor {
-  margin-right: 280px;
+.registrateIniciar {
+  margin-right: 10px;
+  color: #0a0a0a;
+  text-decoration: none;
+  align-items: center;
+  font-size: smaller;
+  margin-left: 0px;
+  font-weight: lighter;
 }
-.correoFor {
-  margin-right: 230px;
+
+.olvidarContraseña {
+  color: #0b0b0b;
+  cursor: pointer;
+  margin-top: -100px;
+  font-size: smaller;
+  font-weight: lighter;
+}
+.campoDato,
+.campoContraseña {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #000000;
+}
+input::placeholder {
+  color: #000;
+}
+.iconLogin {
+  color: #12aed1cd;
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+.contIconoLog {
+  position: relative;
 }

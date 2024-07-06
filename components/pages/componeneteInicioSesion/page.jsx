@@ -1,127 +1,111 @@
 "use client";
-import Link from "next/link";
+
+import React, { useState } from "react";
 import "../../../src/styles/stylesIniciarSesion/styleIniciarSesion.css";
-import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
 import { useRouter } from "next/navigation";
-import OlvidoContrasena from "@/app/auth/recuperarContrasena/page";
-import RecuperarContraseña from "../ComponenteRecuperarContraseña/page";
 import { loginUser } from "../../../src/lib/api";
+import { Check } from "react-feather";
 import Cookies from "js-cookie";
 
-export default function InicioSesion() {
-  const [correo, setCorreo] = useState("");
-  const [contrasena, setContrasena] = useState("");
-  const [error, setError] = useState(null);
-  const [mostrarRecuperarContraseña, setMostrarRecuperarContraseña] =
-    useState(false);
+// const LoginSchema = Yup.object().shape({
+//   correo: Yup.string().email("Email inválido").required("Requerido"),
+//   contrasena: Yup.string().required("Requerido"),
+// });
+
+const InicioSesion = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, touchedFields },
+    setError,
+    clearErrors,
+  } = useForm();
+  // resolver: yupResolver(LoginSchema),
+  // mode: "onChange",
+
+  const [isValid, setIsvalid] = useState({ correo: false, contrasena: false });
   const router = useRouter();
-  // const ruta = "/organizador/campeonatos";
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError(null);
+  const onSubmit = async (data) => {
     try {
-      const data = await loginUser(correo, contrasena);
-      Cookies.set("token", data.token, { path: "/" });
-      //  console.log(Cookies.get('jwt'));
-      // localStorage.setItem("token", data.token);
+      const response = await loginUser(data.correo, data.contrasena);
+      setIsvalid({ correo: true, contrasena: true });
+      Cookies.set("token", response.token, { path: "/" });
 
-      const userRole = data.user.rol;
+      const userRole = response.user.rol;
       if (userRole === "jugador") {
         router.push("/jugador/dashboard");
       } else if (userRole === "organizador") {
         router.push("/organizador/campeonatos");
       } else {
-        setError("Rol desconocido");
+        throw new Error("Rol desconocido");
       }
     } catch (error) {
       if (error.response && error.response.status === 403) {
-        setError(
-          "Las credenciales proporcionadas no son válidas. Por favor, verifica tus datos e intenta de nuevo."
-        );
+        alert("Credenciales inválidas. Verifica tus datos e intenta de nuevo.");
       } else {
-        setError(
-          "Ocurrió un error al intentar iniciar sesión. Por favor, inténtalo de nuevo más tarde."
-        );
+        alert("Error al iniciar sesión. Inténtalo de nuevo más tarde.");
       }
     }
   };
 
-  const abrirRecuperarContraseña = () => setMostrarRecuperarContraseña(true);
-  const cerrarRecuperarContraseña = () => setMostrarRecuperarContraseña(false);
-
   return (
-    <>
-      <div
-        style={{
-          backgroundImage: "url('/images/iniciarSesion/imgIn.png')",
-          width: "100vw",
-          height: "100vh",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div className="contenedorPrincipalInicioSe">
-          <h1 className="tituloPrincipal">Inicia sesión ahora</h1>
-          <br />
-          <div className="contenedorDatos">
-            {error && <p>{error}</p>}
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="correo" className="etiquetaDato correoFor">
-                Correo electrónico
-              </label>
-              <input
-                type="text"
-                id="correo"
-                name="correo"
-                placeholder="ej: pepito@gmail.com"
-                required
-                className="campoDato"
-                onChange={(e) => setCorreo(e.target.value)}
-                value={correo}
-              />
-              <br />
-              <label
-                htmlFor="contrasena"
-                className="etiquetaDato contraseñaFor"
-              >
-                Contraseña
-              </label>
-              <input
-                className="campoContraseña"
-                type="password"
-                id="contrasena"
-                name="contrasena"
-                placeholder="*********"
-                required
-                onChange={(e) => setContrasena(e.target.value)}
-                value={contrasena}
-              />
-              <br />
-              <button className="botonInicioSesion" type="submit">
-                Iniciar Sesión
-              </button>
-            </form>
-            <div className="enlacesAdicionales">
-              <span
-                className="olvidarContraseña"
-                onClick={abrirRecuperarContraseña}
-              >
-                ¿Olvidaste tu contraseña?
-              </span>
-              <Link className="registrateIniciar" href="/registro">
-                ¿No tienes cuenta?
-              </Link>
-            </div>
+    <div className="contenedorPadreLogin">
+      <div className="contenedorSecunLogin">
+        <h1 className="tituloPrincipal">Inicia sesión ahora</h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label htmlFor="correo" className="etiquetaDato correoFor">
+            Correo electrónico
+          </label>
+
+          <div className="contIconoLog">
+            <input
+              {...register("correo")}
+              type="text"
+              id="correo"
+              placeholder="ej: pepito@gmail.com"
+              className="campoDato"
+            />
+            {errors.correo && <p>{errors.correo.message}</p>}
+            {touchedFields.correo && isValid.correo && !errors.correo && (
+              <Check className="iconLogin" />
+            )}
           </div>
-          {mostrarRecuperarContraseña && (
-            <RecuperarContraseña onClose={cerrarRecuperarContraseña} />
-          )}
+
+          <label htmlFor="contrasena" className="etiquetaDato contraseñaFor">
+            Contraseña
+          </label>
+          <div className="contIconoLog">
+            <input
+              {...register("contrasena")}
+              type="password"
+              id="contrasena"
+              placeholder="*********"
+              className="campoContraseña"
+            />
+            {errors.contrasena && <p>{errors.contrasena.message}</p>}
+            {touchedFields.contrasena &&
+              isValid.contrasena &&
+              !errors.contrasena && <Check className="iconLogin" />}
+          </div>
+
+          <button type="submit" className="botonInicioSesion">
+            Iniciar Sesión
+          </button>
+        </form>
+
+        <div className="enlacesAdicionales">
+          <a className="registrateIniciar" href="/registro">
+            ¿No tienes cuenta?
+          </a>
+          <span className="olvidarContraseña">¿Olvidaste tu contraseña?</span>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default InicioSesion;
