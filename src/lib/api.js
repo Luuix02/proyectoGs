@@ -24,15 +24,15 @@ api.interceptors.request.use(
   }
 );
 
-export const fetchProtectedData = async (endpoint) => {
-  try {
-    const response = await api.get(`/protected/${endpoint}`);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching protected data:", error);
-    throw error;
-  }
-};
+// export const fetchProtectedData = async (endpoint) => {
+//   try {
+//     const response = await api.get(`/protected/${endpoint}`);
+//     return response.data;
+//   } catch (error) {
+//     console.error("Error fetching protected data:", error);
+//     throw error;
+//   }
+// };
 
 export const loginUser = async (correo, contrasena) => {
   try {

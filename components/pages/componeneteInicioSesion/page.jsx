@@ -35,14 +35,16 @@ const InicioSesion = () => {
       setIsvalid({ correo: true, contrasena: true });
       Cookies.set("token", response.token, { path: "/" });
 
-      const userRole = response.user.rol;
-      if (userRole === "jugador") {
-        router.push("/jugador/dashboard");
-      } else if (userRole === "organizador") {
-        router.push("/organizador/campeonatos");
-      } else {
-        throw new Error("Rol desconocido");
-      }
+      setTimeout(() => {
+        const userRole = response.user.rol;
+        if (userRole === 'jugador') {
+          router.push('/jugador/dashboard');
+        } else if (userRole === 'organizador') {
+          router.push('/organizador/campeonatos');
+        } else {
+          setError("rol", { type: "manual", message: "Rol desconocido" });
+        }
+      }, 1000); 
     } catch (error) {
       if (error.response && error.response.status === 403) {
         alert("Credenciales inválidas. Verifica tus datos e intenta de nuevo.");
