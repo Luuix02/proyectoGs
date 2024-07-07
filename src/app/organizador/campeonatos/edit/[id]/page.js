@@ -1,31 +1,8 @@
 'use client'
 
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import React from 'react'
-import '../../../src/styles/Campeonato/Post.css'
+import '../../../../../styles/Campeonato/edit.css'
 
-export default function CreateCampeonato() {
-
-
-    const [tasks, setTasks] = useState([]);
-
-    useEffect(() => {
-        const fetchTasks = async () => {
-            try {
-                const response = await axios.post('http://localhost:3001/campeonato');
-                if (response.data && Array.isArray(response.data.campeonatos)) {
-                    setTasks(response.data.campeonatos);
-                } else {
-                    console.error('Fetch tasks returned unexpected data:', response.data);
-                }
-            } catch (error) {
-                console.error('Error fetching CrearCampeonato:', error);
-            }
-        };
-        fetchTasks();
-    }, []);
-
+export default function Editar () {
     return (
         <div className='contenedor'>
         <section class="container">
