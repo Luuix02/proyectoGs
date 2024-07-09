@@ -41,17 +41,7 @@ export default function SideBarPrincipal() {
             Fotos
           </Link>
         </li>
-        <li className="contenedorAside">
-          <Image 
-          src={`${pathImg}/cuenta.png`} 
-          width={35} 
-          height={35}
-          className="img4"
-          ></Image>
-          <Link href={`perfil`} className="li">
-            Cuenta
-          </Link>
-        </li>
+       
         <li className="contenedorAside">
           <Image 
           src={`${pathImg}/salir.png`} 
@@ -61,6 +51,19 @@ export default function SideBarPrincipal() {
           ></Image>
           <Link href={`/`} className="li">
             Salir
+          </Link>
+        </li>
+      </ul>
+      <ul>
+      <li className="contenedorAside">
+          <Image 
+          src={`${pathImg}/cuenta.png`} 
+          width={35} 
+          height={35}
+          className="img4"
+          ></Image>
+          <Link href={`perfil`} className="li">
+            Cuenta
           </Link>
         </li>
       </ul>
