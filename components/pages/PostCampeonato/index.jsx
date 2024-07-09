@@ -1,7 +1,7 @@
 'use client'
 
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import React from 'react'
 import '../../../src/styles/Campeonato/Post.css'
@@ -19,7 +19,7 @@ export default function CreateCampeonato() {
     const [cantidadEquipos, setCantidadEquipos] = useState('')
     const [error, setError] = useState(null);
 
-    // const history = useHistory();
+    const router = useRouter();
 
 
     const handleSubmit = async (e) => {
@@ -37,13 +37,10 @@ export default function CreateCampeonato() {
             cantidadEquipos
         };
 
-
         try {
             const response = await axios.post('http://localhost:3001/campeonato/', data);
             console.log('Respuesta del servidor:', response.data);
-
-            history.push('/organizador/campeonatos');
-
+            router.push('/organizador/campeonatos');
         } catch (error) {
             console.error('Error al crear el campeonato:', error);
             if (error.response) {
@@ -138,7 +135,6 @@ export default function CreateCampeonato() {
                                 placeholder="Enter birth date"
                                 type="date"
                                 onChange={(e) => setFinInscripcion(e.target.value)}
-
                             />
                         </div>
                     </div>
