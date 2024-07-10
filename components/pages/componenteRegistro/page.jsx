@@ -1,150 +1,144 @@
-'use client'
-import React, { useState } from "react";
-import Link from "next/link";
-import "../../../src/styles/styleRegistro/styleRegistro.css";
-import RootLayout from "@/app/layout";
-import { useRouter } from "next/router";
+"use client";
 import { registroUser } from "@/lib/api";
+import { useForm } from "react-hook-form";
+import "../../../src/styles/styleRegistro/styleRegistro.css";
+import { useState } from "react";
 
-export default function Registro() {
- 
-  const path = "/auth";
+export default function RegisterUser() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
-  const [datosRegistro, setDatosRegistro] = useState({
-    correo: "",
-    contrasena: "",
-    nombres: "",
-    telefono: "",
-    identificacion: "",
-    programa: "",
-    fichaFin: "",
-    ficha: "",
-    confirmarContrasena: '',
-  });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
+    data.finFicha = new Date(data.finFicha).toISOString();
     try {
-      const response = await registroUser(datosRegistro);
-      console.log("usario registrado", response);
+      const response = await registroUser(data);
+      alert("Usuario registrado correctamente");
+      reset();
     } catch (error) {
-      console.log("Errro al registrar usuario", error.message);
+      console.error("Error en el registro del usuario:", error.message);
+      alert(error.message);
     }
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setDatosRegistro((prevDatos) => ({
-      ...prevDatos,
-      [name]: value,
-    }));
-  };
-
-
-return (
-  <>
-    
-      <body className="FONDO  ">
-        <div className="mayor class">
-          <h1 className="titulo">Regístrate en GoSport</h1>
-          <br />
-          <div className="divdatos2">
-            <div className="divdatos">
-              <form onSubmit={handleSubmit} action="datos">
-                <label htmlFor="nombres">Nombres</label>
-                <input
-                  type="text"
-                  id="nombres"
-                  name="nombres"
-                  value={datosRegistro.nombres}
-                  onChange={handleChange}
-                  placeholder="ejemplo juan perez"
-                  required
-                />
-
-
-                <label htmlFor="telefono">Teléfono</label>
-                <input
-                  className="la"
-                  type="tel"
-                  id="telefono"
-                  name="telefono"
-                  value={datosRegistro.telefono}
-                  onChange={handleChange}
-                  placeholder="ej:3163221523"
-                  required
-                />
-
-
-
-{/* agregar los campos de identificacion, fin fecha y programa*/}
-
-
-                <label htmlFor="ficha">N° Ficha</label>
-                <input
-                  className="la"
-                  type="  tel"
-                  id="ficha"
-                  name="ficha"
-                  value={datosRegistro.ficha}
-                  onChange={handleChange}
-                  placeholder="ej:2669739"
-                  required
-                />
-
-                <br />
-                <label htmlFor="correo">Email</label>
-                <input
-                  type="email"
-                  id="correo"
-                  name="correo"
-                  value={datosRegistro.correo}
-                  onChange={handleChange}
-                  placeholder="ej:pepito@gmail.com"
-                  required
-                />
-
-                <label htmlFor="contrasena">Contraseña</label>
-                <input
-                  type="password"
-                  id="contrasena"
-                  name="contrasena"
-                  value={datosRegistro.contrasena}
-                  onChange={handleChange}
-                  placeholder="***********"
-                  required
-                />
-
-                <label htmlFor="confirmar-password">Confirmar contraseña</label>
-                <input
-                  type="password"
-                  id="confirmarContrasena"
-                  name="confirmarContrasena"
-                  value={datosRegistro.confirmarContrasena}
-                  onChange={handleChange}
-                  placeholder="***********"
-                  required
-                />
-
-                
-                  <button type="submit" className="Botonregistros">Registrarse</button>
-               
-
-                <p className="cuenta">
-                  ¿Ya tienes cuenta?{" "}
-                  <Link
-                    href={`${path}/inicioSesion`}
-                    className="parairaotrapagina"
-                  >
-                    Inicia Sesión
-                  </Link>
-                </p>
-              </form>
+  return (
+    <div className="contenedorPadreRegisro">
+      <div className="contenedorFormularioReg">
+        <h1 className="tituloPrincipal">Regístrate en GoSport</h1>
+        <h2 className="tituloSecundario">
+          Queremos saber un poco de ti, por favor llena el formulario completo
+        </h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="form-row">
+            <div className="form-group">
+              <input
+                type="text"
+                id="nombres"
+                placeholder="Ingresa tus nombres completos"
+                className="campoDato"
+                {...register("nombres", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.nombres && <span>{errors.nombres.message}</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                id="telefono"
+                placeholder="Ingresa tu número de celular"
+                className="campoDato"
+                {...register("telefono", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.telefono && <span>{errors.telefono.message}</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                id="identificacion"
+                placeholder="Ingresa tus número de identificación"
+                className="campoDato"
+                {...register("identificacion", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.identificacion && (
+                <span>{errors.identificacion.message}</span>
+              )}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                id="programa"
+                placeholder="Ingresa el programa que estás cursando"
+                className="campoDato"
+                {...register("programa", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.programa && <span>{errors.programa.message}</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                id="ficha"
+                placeholder="Ingresa tu número de ficha"
+                className="campoDato"
+                {...register("ficha", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.ficha && <span>{errors.ficha.message}</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="date"
+                id="finFicha"
+                placeholder="Ingresa fecha de terminación del programa"
+                className="campoDato"
+                {...register("finFicha", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.finFicha && <span>{errors.finFicha.message}</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                id="correo"
+                placeholder="Ingresa tu correo electrónico"
+                className="campoDato"
+                {...register("correo", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.correo && <span>{errors.correo.message}</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="password"
+                id="contrasena"
+                placeholder="Crea tu contraseña"
+                className="campoDato"
+                {...register("contrasena", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.contrasena && <span>{errors.contrasena.message}</span>}
             </div>
           </div>
-        </div>
-      </body>
-   
-  </>
-);
-};
+          <div className="form-group-btn">
+            <button type="submit" className="Registrar">
+              Registrarse
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}

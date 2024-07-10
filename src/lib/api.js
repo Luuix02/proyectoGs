@@ -52,7 +52,8 @@ export const registroUser = async ({
   contrasena,
   nombres,
   telefono,
-  genero,
+  programa,
+  finFicha,
   identificacion,
   ficha,
 }) => {
@@ -62,10 +63,12 @@ export const registroUser = async ({
       contrasena,
       nombres,
       telefono,
-      genero,
+      programa,
+      finFicha,
       identificacion,
       ficha,
     });
+    return response.data;
   } catch (error) {
     throw new Error(
       error.response.data.message || "Error al registrar usuario"
