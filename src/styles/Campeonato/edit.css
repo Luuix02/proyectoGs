@@ -1,14 +1,14 @@
 .contenedor {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: grid;
     place-content: center;
-    height: 100vh;
     font-size: 17px;
 }
 
 .container {
-    position: relative;
-    max-width: 500px;
-    width: 100%;
+    width: 40vw;
     background: #fff;
     padding: 25px;
     border-radius: 8px;
@@ -110,9 +110,9 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
-    background-color: #12aed1cd;
+    background-color: #007bffcb;
 }
 
 .form button:hover {
-    background: #EE3E34;
+    background: #007bffc3;
 }
