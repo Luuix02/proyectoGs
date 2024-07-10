@@ -18,12 +18,9 @@ export default function CampeonatosDisponibles() {
         <h1 className='tituloCam'>Campeonatos Disponibles</h1>
        <article className='contenedorCards'>
         <CardCampeonato/>
-        <CardCampeonato/>
+        
         </article>
       </section>
-      <Link href={'/auth/inicioSesion'} className='salir'>
-        <Image src={'/images/iconosSide/salir.png'} width={50} height={50}/>
-      </Link>
     </>
   )
 }

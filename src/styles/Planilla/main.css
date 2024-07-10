@@ -6,9 +6,12 @@
   align-items: center;
   min-width: 100vw;
   height: 80vh;
-
+  
 }
 
+.principal{
+ margin-top: 150px
+}
 .tablaPlanillaIns {
   width: 100%;
   border-collapse: separate;
@@ -223,7 +226,7 @@ th,td, input{
   width: 100%;
   justify-content: center;
   align-items: center;
-
+  flex-direction: column;
 }
 
 .Nosee{

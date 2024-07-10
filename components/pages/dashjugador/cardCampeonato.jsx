@@ -2,13 +2,14 @@
 import Link from "next/link";
 import "../../../src/styles/styleDashJugador/styleCard.css";
 import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
 import axios from "axios";
 export default function CardCampeonato() {
   const [campeonatos, setCampenatos] = useState()
   const token = Cookies.get('token')
   useEffect(()=>{
     const obtenerCampeonatos =async()=>{
-    const response = await axios.get('http://localhost:3001/inscripcionEquipos',{
+    const response = await axios.get('http://localhost:3001/campeonato/',{
       headers:{
         Authorization: token
       }
@@ -16,28 +17,34 @@ export default function CardCampeonato() {
 
     setCampenatos(response.data)
     }
-  })
+    obtenerCampeonatos()
+  },[])
 
+  console.log(campeonatos)
   return (
-    <article className="cardCampeonato">
+    <>
+        {campeonatos && campeonatos.campeonatos.map((campeonato)=>(
+    <article className="cardCampeonato" key={campeonato._id}>
+
       <div className="column">
-        <h1 className="font-bold">Torneo del Ascenso Dorado</h1>
+        <h1 className="font-bold">{campeonato.nombreCampeonato}</h1>
         <p className="text-xl">
-          El torneo del Ascenso Dorado no es solo un torneo;es una oportunidad
-          para elevarse por encima de las adversidades, ¿Tienes lo necesario
-          para enfrentarte y emerger como un campeón? Inscríbete y prepárate
-        </p>
+         {campeonato.descripcion}
+         </p>
       </div>
 
       <div className="column column2">
-        <h1 className="">Maximo de integrantes: 15</h1>
-        <p className="">Fecha de inicio: 15/01/2024</p>
-        <p className="espacio">Fecha de finalizacion: 12/02/2024</p>
+        <h1 className="">Categoria {campeonato.nombreDiciplinas}</h1>
+        <p className="">Fecha de inicio {campeonato.fechaIniciio}</p>
+        <p className="espacio">Fecha de finalizacion {campeonato.fechaFin}</p>
 
-        <Link href="planillaInscripcion" className="inscribirme ">
+        <Link href={`/jugador/dashboard/${campeonato._id}`} className="inscribirme ">
           Inscribirme
         </Link>
       </div>
     </article>
+        ))}
+    </>
+
   );
 }
