@@ -1,126 +1,75 @@
-.FONDO {
-  background-image: url("https://as01.epimg.net/masdeporte/imagenes/2021/08/18/reportajes/1629287252_471087_1632935001_noticiareportajes_grande.jpg");
+.contenedorPadreRegisro{
+  background-image: url("/images/iniciarSesion/in.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.divpadre {
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  background: rgba(116, 126, 137, 0.6);
-  width: 650px;
-  height: auto;
-  border-radius: 40px;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: fixed;
+  left: 0;
+  z-index: 1000;
+}
+.contenedorFormularioReg {
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
-}
-
-.titulo {
-  font-size: 26px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-}
-
-h1,
-label,
-.registro {
-  color: rgb(7, 6, 6);
-  font-weight: bold;
-}
-
-.cuenta {
-  font-weight: bold;
-  font-size: 15px;
-  margin-top: auto;
-  color: rgb(0, 0, 0);
-}
-
-Select,
-Input,
-button {
-  color: rgb(70, 37, 37);
-  margin: 10px 0;
-  border: 2px solid black;
   border-radius: 10px;
+  border: 2px solid #ccc;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.858);
+  animation: cambioColor 4s infinite alternate;
+}
+@keyframes cambioColor {
+  0% {
+    background-color: #ffffff;
+  }
+  50% {
+    background-color: #dfe6e9a7;
+  }
+  100% {
+    background-color: #efefef51;
+  }
+}
+
+.tituloPrincipal, .tituloSecundario {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  width: 48%;
+  margin-bottom: 15px;
+}
+
+.campoDato {
+  width: 100%;
   padding: 10px;
-  background-color: #a1b9d1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-Select,
-button {
-  width: 428px;
-  padding-left: 30px;
+.form-group-btn {
+  text-align: center;
 }
 
-Input {
-  width: 400px;
-}
-
-.divdatos {
-  display: flex;
-  justify-content: center;
-  margin-left: 550px;
-}
-
-.divdatos form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.divdatos {
-  width: 800px;
-  display: flex;
-  justify-content: center;
-  background-color: rgba(116, 126, 137, 0.6);
-  border-radius: 15px;
-  width: 600px;
-  padding: 18px;
-}
-
-button {
-  font-weight: bold;
+.Registrar {
   background-color: #12aed1cd;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-Input::placeholder,
-Select::placeholder {
-  color: #574545;
-  padding-left: 25px;
-}
-
-.parairaotrapagina {
-  color: black;
-  font-size: 15px;
-}
-
-@media (max-width: 1024px) {
-  .mayor {
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .mayor {
-    width: 90%;
-  }
-
-  .divdatos form {
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .mayor {
-    width: 95%;
-  }
-
-  .divdatos form {
-    width: 95%;
-  }
+.Registrar:hover {
+  background-color: #0056b3;
 }
