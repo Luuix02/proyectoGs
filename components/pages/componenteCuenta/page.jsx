@@ -51,6 +51,7 @@ const savePost = async () => {
   }
   const formData = new FormData();
   formData.append("imageAgregar", file);
+  
 
   const respuesta = await fetch('/api/post', {
     method: 'POST',
@@ -72,7 +73,7 @@ const saveUpdate = async () => {
   const formData = new FormData();
   formData.append("imageUpdate", file);
   formData.append("public_id", "public_id_image");
-
+  
   const respuesta = await fetch('/api/post', {
     method: 'PUT',
     body: formData
@@ -177,8 +178,33 @@ const handleDelete = async () => {
                   <img  className='ImagenPerfil' width={230} height={230} src={imagen} alt=""/>
                 )
               }
-             
+              <button className='ContenedorFotoDelete' onClick={handleDelete}>
+              <svg xmlns="http://www.w3.org/2000/svg" class="IconDelete" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+             <path d="M4 7l16 0"></path>
+             <path d="M10 11l0 6"></path>
+             <path d="M14 11l0 6"></path>
+           <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+              <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+</svg>
+              </button>
+               <button onClick={input} style={{ display: imagen === '/sinfoto.png' ? 'none' : 'block'}} className={`ContenedorFotoUpdate ${imagen !== '/sinfoto.png' ? '' : 'hidden'}`}>
+               <svg xmlns="http://www.w3.org/2000/svg" class="iconupdate" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path>
+             <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
+            </svg>
+               </button>
+               <button onClick={input} style={{ display: imagen !== '/sinfoto.png' ? 'none' : 'block' }} className={`ContenedorAgregar ${imagen === '/sinfoto.png' ? '' : 'hidden'}`}>
+               <svg xmlns="http://www.w3.org/2000/svg" class="IconAgregar" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"></path>
+                 <path d="M15 12h-6"></path>
+                 <path d="M12 9v6"></path>
+            </svg>
+               </button>
                </div>
+              
                <form className='imagenPerfil' onSubmit={(e)=> e.preventDefault()}>
                 <input
                 className='escanearFoto'
@@ -192,12 +218,6 @@ const handleDelete = async () => {
               }}className='botonEnviarClouddinary'>Enviar</button>
                 
                </form>
-               <div className='SeccionBotones'>
-               <button onClick={handleDelete} className='BotonesAccionesCrud'>Eliminar foto</button>
-               <button onClick={input} className='BotonesAccionesCrud'>Subir foto</button>
-               <button onClick={input} className='BotonesAccionesCrud'>Actualizar foto</button>
-               </div>
-               
                 </section>
                 <section className='seccionDatos'> 
                 {

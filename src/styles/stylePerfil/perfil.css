@@ -1,7 +1,7 @@
 .ContenedorPrincipalEditarPerfil{
     width: 100%;
     display: flex;
-    position: absolute;
+
 }
 
 .section{
@@ -15,10 +15,12 @@
 .ContenedorFormulario{
     background-color: rgba(61, 67, 81, 0.505);
     width: 70%;
-    height: 95%;
+    height: 85%;
     border-radius: 15px;
     display: flex;
     flex-direction: column; 
+    justify-content: center;
+    align-items:center ;
     gap: 29px;
     padding-top: 10px;
     
@@ -34,14 +36,56 @@
 .ContenedorFoto{
     position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+  align-items: center;
+}
+.hidden {
+    display: none;
+  }
+.ContenedorFotoDelete{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    border: 0px solid;
+}
+.ContenedorFotoUpdate{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    border: 0px solid;
+}
+.ContenedorAgregar{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    border: 0px solid;
+}
+ .IconAgregar, .iconupdate{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: -3px 0px;
+
+}
+.IconDelete{
+    width: 22px;
+    height: 22px;
 }
 .ImagenPerfil{
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     margin-top: 10px;
