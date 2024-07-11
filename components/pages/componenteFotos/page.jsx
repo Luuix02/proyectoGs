@@ -41,11 +41,11 @@ const Fc = () => {
     <>
       <main style={{ display: "flex" }}>
         <SideBarPrincipal />
-        <div>
+        <div className='divmayor'>
           <div className='contenedorSubirImagenes'>
             {photos.map(photo => (
               <div key={photo._id}>
-                <img src={`http://localhost:3001/${photo.Imagepath}`} alt={photo.Nombre} />
+                <img className='cards'src={`http://localhost:3001/${photo.Imagepath}`} alt={photo.Nombre} />
                 <h2>{photo.Nombre}</h2>
                 <p>{photo.Descripcion}</p>
                 <button onClick={() => handleDelete(photo._id)}>Eliminar</button>
