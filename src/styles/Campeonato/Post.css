@@ -6,13 +6,18 @@
 }
 
 .container {
-    position: relative;
-    max-width: 500px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
     background: #fff;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-create {
+    padding-top: 1.4rem;
+    padding-bottom: 0.5;
 }
 
 .container header {
@@ -110,9 +115,10 @@
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
-    background-color: #12aed1cd;
+    background-color: #007bffcb;
 }
 
 .form button:hover {
-    background: #EE3E34;
+    background: #007bffc3;
 }
+

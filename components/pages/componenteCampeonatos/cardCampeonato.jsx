@@ -42,11 +42,10 @@ export default function CardCampeonato() {
                                 d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
                             ></path>
                         </svg>
-                        <span className="btn-text">Crear</span>
+                        <span className="btn-text">Crear campeonato</span>
                     </button>
                 </Link>
             </div>
-
             <div className="container">
                 <div className="table-container">
                     <table className="table">
@@ -57,7 +56,7 @@ export default function CardCampeonato() {
                                 <th className="header-cell">Fin Inscripción</th>
                                 <th className="header-cell">Inicio</th>
                                 <th className="header-cell">Cantidad Equipos</th>
-                                <th className="header-cell">Acción</th>
+                                <th className="header-cell"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -69,7 +68,10 @@ export default function CardCampeonato() {
                                     <td>{task.fechaFin}</td>
                                     <td>{task.tamanoEquipos}</td>
                                     <td>
-                                        {/* <button className="action-button" onClick={() => handleDelete(task._id)}>Eliminar</button>  */}
+                                        <Link className="custom-style"
+                                            href={`/organizador/campeonatos/edit/${task._id}`}>
+                                            Editar
+                                        </Link>
                                     </td>
                                 </tr>
                             ))}
