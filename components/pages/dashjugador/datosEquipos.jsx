@@ -10,54 +10,65 @@ export const DatosEquipos = ({ id }) => {
   const [mensaje, setMensaje] = useState()
   const [jugadores, setJugadores] = useState([])
   const [jugador, setJugador] = useState()
+  const [file, setFile] = useState()
+  const [nombreEquipo, setNombreEquipo] = useState()
+  const [nombreCapitan, setNombreCapitan] = useState()
+  const [contactoUno, setContactoUno] = useState()
+  const [contactoDos, setContactoDos] = useState()
   
-  const {
-    register,
-    handleSubmit,
-    formState: { errors } } = useForm()
-
   const handleImage =async (e) => {
     const file = e.target.files[0]
-    setImage(URL.createObjectURL(file))
-
-    const formData = new FormData();
-    formData.append("imageAgregar", file)
-
-    const respuesta = await fetch('/api/post',{
-      method:'POST',
-      body: formData
-    })
-
-    const data = await respuesta.json()
-    console.log(data)
-    setEstadoImg(data.url)
-    
+    setImage(URL.createObjectURL(file)) 
+    setFile(file)
   }
 
-  console.log(estadoImg)
+  const submit = async(e) => {
+    e.preventDefault()
+    // const formData = new FormData();
+    // formData.append("imageAgregar", file)
 
-  const submit = handleSubmit(async (data) => {
+    // const respuesta = await fetch('/api/post',{
+    //   method:'POST',
+    //   body: formData
+    // })
+
+    // const dataImage = await respuesta.json()
+    
+    // setEstadoImg(dataImage.url)
+    if(jugadores.length <10){
+      console.log("Numero de jugadores no alcanzado")
+    }else{
     const response = await axios.post('http://localhost:3001/inscripcionEquipos', {
-      nombreEquipo: data.nombreEquipo,
-      nombreCapitan: data.nombreCapitan,
-      contactoUno: data.contactoUno,
-      contactoDos: data.contactoDos,
-      IdCampeonato: id
+      nombreEquipo: nombreEquipo,
+      nombreCapitan: nombreCapitan,
+      contactoUno: contactoUno,
+      contactoDos: contactoDos,
+      IdCampeonato: id,
+      ganador: true,
+      imgLogo: "imgshsshshs",
+      participantes: jugadores
     })
-    setMensaje(response.data)
-  })
+    setMensaje(response.data.msg)
+    console.log(response.data)
+    Swal.fire({
+      icon:"success",
+      title: mensaje
+    })
+
+  }
+  }
 
   const searchJugador = async (idenfiticacion) => {
     try {
-      const response = await axios.get(`http://localhost:3001/jugador/indentificacion/${idenfiticacion}`)
-      console.log(response.data.error)
+      const response = await axios.get(`http://localhost:3001/usuarios/indentificacion/${idenfiticacion}`)
+      console.log(response)
       const { value: formValues } = await Swal.fire({
         title: "Deseas agregar a este jugador",
         
         html: `
           <h1>${response.data.nombres}</h1>
-          <input id="swal-input1" class="swal2-input" required >
-          <input id="swal-input2" class="swal2-input" required >
+          <input id="swal-input1" class="swal2-input" required  placeholder="Ingresa la ficha" >
+          <input id="swal-input2" class="swal2-input" required  placeholder="Ingresa el dorsal" >
         `,
         focusConfirm: false,
         preConfirm: () => {
@@ -81,9 +92,9 @@ export const DatosEquipos = ({ id }) => {
           if (result.isConfirmed) {
             Swal.fire("Jugador guardado correctamente", "", "success");
             setJugadores(prev => [...prev,
-               {nombre:response.data.nombres,
-                ficha: JSON.stringify(formValues[0]),
-                dorsal: JSON.stringify(formValues[1])
+               {nombreJugador:response.data.nombres,
+                ficha:formValues[0],
+                dorsal:formValues[1]
                }
               ])
           }
@@ -100,12 +111,14 @@ export const DatosEquipos = ({ id }) => {
       }
     }
   }
+
+  console.log(jugadores)
   return (
     <div className="principal">
       <div className="containerPlanillaIns">
         <div className="PlanHl">
-          <div className="Nosee">
             <form action="" onSubmit={submit}>
+          <div className="Nosee">
               <div className="Tainer">
                 <div>
                   <h2 className="tainer-h2">Planilla Inscripcion Equipo</h2>
@@ -114,14 +127,14 @@ export const DatosEquipos = ({ id }) => {
                     <label className="mt-4-label" htmlFor="name">
                       Equipo
                     </label>
-                    <input className="mt-4-input " type="text" {...register('nombreEquipo')} />
+                    <input className="mt-4-input " type="text" onChange={e=> setNombreEquipo(e.target.value)} />
                   </div>
 
                   <div className="mt-4">
                     <label className="mt-4-label" htmlFor="address">
                       Capitan
                     </label>
-                    <input className="mt-4-input" id="address" {...register('nombreCapitan')} />
+                    <input className="mt-4-input" id="address" onChange={e=> setNombreCapitan(e.target.value)} />
                   </div>
 
                   <div className="tunder">
@@ -134,7 +147,7 @@ export const DatosEquipos = ({ id }) => {
                         className="m-4-input"
                         id="city"
                         type="text"
-                        {...register('contactoUno')}
+                       onChange={e=>setContactoUno(e.target.value)}
                       />
                     </div>
 
@@ -147,7 +160,7 @@ export const DatosEquipos = ({ id }) => {
                         className="m-4-input"
                         id="state"
                         type="text"
-                        {...register('contactoDos')}
+                        onChange={e=> setContactoDos(e.target.value)}
                       />
                     </div>
                   </div>
@@ -158,7 +171,6 @@ export const DatosEquipos = ({ id }) => {
                 </div>
 
               </div>
-            </form>
           </div>
 
 
@@ -181,7 +193,7 @@ export const DatosEquipos = ({ id }) => {
                 {jugadores && jugadores.map((jugador, indice)=>(
               <tr key={indice}>
             <td className="whill">{indice}</td>
-            <td>{jugador.nombre}</td>
+            <td>{jugador.nombreJugador}</td>
             <td>{jugador.ficha}</td>
             <td>{jugador.dorsal}</td>
             </tr>
@@ -190,8 +202,9 @@ export const DatosEquipos = ({ id }) => {
             </table>
           </div>
           <div class="ButtonPlanillaIns">
-            <button className="botonPlanillaInscrip"> Inscribir </button>
+            <button className="botonPlanillaInscrip" type="submit"> Inscribir </button>
           </div>
+          </form>
         </div>
       </div>
     </div>
