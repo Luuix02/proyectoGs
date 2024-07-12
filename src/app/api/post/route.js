@@ -1,6 +1,6 @@
     import { NextResponse } from "next/server";
     import { v2 as cloudinary } from 'cloudinary';
-    import { resolve } from "styled-jsx/css";
+
 
 
         // Configuration
@@ -66,34 +66,40 @@
         }
 
         //AGREGAR
-        export async function POST(request){
-        
-        const data = await request.formData();
-        const image = data.get("imageAgregar")
-
-        if(!image){
-            return NextResponse.json("Not found", {status:400})
-        }
-
-        const bytes = await image.arrayBuffer()
-        const buffer = Buffer.from(bytes)
-
-        const response = await new Promise((resolve, reject) =>{
-            cloudinary.uploader
-            .upload_stream({}, (err, result)=>{
-                if(err){
-                    reject(err)
-                }
-                resolve(result)
-            })
-            .end(buffer)
-        })
-
-        console.log(response)
-
-        return NextResponse.json({
-            message: "Imagen Subida",
-            url: response.secure_url,
-        })
-    } 
-        
+        export async function POST(request) {
+          try {
+              const data = await request.formData();
+              const image = data.get("imageAgregar");
+              const publicId = data.get("public_id"); 
+      
+              if (!image) {
+                  return NextResponse.json({ message: "Image not found" }, { status: 400 });
+              }
+      
+              const bytes = await image.arrayBuffer();
+              const buffer = Buffer.from(bytes);
+      
+              const response = await new Promise((resolve, reject) => {
+                  cloudinary.uploader.upload_stream(
+                      { folder: 'uploads', public_id: publicId },
+                      (err, result) => {
+                          if (err) {
+                              reject(err);
+                          }
+                          resolve(result);
+                      }
+                  ).end(buffer);
+              });
+      
+              console.log(response);
+      
+              return NextResponse.json({
+                  message: "Image uploaded",
+                  url: response.secure_url,
+                  public_id: response.public_id
+              });
+          } catch (error) {
+              console.error("Error uploading image:", error);
+              return NextResponse.json({ message: "Error uploading image" }, { status: 500 });
+          }
+      }
