@@ -53,29 +53,36 @@ export default function CreateCampeonato() {
     return (
         <div className='contenedor'>
             <section class="container">
-                <header>Crear Campeonato</header>
+                <div className='header-create'>
+                    <header>¡Crea tu Campeonato! Completa el formulario a continuación</header>
+                </div>
                 <form class="form" onSubmit={handleSubmit}>
                     <div class="input-box">
-                        <label>Nombre</label>
+                        <label className='name-label'>Nombre Campeonato</label>
                         <input
                             required
-                            placeholder="Alt Nacional"
+                            placeholder="name"
                             type="text"
                             onChange={(e) => setNombreCampeonato(e.target.value)}
                         />
                     </div>
+                    
                     <div class="column">
                         <div class="input-box">
                             <label>Diciplina</label>
-                            <input
-                                required
-                                placeholder="Futbol Sala"
-                                type="text"
-                                onChange={(e) => setNombreDiciplinas(e.target.value)}
-                            />
+                            <div class="column">
+                                <div class="select-box">
+                                    <select onChange={(e) => setNombreDiciplinas(e.target.value)}>
+                                        <option hidden>Selecciona</option>
+                                        <option>Futbol Sala</option>
+                                        <option>Microfutbol</option>
+                                        <option>Futbol 11</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="input-box">
-                            <label>Tamaño</label>
+                            <label>Tamaño de Equipos</label>
                             <input
                                 required
                                 placeholder="10"
@@ -84,7 +91,7 @@ export default function CreateCampeonato() {
                             />
                         </div>
                         <div class="input-box">
-                            <label>Cantidad</label>
+                            <label>Cantidad de Equipos</label>
                             <input
                                 required
                                 placeholder="10"
@@ -95,7 +102,7 @@ export default function CreateCampeonato() {
                     </div>
                     <div class="column">
                         <div class="input-box">
-                            <label>Inicio</label>
+                            <label>Fecha de Inicio</label>
                             <input required
                                 placeholder="Enter birth date"
                                 type="date"
@@ -103,7 +110,7 @@ export default function CreateCampeonato() {
                             />
                         </div>
                         <div class="input-box">
-                            <label>Fin</label>
+                            <label>Fin de Fin</label>
                             <input required
                                 placeholder="Enter birth date"
                                 type="date"
@@ -112,7 +119,7 @@ export default function CreateCampeonato() {
                         </div>
                     </div>
                     <div class="input-box address">
-                        <label>Descripcion</label>
+                        <label>Descripción</label>
                         <input require
                             placeholder="CTPI"
                             type="text"
@@ -130,7 +137,7 @@ export default function CreateCampeonato() {
                             />
                         </div>
                         <div class="input-box">
-                            <label>Fin Inscripcion</label>
+                            <label>Fin de Inscripción</label>
                             <input required
                                 placeholder="Enter birth date"
                                 type="date"
@@ -138,7 +145,7 @@ export default function CreateCampeonato() {
                             />
                         </div>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit">Crear campeonato</button>
                 </form>
             </section>
         </div>
