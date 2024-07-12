@@ -56,6 +56,7 @@ export const registroUser = async ({
   finFicha,
   identificacion,
   ficha,
+  jornada
 }) => {
   try {
     const response = await api.post("/auth/register", {
@@ -67,6 +68,7 @@ export const registroUser = async ({
       finFicha,
       identificacion,
       ficha,
+      jornada
     });
     return response.data;
   } catch (error) {
