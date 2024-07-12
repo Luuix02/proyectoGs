@@ -5,6 +5,11 @@ import "../../../src/styles/styleRegistro/styleRegistro.css";
 import { useState } from "react";
 
 export default function RegisterUser() {
+  const [selectedOption, setSelectedOption] = useState(" ");
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
   const {
     register,
     handleSubmit,
@@ -120,10 +125,41 @@ export default function RegisterUser() {
               {errors.correo && <span>{errors.correo.message}</span>}
             </div>
             <div className="form-group">
+              <label htmlFor="select">Selecciona tu jornada</label>
+              <select
+                id="select"
+                value={selectedOption}
+                {...register("jornada", {
+                  required: "Este campo es obligatorio",
+                })}
+                onChange={handleChange}
+              >
+                <option value="">Selecciona una jornada</option>
+                <option value="mañana">mañana</option>
+                <option value="tarde">tarde</option>
+                <option value="noche">noche</option>
+              </select>
+
+              {errors.jornada && <span>{errors.jornada.message}</span>}
+            </div>
+
+            <div className="form-group">
               <input
                 type="password"
                 id="contrasena"
                 placeholder="Crea tu contraseña"
+                className="campoDato"
+                {...register("contrasena", {
+                  required: "Este campo es obligatorio",
+                })}
+              />
+              {errors.contrasena && <span>{errors.contrasena.message}</span>}
+            </div>
+            <div className="form-group">
+              <input
+                type="password"
+                id="contrasena"
+                placeholder="Confirma tu contraseña"
                 className="campoDato"
                 {...register("contrasena", {
                   required: "Este campo es obligatorio",
