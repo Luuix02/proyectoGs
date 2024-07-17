@@ -1,71 +1,97 @@
-.contenedorPrincipal {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-color: rgba(61, 67, 81, 0.505);
-    width: 80%;
-    height: 70%;
-    margin: 2% 2% 2% 10%;
-    
-}
-.botonesCronometro{
-   margin-left: 35%;
-   
-   
-}
-.divContenedor{
+.father-main{
     display: flex;
-    margin-left:  20%;
-}
-.contenedorEquipo{
-    display: grid;
-    height: max-content;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
 }
-.nombreEquipo{
-    margin-left: 41%;
-    color: white;
-    font-weight: bolder;
-    }
-    
-    .falta{
-        display: flex;
-        gap: 20px;
-        width: 30px;
-        height: 30px;
-    }
-    .nombreFalta{
-        font-weight: 600;
-    }
-    .amarilla{
-        background-color: rgb(255, 251, 8);
-    }
-    .roja{
-        background-color: rgb(255, 0, 0);
-       
-    }
-    .columnas{
-        display: flex;
-        gap: 40px;
-        margin-left: 40%;
-    }
-    .cronometro{
-        margin-left:  47%;
-    
-    }
-    .botones{
-        margin: 2%;
-        border-radius: 10px;
-        background-color: #12aed1cd;
-        color: #faf8f8;
-        
-    }
-    .numero{
-        font-size: xx-large;
-        
 
-    }
+.content-section {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(210, 213, 221, 0.505);
+    width: 80vw;
+    height: 82vh;
+    padding: 1.8rem 0;
+    border-radius: 10px;
     
-    
+}
+
+.content-team{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.team-one{
+    display: flex;
+    flex-direction: column;
+}
+
+.team-two{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.img-team {
+    object-fit: contain;
+    width: 16rem;
+    filter: drop-shadow(2px 4px 7px black);
+}
+
+.name-team{
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.faltas-santion{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:  1rem 0;
+
+}
+
+.faltas-santion img {
+    object-fit: contain;
+    width: 3.5rem;
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.btn-time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+}
+
+.btn-init {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-init:active {
+  transform: translateY(-1px);
+}

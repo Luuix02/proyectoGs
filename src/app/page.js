@@ -4,7 +4,6 @@
 import Footer from "../../components/pages/FooterLanding";
 import Header from "../../components/pages/Navbar";
 import RootLayout from "./layout";
-
 import '../styles/loanding/main.css';
 
 import Aos from 'aos'
@@ -22,7 +21,6 @@ export default function Home() {
     <>
       <RootLayout backgroundImage={false}>
         <div class="pagesPri">
-
           <div class="Conten">
             <Header />
             <div class="Sub-cont">
