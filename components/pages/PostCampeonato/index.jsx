@@ -2,14 +2,13 @@
 
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react'
 import '../../../src/styles/Campeonato/Post.css'
 
 export default function CreateCampeonato() {
 
     const [nombreCampeonato, setNombreCampeonato] = useState('');
-    const [nombreDiciplinas, setNombreDiciplinas] = useState('');
     const [tamanoEquipos, setTamanoEquipos] = useState('');
     const [fechaIniciio, setFechaIniicio] = useState('');
     const [fechaFin, setFechaFin] = useState('');
@@ -18,7 +17,6 @@ export default function CreateCampeonato() {
     const [finInscripcion, setFinInscripcion] = useState('');
     const [cantidadEquipos, setCantidadEquipos] = useState('')
     const [error, setError] = useState(null);
-
     
     const router = useRouter();
 
@@ -28,7 +26,6 @@ export default function CreateCampeonato() {
 
         const data = {
             nombreCampeonato,
-            nombreDiciplinas,
             tamanoEquipos,
             fechaIniciio,
             fechaFin,
@@ -49,6 +46,9 @@ export default function CreateCampeonato() {
             }
             setError('Error al crear el campeonato. Inténtalo de nuevo.');
         }
+
+        // Modalidad
+
     };
 
     return (
@@ -69,19 +69,6 @@ export default function CreateCampeonato() {
                     </div>
                     
                     <div class="column">
-                        <div class="input-box">
-                            <label>Disciplina</label>
-                            <div class="column">
-                                <div class="select-box">
-                                    <select onChange={(e) => setNombreDiciplinas(e.target.value)}>
-                                        <option hidden>Selecciona</option>
-                                        <option>Futbol Sala</option>
-                                        <option>Microfutbol</option>
-                                        <option>Futbol 11</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
                         <div class="input-box">
                             <label>Tamaño de Equipos</label>
                             <input
