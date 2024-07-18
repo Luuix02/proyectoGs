@@ -3,12 +3,13 @@
     place-content: center;
     height: 100vh;
     font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    width: 40vw;
+    width: 35vw;
     background: #fff;
     padding: 25px;
     border-radius: 8px;
@@ -33,7 +34,6 @@
 
 .form .input-box {
     width: 100%;
-    margin-top: 10px;
 }
 
 .input-box label {
@@ -94,8 +94,8 @@
     margin-top: 10px;
 }
 
-.select-box select  {
-    height: 100%;   
+.select-box select {
+    height: 100%;
     width: 100%;
     outline: none;
     border: none;
@@ -110,7 +110,7 @@
     color: #000;
     font-size: 1rem;
     font-weight: 400;
-    margin-top: 15px;
+    margin-top: 1.5rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -122,3 +122,16 @@
     background: #007bffc3;
 }
 
+/* Ajustes estilos */
+
+.label-name {
+    margin-bottom: 1.6rem;
+}
+
+.disciplina-label {
+    margin-top: 1.6rem;
+}
+
+.init-label{
+    margin-top: 1.5rem;
+}
