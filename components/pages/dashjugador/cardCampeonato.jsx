@@ -9,12 +9,8 @@ export default function CardCampeonato() {
   const token = Cookies.get('token')
   useEffect(()=>{
     const obtenerCampeonatos =async()=>{
-    const response = await axios.get('http://localhost:3001/campeonato/',{
-      headers:{
-        Authorization: token
-      }
-    })
-
+    const response = await axios.get('http://localhost:3001/campeonato')
+    console.log(response)
     setCampenatos(response.data)
     }
     obtenerCampeonatos()
@@ -23,7 +19,7 @@ export default function CardCampeonato() {
   console.log(campeonatos)
   return (
     <>
-        {campeonatos && campeonatos.campeonatos.map((campeonato)=>(
+        {campeonatos && campeonatos.map((campeonato)=>(
     <article className="cardCampeonato" key={campeonato._id}>
 
       <div className="column">

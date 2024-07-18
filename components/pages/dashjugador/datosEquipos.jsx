@@ -52,7 +52,7 @@ export const DatosEquipos = ({ id }) => {
     console.log(response.data)
     Swal.fire({
       icon:"success",
-      title: mensaje
+      title: response.data.msg
     })
 
   }
