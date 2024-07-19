@@ -19,6 +19,7 @@ export default function CreateCampeonato() {
     const [cantidadEquipos, setCantidadEquipos] = useState('')
     const [error, setError] = useState(null);
 
+    
     const router = useRouter();
 
 
@@ -57,11 +58,11 @@ export default function CreateCampeonato() {
                     <header>¡Crea tu Campeonato! Completa el formulario a continuación</header>
                 </div>
                 <form class="form" onSubmit={handleSubmit}>
-                    <div class="input-box">
+                    <div class="input-box label-name">
                         <label className='name-label'>Nombre Campeonato</label>
                         <input
                             required
-                            placeholder="name"
+                            placeholder="ingresa nombre de campeonato"
                             type="text"
                             onChange={(e) => setNombreCampeonato(e.target.value)}
                         />
@@ -69,7 +70,7 @@ export default function CreateCampeonato() {
                     
                     <div class="column">
                         <div class="input-box">
-                            <label>Diciplina</label>
+                            <label>Disciplina</label>
                             <div class="column">
                                 <div class="select-box">
                                     <select onChange={(e) => setNombreDiciplinas(e.target.value)}>
@@ -100,7 +101,7 @@ export default function CreateCampeonato() {
                             />
                         </div>
                     </div>
-                    <div class="column">
+                    <div class="column init-label">
                         <div class="input-box">
                             <label>Fecha de Inicio</label>
                             <input required
@@ -118,16 +119,16 @@ export default function CreateCampeonato() {
                             />
                         </div>
                     </div>
-                    <div class="input-box address">
+                    <div class="input-box address init-label">
                         <label>Descripción</label>
                         <input require
-                            placeholder="CTPI"
+                            placeholder="Ingrese una breve descripción del campeonato"
                             type="text"
                             onChange={(e) => setDescripcion(e.target.value)}
                         />
                     </div>
 
-                    <div class="column">
+                    <div class="column init-label">
                         <div class="input-box">
                             <label>Inicio Inscripcion</label>
                             <input required

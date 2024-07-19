@@ -6,8 +6,8 @@ export default function RegistroUser() {
   return (
     <>
       <RootLayout backgroundImage={false}>
-       <RegistroModal/>
-              </RootLayout>
+        <RegistroModal />
+      </RootLayout>
     </>
   );
 }

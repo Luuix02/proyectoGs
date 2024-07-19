@@ -12,8 +12,9 @@ export default function CardCampeonato() {
         const fetchTasks = async () => {
             try {
                 const response = await axios.get('http://localhost:3001/campeonato');
-                if (response.data && Array.isArray(response.data.campeonatos)) {
-                    setTasks(response.data.campeonatos);
+                console.log(response.data); // Verifica la respuesta en la consola
+                if (response.data && Array.isArray(response.data)) {
+                    setTasks(response.data);
                 } else {
                     console.error('Fetch tasks returned unexpected data:', response.data);
                 }
@@ -24,8 +25,9 @@ export default function CardCampeonato() {
         fetchTasks();
     }, []);
 
+
     return (
-        <>
+        <div className='emoji-contenedor'>
             <div className="button-wrapper">
                 <Link href="/organizador/campeonatos/crear">
                     <button className="btn btn-create">
@@ -79,7 +81,7 @@ export default function CardCampeonato() {
                     </table>
                 </div>
             </div>
-        </>
+        </div>
 
     );
 }

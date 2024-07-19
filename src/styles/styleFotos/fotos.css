@@ -5,19 +5,55 @@
   background-color: rgba(61, 67, 81, 0.605);
   border-radius: 8px;
   margin-left: 120px;
-  margin-top: 100px;
+  margin-top: 20px;
   width: 70%;
-  height: 70vh;
+  overflow: visible; /* Permitir que el contenido expanda el contenedor */
 }
-.divmayor{
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.botonpagina {
+  width: 120px;
+  height: 33px;
+}
+
+.divpaginasiguiente {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: 20px;
 }
-.cards{
-  width: 250px;
-  height: 250px;
-  margin: 20px;
+
+.divmayor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures images maintain aspect ratio */
+  border-radius: 8px;
 }
 
 input,
@@ -44,8 +80,5 @@ button:hover {
 }
 
 .divdatos {
-    width: 100%;
-  }
-
-  
-
+  width: 100%;
+}

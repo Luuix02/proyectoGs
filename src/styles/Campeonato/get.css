@@ -1,8 +1,13 @@
+.emoji-contenedor{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
 .container {
     width: 85vw;
     padding-top: 1.3rem;
-    margin-left: 14rem;
-
+    margin: 0 auto;
 }
 
 .table-container {
@@ -59,7 +64,7 @@
 
 .button-wrapper {
     padding-top: 1.5rem;
-    margin-left: 14rem;
+    
     /* Adjust as needed */
 }
 
