@@ -125,7 +125,7 @@ export default function RegisterUser() {
               {errors.correo && <span>{errors.correo.message}</span>}
             </div>
             <div className="form-group">
-              <label htmlFor="select">Selecciona tu jornada</label>
+              {/* <label htmlFor="select">Selecciona tu jornada</label> */}
               <select
                 id="select"
                 value={selectedOption}
@@ -134,10 +134,10 @@ export default function RegisterUser() {
                 })}
                 onChange={handleChange}
               >
-                <option value="">Selecciona una jornada</option>
-                <option value="mañana">mañana</option>
-                <option value="tarde">tarde</option>
-                <option value="noche">noche</option>
+                <option value="">Selecciona tu jornada</option>
+                <option value="Mañana">Mañana</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noche">Noche</option>
               </select>
 
               {errors.jornada && <span>{errors.jornada.message}</span>}
