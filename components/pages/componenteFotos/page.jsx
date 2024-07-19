@@ -44,7 +44,7 @@ const Fc = () => {
         <SideBarPrincipal />
         <div className='divmayor'>
           <div className='divpaginasiguiente'>
-            <Link href="./formulario">
+            <Link href="/organizador/fotos/formulario">
               <button className='botonpagina'>subir imagenes</button>
             </Link>
           </div>
