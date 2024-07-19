@@ -45,7 +45,7 @@ export default function Page() {
 
     const navigateToAnotherPage = () => {
         if (selectedModalidad) {
-            router.push(`/organizador/campeonatos/${selectedModalidad}`); // Navega a la otra página con el ID de la modalidad seleccionada
+            router.push(`/organizador/campeonatos/crear/${selectedModalidad}`); // Navega a la otra página con el ID de la modalidad seleccionada
         } else {
             console.warn('No modalidad selected'); // Maneja el caso donde no se ha seleccionado ninguna modalidad
         }
@@ -93,7 +93,6 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-
 
                 <div className="input-box">
                     <label>Selecciona una sede:</label>

@@ -29,7 +29,7 @@ export default function CardCampeonato() {
     return (
         <div className='emoji-contenedor'>
             <div className="button-wrapper">
-                <Link href="/organizador/campeonatos/modalidad">
+                <Link href="/organizador/campeonatos/crear">
                     <button className="btn btn-create">
                         <svg
                             className="svg-icon"

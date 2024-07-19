@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import Image from "next/image";
 import "../../../src/styles/styleFotos/fotos.css";
 import SideBarPrincipal from "../../common/sidebar/page";
@@ -29,7 +30,6 @@ const Fc = () => {
         if (!response.ok) {
           throw new Error('Error al eliminar la foto');
         }
-        // Actualizar el estado para reflejar la eliminación
         setPhotos(photos.filter(photo => photo._id !== photoId));
       })
       .catch(error => {
@@ -43,15 +43,22 @@ const Fc = () => {
       <main style={{ display: "flex" }}>
         <SideBarPrincipal />
         <div className='divmayor'>
+          <div className='divpaginasiguiente'>
+            <Link href="./formulario">
+              <button className='botonpagina'>subir imagenes</button>
+            </Link>
+          </div>
           <div className='contenedorSubirImagenes'>
-            {photos.map(photo => (
-              <div key={photo._id}>
-                <img className='cards' src={`http://localhost:3001/${photo.Imagepath}`} alt={photo.Nombre} />
-                <h2>{photo.Nombre}</h2>
-                <p>{photo.Descripcion}</p>
-                <button onClick={() => handleDelete(photo._id)}>Eliminars</button>
-              </div>
-            ))}
+            <div className='grid-container'>
+              {photos.map(photo => (
+                <div key={photo._id} className="card">
+                  <img className='cards' src={`http://localhost:3001/${photo.Imagepath}`} alt={photo.Nombre} />
+                  <h2>{photo.Nombre}</h2>
+                  <p>{photo.Descripcion}</p>
+                  <button onClick={() => handleDelete(photo._id)}>Eliminar</button>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </main>
