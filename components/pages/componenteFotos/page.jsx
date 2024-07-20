@@ -1,9 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from "next/image";
-import "../../../src/styles/styleFotos/fotos.css";
-import SideBarPrincipal from "../../common/sidebar/page";
+import SideBarPrincipal from '../../common/sidebar/page';
+import '../../../src/styles/styleFotos/fotos.css';
 
 const Fc = () => {
   const [photos, setPhotos] = useState([]);
@@ -37,32 +36,29 @@ const Fc = () => {
       });
   };
 
-  console.log(photos)
   return (
-    <>
-      <main style={{ display: "flex" }}>
-        <SideBarPrincipal />
-        <div className='divmayor'>
-          <div className='divpaginasiguiente'>
-            <Link href="/organizador/fotos/formulario">
-              <button className='botonpagina'>subir imagenes</button>
-            </Link>
-          </div>
-          <div className='contenedorSubirImagenes'>
-            <div className='grid-container'>
-              {photos.map(photo => (
-                <div key={photo._id} className="card">
-                  <img className='cards' src={`http://localhost:3001/${photo.Imagepath}`} alt={photo.Nombre} />
-                  <h2>{photo.Nombre}</h2>
-                  <p>{photo.Descripcion}</p>
-                  <button onClick={() => handleDelete(photo._id)}>Eliminar</button>
-                </div>
-              ))}
-            </div>
+    <main style={{ display: 'flex' }}>
+      <SideBarPrincipal />
+      <div className='divmayor'>
+        <div className='divpaginasiguiente'>
+          <Link href="/organizador/fotos/formulario">
+            <button className='botonpagina'>Subir Imágenes</button>
+          </Link>
+        </div>
+        <div className='contenedorSubirImagenes'>
+          <div className='grid-container'>
+            {photos.map(photo => (
+              <div key={photo._id} className="card">
+                <img className='cards' src={photo.ImageUrl} alt={photo.Nombre} />
+                <h2>{photo.Nombre}</h2>
+                <p>{photo.Descripcion}</p>
+                <button onClick={() => handleDelete(photo._id)}>Eliminar</button>
+              </div>
+            ))}
           </div>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
 
